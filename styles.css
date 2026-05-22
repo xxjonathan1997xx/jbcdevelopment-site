@@ -10,7 +10,9 @@
   --accent-dark: #0b5f59;
   --accent-soft: #d9f4f1;
   --blue: #2563eb;
+  --blue-soft: #e6efff;
   --green: #15803d;
+  --green-soft: #e7f6ed;
   --shadow: 0 24px 70px rgba(16, 35, 38, 0.1);
   --radius: 8px;
   --shell: min(1120px, calc(100vw - 40px));
@@ -194,8 +196,8 @@ p {
 h1 {
   margin-bottom: 22px;
   color: #0c2023;
-  font-size: 5.35rem;
-  line-height: 0.98;
+  font-size: 4.7rem;
+  line-height: 1;
   letter-spacing: 0;
   font-weight: 790;
 }
@@ -210,10 +212,17 @@ h1 {
 
 .hero-actions,
 .footer-links,
-.app-links {
+.resource-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.hero-note {
+  margin: 18px 0 0;
+  color: #5c7174;
+  font-size: 0.94rem;
+  font-weight: 650;
 }
 
 .button {
@@ -272,7 +281,8 @@ h1 {
 }
 
 .about-section,
-.focus-section {
+.automation-section,
+.projects-section {
   border-block: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.72);
 }
@@ -311,8 +321,9 @@ h3 {
 
 .section-body p,
 .section-heading p,
-.focus-item p,
-.app-card p,
+.service-card p,
+.project-card p,
+.business-list p,
 .contact-panel p,
 .policy-section p {
   color: var(--muted);
@@ -324,7 +335,8 @@ h3 {
   margin-bottom: 0;
 }
 
-.apps-section {
+.services-section,
+.business-section {
   padding: clamp(64px, 9vw, 108px) 0;
 }
 
@@ -338,21 +350,15 @@ h3 {
   font-size: 1.04rem;
 }
 
-.section-heading.compact {
-  max-width: 760px;
-}
-
-.app-grid {
+.service-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
-.app-card {
-  display: grid;
-  grid-template-columns: 76px minmax(0, 1fr);
-  gap: 18px;
-  min-height: 246px;
+.service-card,
+.project-card,
+.business-list > div {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface);
@@ -360,60 +366,53 @@ h3 {
   box-shadow: 0 16px 40px rgba(16, 35, 38, 0.05);
 }
 
-.app-icon {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  border-radius: 8px;
+.service-card {
+  min-height: 184px;
   background:
-    linear-gradient(145deg, rgba(37, 99, 235, 0.18), rgba(15, 118, 110, 0.18)),
-    #fff;
-  border: 1px solid rgba(15, 118, 110, 0.2);
+    linear-gradient(180deg, rgba(230, 239, 255, 0.42), rgba(255, 255, 255, 0) 58%),
+    var(--surface);
 }
 
-.app-icon::before,
-.app-icon::after,
-.app-icon span {
-  position: absolute;
-  content: "";
-  border-radius: 4px;
-  background: #fff;
-  box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.16);
-}
-
-.app-icon::before {
-  top: 13px;
-  left: 13px;
-  width: 25px;
-  height: 17px;
-}
-
-.app-icon::after {
-  right: 12px;
-  bottom: 12px;
-  width: 18px;
-  height: 25px;
-}
-
-.app-icon span {
-  left: 14px;
-  bottom: 14px;
-  width: 20px;
-  height: 5px;
-  background: var(--accent);
-}
-
-.app-icon-alt {
+.service-card:nth-child(3n + 2) {
   background:
-    linear-gradient(145deg, rgba(21, 128, 61, 0.16), rgba(37, 99, 235, 0.14)),
-    #fff;
+    linear-gradient(180deg, rgba(217, 244, 241, 0.48), rgba(255, 255, 255, 0) 58%),
+    var(--surface);
 }
 
-.app-links {
-  margin-top: 18px;
+.service-card:nth-child(3n + 3) {
+  background:
+    linear-gradient(180deg, rgba(231, 246, 237, 0.56), rgba(255, 255, 255, 0) 58%),
+    var(--surface);
 }
 
-.app-links span {
+.projects-section {
+  padding: clamp(62px, 8vw, 96px) 0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr 0.85fr;
+  gap: 18px;
+}
+
+.project-card {
+  min-height: 250px;
+}
+
+.featured-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    linear-gradient(135deg, rgba(15, 118, 110, 0.11), rgba(37, 99, 235, 0.08)),
+    var(--surface);
+}
+
+.resource-list {
+  margin-top: 22px;
+}
+
+.resource-list span {
   display: inline-flex;
   min-height: 34px;
   align-items: center;
@@ -426,33 +425,10 @@ h3 {
   padding: 6px 10px;
 }
 
-.focus-section {
-  padding: clamp(62px, 8vw, 96px) 0;
-}
-
-.focus-grid {
+.business-list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 28px;
-}
-
-.focus-item {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.78);
-  padding: 22px;
-}
-
-.focus-item svg {
-  width: 34px;
-  height: 34px;
-  margin-bottom: 18px;
-  fill: none;
-  stroke: var(--accent);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.75;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .contact-section {
@@ -574,8 +550,9 @@ h3 {
     max-width: 680px;
   }
 
-  .app-grid,
-  .focus-grid {
+  .service-grid,
+  .project-grid,
+  .business-list {
     grid-template-columns: 1fr;
   }
 
@@ -646,8 +623,10 @@ h3 {
     font-size: 1.55rem;
   }
 
-  .app-card {
-    grid-template-columns: 1fr;
+  .contact-link {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    text-align: center;
   }
 
   .footer-inner {

@@ -2,6 +2,16 @@
 
 Static one-page company website for `jbcdevelopment.dev`.
 
+The site presents JBC Software Development LLC as a practical software/app
+development business focused on:
+
+- Affordable software solutions
+- Mobile app development
+- AI tools and agents
+- Small business support
+- Automation and workflow systems
+- Practical technology for local business growth
+
 ## Local Preview
 
 Run a simple static server from this folder:
@@ -30,3 +40,9 @@ This site is deploy-ready for Vercel, Netlify, Cloudflare Pages, or any static h
 - `styles.css`: responsive styling
 - `script.js`: mobile navigation behavior
 - `assets/`: favicon and site visual asset
+
+## Public Action Rule
+
+This repository contains the website files only. Publishing, DNS changes,
+external outreach, email campaigns, App Store/TestFlight claims, or public
+release announcements should be reviewed before action.
