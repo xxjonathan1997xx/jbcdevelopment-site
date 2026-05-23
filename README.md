@@ -51,11 +51,20 @@ This site is deploy-ready for Vercel, Netlify, Cloudflare Pages, or any static h
 - Build command: none
 - Output directory: project root
 
+Before any live deployment or public update, review:
+
+- `WEBSITE_RELEASE_CHECKLIST.md` in this repo
+- `WEBSITE_DEPLOYMENT_READINESS.md` in `business-growth-agent-system`
+- `scripts/run-website-deployment-readiness` from `business-growth-agent-system`
+
+Deployment, DNS changes, hosting changes, and public update announcements require approval first.
+
 ## Files
 
 - `index.html`: company site content and metadata
 - `styles.css`: responsive styling
 - `script.js`: mobile navigation and staged intake form behavior
+- `WEBSITE_RELEASE_CHECKLIST.md`: pre-deploy QA, contact form limitation, approval, and rollback checklist
 - `assets/`: favicon and site visual asset
 
 ## Public Action Rule
