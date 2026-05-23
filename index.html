@@ -49,6 +49,7 @@
           <a href="#projects">Projects</a>
           <a href="#small-business">Small Business</a>
           <a href="#automation">AI & Automation</a>
+          <a href="#intake">Intake</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -64,7 +65,7 @@
             and workflow automation.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="mailto:jonathan@jbcdevelopment.dev">Tell me what you need built</a>
+            <a class="button primary" href="#intake">Tell me what you need built</a>
             <a class="button secondary" href="#services">View services</a>
           </div>
           <p class="hero-support">Send a short note about what you need help with.</p>
@@ -282,6 +283,129 @@
               Discuss an automation idea
             </a>
           </div>
+        </div>
+      </section>
+
+      <section class="intake-section shell" id="intake" aria-labelledby="intake-title">
+        <div class="intake-panel">
+          <div class="section-heading">
+            <p class="section-label">Project intake</p>
+            <h2 id="intake-title">Tell me what you need built.</h2>
+            <p>
+              Share the business problem, timeline, and type of help you need. This
+              static form prepares an email draft for you to review and send.
+            </p>
+          </div>
+
+          <form class="intake-form" id="intakeForm" novalidate>
+            <div class="form-grid">
+              <label>
+                Business name
+                <input name="businessName" type="text" autocomplete="organization" maxlength="120" required />
+              </label>
+
+              <label>
+                Contact name
+                <input name="contactName" type="text" autocomplete="name" maxlength="120" required />
+              </label>
+
+              <label>
+                Email
+                <input name="email" type="email" autocomplete="email" maxlength="160" required />
+              </label>
+
+              <label>
+                Phone <span>optional</span>
+                <input name="phone" type="tel" autocomplete="tel" maxlength="40" />
+              </label>
+
+              <label>
+                Service needed
+                <select name="serviceNeeded" required>
+                  <option value="">Select a service</option>
+                  <option>Custom app or dashboard</option>
+                  <option>AI tool or agent</option>
+                  <option>Workflow automation</option>
+                  <option>Website or support page</option>
+                  <option>Customer intake or quote workflow</option>
+                  <option>Mobile app MVP</option>
+                  <option>Not sure yet</option>
+                </select>
+              </label>
+
+              <label>
+                Desired timeline
+                <select name="desiredTimeline" required>
+                  <option value="">Select a timeline</option>
+                  <option>As soon as practical</option>
+                  <option>Within 1 month</option>
+                  <option>1 to 3 months</option>
+                  <option>3+ months</option>
+                  <option>Exploring options</option>
+                </select>
+              </label>
+
+              <label>
+                Budget range <span>optional</span>
+                <select name="budgetRange">
+                  <option value="">Prefer to discuss later</option>
+                  <option>Under $1,000</option>
+                  <option>$1,000 to $3,000</option>
+                  <option>$3,000 to $5,000</option>
+                  <option>$5,000+</option>
+                  <option>Not sure yet</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Main problem or pain point
+              <textarea
+                name="painPoint"
+                rows="5"
+                maxlength="1000"
+                required
+                placeholder="What is slowing the business down or creating repeat work?"
+              ></textarea>
+            </label>
+
+            <label>
+              Notes <span>optional</span>
+              <textarea
+                name="notes"
+                rows="4"
+                maxlength="1000"
+                placeholder="Useful context, current tools, links, or questions. Please do not include passwords, payment details, or private customer records."
+              ></textarea>
+            </label>
+
+            <label class="form-honeypot" aria-hidden="true">
+              Website
+              <input name="websiteUrl" type="text" tabindex="-1" autocomplete="off" />
+            </label>
+
+            <p class="form-note">
+              This does not send automatically. Review the prepared message before sending.
+              Do not include passwords, payment information, or sensitive customer records.
+            </p>
+
+            <div class="form-actions">
+              <button class="button primary" type="submit">Prepare inquiry email</button>
+              <a class="button secondary intake-mail-link" id="intakeMailLink" href="mailto:jonathan@jbcdevelopment.dev" hidden>
+                Open email draft
+              </a>
+            </div>
+
+            <div class="form-message" id="intakeMessage" role="status" aria-live="polite" hidden></div>
+
+            <div class="intake-result" id="intakeResult" hidden>
+              <label>
+                Inquiry summary
+                <textarea id="intakeSummary" rows="9" readonly></textarea>
+              </label>
+              <button class="button secondary" id="copyInquiryButton" type="button">Copy inquiry summary</button>
+            </div>
+          </form>
         </div>
       </section>
 

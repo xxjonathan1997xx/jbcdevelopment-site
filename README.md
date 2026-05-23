@@ -12,6 +12,23 @@ development business focused on:
 - Automation and workflow systems
 - Practical technology for local business growth
 
+## Client Intake Form
+
+The website includes a staged "Tell me what you need built" intake form.
+
+Current behavior:
+
+- Validates required fields in the browser
+- Uses a simple honeypot field and message-length checks
+- Prepares a copyable inquiry summary
+- Creates a user-reviewed email draft to `jonathan@jbcdevelopment.dev`
+- Does not store submissions, send automatic emails, create proposals, or make commitments
+
+Because this is a static site, there is no server-side submission storage yet.
+To activate direct form capture later, add an approved backend/form handler such
+as Netlify Forms, a Vercel/Cloudflare Function, or another reviewed intake
+endpoint. Do not add automated replies or external sending without approval.
+
 ## Local Preview
 
 Run a simple static server from this folder:
@@ -38,7 +55,7 @@ This site is deploy-ready for Vercel, Netlify, Cloudflare Pages, or any static h
 
 - `index.html`: company site content and metadata
 - `styles.css`: responsive styling
-- `script.js`: mobile navigation behavior
+- `script.js`: mobile navigation and staged intake form behavior
 - `assets/`: favicon and site visual asset
 
 ## Public Action Rule

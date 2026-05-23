@@ -333,6 +333,7 @@ h3 {
 .process-step p,
 .project-card p,
 .business-list p,
+.intake-panel p,
 .contact-panel p,
 .policy-section p {
   color: var(--muted);
@@ -485,6 +486,123 @@ h3 {
   gap: 18px;
 }
 
+.intake-section {
+  padding: clamp(64px, 9vw, 108px) 0 24px;
+}
+
+.intake-panel {
+  border: 1px solid rgba(15, 118, 110, 0.18);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: clamp(24px, 4vw, 42px);
+  box-shadow: var(--shadow);
+}
+
+.intake-panel .section-heading {
+  margin-bottom: 28px;
+}
+
+.intake-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.intake-form label {
+  display: grid;
+  gap: 7px;
+  color: #183234;
+  font-size: 0.9rem;
+  font-weight: 760;
+}
+
+.intake-form label span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.intake-form input,
+.intake-form select,
+.intake-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fbffff;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.98rem;
+  padding: 12px 13px;
+}
+
+.intake-form textarea {
+  min-height: 128px;
+  resize: vertical;
+}
+
+.intake-form input:focus,
+.intake-form select:focus,
+.intake-form textarea:focus {
+  border-color: rgba(15, 118, 110, 0.68);
+  outline: 3px solid rgba(15, 118, 110, 0.16);
+}
+
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-note {
+  max-width: 760px;
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-message {
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-weight: 700;
+}
+
+.form-message.success {
+  border: 1px solid rgba(21, 128, 61, 0.2);
+  background: var(--green-soft);
+  color: #14532d;
+}
+
+.form-message.error {
+  border: 1px solid rgba(185, 28, 28, 0.2);
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.intake-result {
+  display: grid;
+  gap: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.intake-result textarea {
+  min-height: 220px;
+  background: #f8fcfc;
+  color: #315054;
+}
+
 .contact-section {
   padding: clamp(64px, 9vw, 108px) 0 24px;
 }
@@ -607,7 +725,8 @@ h3 {
   .service-grid,
   .process-grid,
   .project-grid,
-  .business-list {
+  .business-list,
+  .form-grid {
     grid-template-columns: 1fr;
   }
 
