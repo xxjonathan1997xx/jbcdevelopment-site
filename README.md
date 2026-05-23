@@ -29,6 +29,9 @@ handled through Gmail/Google Workspace, and DNS email records should be reviewed
 against Google Workspace MX, SPF, DKIM, and DMARC requirements before deployment
 or provider changes.
 
+This Google Workspace note applies only to JBC Development and should not be
+used to change other projects without a separate review.
+
 Because this is a static site, there is no server-side submission storage yet.
 To activate direct form capture later, add an approved backend/form handler such
 as Netlify Forms, a Vercel/Cloudflare Function, or another reviewed intake

@@ -36,6 +36,8 @@ The current intake form is static. It validates locally, prepares a copyable inq
 
 Website inquiries should be manually reviewed in `business-growth-agent-system/leads/WEBSITE_INQUIRIES.md` before becoming lead tracker rows.
 
+The Google Workspace email DNS checklist applies only to JBC Development. Do not use this checklist to change other projects, email providers, quote intake systems, or automation settings.
+
 ## Approval Gate
 
 Deployment requires explicit approval before:
