@@ -22,6 +22,7 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
 | Desktop QA | Pending | Test layout at desktop width | Desktop QA not recorded | Test before deploy |
 | Navigation links | Pending | Services, How We Work, Projects, Small Business, AI & Automation, Intake, Contact | Link review not recorded | Verify every header and footer link |
 | Contact email | Pending | `jonathan@jbcdevelopment.dev` | Contact email review not recorded | Search for outdated email or placeholders |
+| Email DNS records | Pending | Email provider is Gmail/Google Workspace; DNS should use Google Workspace MX, SPF, DKIM, and DMARC records | DNS email record review not recorded | Review DNS outside this workflow before deploy |
 | Intake form behavior | Pending | Required fields, short pain-point validation, success message, email draft link | Static form does not store submissions | Verify staged form behavior before deploy |
 | SEO title/description | Pending | `index.html` metadata | Metadata review not recorded | Confirm title and description |
 | Sitemap/robots | Pending | `sitemap.xml` and `robots.txt` | Sitemap/robots review not recorded | Review static files |
@@ -41,6 +42,7 @@ Deployment requires explicit approval before:
 
 - Deploying or updating the live website.
 - Changing DNS, hosting, redirects, HTTPS, or domain settings.
+- Changing Gmail/Google Workspace MX, SPF, DKIM, DMARC, or email-routing settings.
 - Adding backend form capture, CRM syncing, external storage, or automatic replies.
 - Publishing external marketing about the update.
 

@@ -24,6 +24,11 @@ Current behavior:
 - Creates a user-reviewed email draft to `jonathan@jbcdevelopment.dev`
 - Does not store submissions, send automatic emails, create proposals, or make commitments
 
+The public domain email remains `jonathan@jbcdevelopment.dev`. The mailbox is
+handled through Gmail/Google Workspace, and DNS email records should be reviewed
+against Google Workspace MX, SPF, DKIM, and DMARC requirements before deployment
+or provider changes.
+
 Because this is a static site, there is no server-side submission storage yet.
 To activate direct form capture later, add an approved backend/form handler such
 as Netlify Forms, a Vercel/Cloudflare Function, or another reviewed intake
