@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="JBC Development brand mark">
+  <defs>
+    <linearGradient id="jbc-green" x1="18" y1="18" x2="110" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#062c1f"/>
+      <stop offset=".48" stop-color="#075f3d"/>
+      <stop offset="1" stop-color="#021811"/>
+    </linearGradient>
+    <linearGradient id="jbc-bar" x1="40" y1="84" x2="88" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b4b32"/>
+      <stop offset="1" stop-color="#6bb67c"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="26" fill="#ffffff"/>
+  <path
+    d="M64 10 107 34v50l-43 24-43-24V34L64 10Z"
+    fill="none"
+    stroke="url(#jbc-green)"
+    stroke-width="9"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M21 84v14l43 24 43-24V84"
+    fill="none"
+    stroke="url(#jbc-green)"
+    stroke-width="9"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <rect x="40" y="61" width="13" height="32" rx="4" fill="url(#jbc-bar)"/>
+  <rect x="58" y="48" width="13" height="45" rx="4" fill="url(#jbc-bar)"/>
+  <rect x="76" y="32" width="13" height="61" rx="4" fill="url(#jbc-bar)"/>
+</svg>
