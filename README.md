@@ -51,6 +51,12 @@ Then open:
 http://127.0.0.1:8788
 ```
 
+## Visual Assets
+
+- `assets/brand-workbench.svg` is a custom local SVG created for this site.
+- It is not hotlinked, does not use third-party stock imagery, and is intended
+  to show a practical website/dashboard build workspace.
+
 ## Deploy
 
 This site is deploy-ready for Vercel, Netlify, Cloudflare Pages, or any static host.
