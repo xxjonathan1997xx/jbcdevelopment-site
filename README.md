@@ -37,6 +37,17 @@ To activate direct form capture later, add an approved backend/form handler such
 as Netlify Forms, a Vercel/Cloudflare Function, or another reviewed intake
 endpoint. Do not add automated replies or external sending without approval.
 
+## Language Support
+
+The public pages include lightweight English/Spanish support in `script.js`.
+
+- Spanish is selected automatically when the visitor's browser language starts
+  with `es`.
+- Visitors can switch manually with the `EN` / `ES` toggle in the header.
+- The preference is stored in local browser storage only.
+- No external translation widget, API, tracking script, or visitor data transfer
+  is used.
+
 ## Local Preview
 
 Run a simple static server from this folder:

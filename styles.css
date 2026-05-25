@@ -164,6 +164,41 @@ a {
   outline: none;
 }
 
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 6px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 3px;
+}
+
+.language-option {
+  min-width: 36px;
+  min-height: 30px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.language-option.is-active,
+.language-option[aria-pressed="true"] {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.language-option:focus-visible {
+  outline: 3px solid rgba(7, 95, 61, 0.22);
+  outline-offset: 2px;
+}
+
 .nav-toggle {
   display: none;
   width: 42px;
@@ -913,6 +948,15 @@ h3 {
 
   .nav-links a {
     padding: 12px;
+  }
+
+  .language-switcher {
+    justify-content: stretch;
+    margin: 6px 4px 2px;
+  }
+
+  .language-option {
+    flex: 1;
   }
 }
 
