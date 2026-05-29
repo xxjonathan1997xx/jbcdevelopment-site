@@ -300,6 +300,119 @@ h1 {
   padding: 6px 11px;
 }
 
+.app-showcase-section {
+  padding: clamp(18px, 3vw, 32px) 0 0;
+}
+
+.app-showcase-panel {
+  border: 1px solid rgba(7, 95, 61, 0.16);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(231, 244, 237, 0.86), rgba(255, 255, 255, 0.94)),
+    #ffffff;
+  padding: clamp(18px, 3vw, 26px);
+  box-shadow: 0 18px 44px rgba(8, 36, 24, 0.08);
+}
+
+.app-showcase-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.app-showcase-heading .section-label {
+  margin-bottom: 6px;
+}
+
+.app-showcase-heading h2 {
+  margin: 0;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  line-height: 1.2;
+}
+
+.app-showcase-heading p:last-child {
+  max-width: 360px;
+  margin: 0;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.app-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.app-showcase-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 132px;
+  border: 1px solid rgba(7, 95, 61, 0.16);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78)),
+    #ffffff;
+  color: #14271d;
+  padding: 14px;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+.app-showcase-card:hover,
+.app-showcase-card:focus-visible {
+  border-color: rgba(7, 95, 61, 0.42);
+  box-shadow: 0 12px 24px rgba(8, 36, 24, 0.08);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.app-icon {
+  width: 76px;
+  height: 76px;
+  flex: 0 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 22px rgba(8, 36, 24, 0.14);
+}
+
+.app-card-copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.app-link-kicker,
+.app-showcase-card em {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 820;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.app-showcase-card strong {
+  font-size: 1.04rem;
+  line-height: 1.16;
+}
+
+.app-showcase-card span:not(.app-link-kicker):not(.app-card-copy) {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.app-showcase-card em {
+  margin-top: auto;
+  color: #063522;
+  text-transform: none;
+}
+
 .button {
   display: inline-flex;
   min-height: 46px;
@@ -887,6 +1000,7 @@ h3 {
   .process-grid,
   .project-grid,
   .business-list,
+  .app-showcase-grid,
   .form-grid {
     grid-template-columns: 1fr;
   }
@@ -971,6 +1085,19 @@ h3 {
 
   .hero-copy p {
     font-size: 1rem;
+  }
+
+  .app-showcase-panel {
+    padding: 15px;
+  }
+
+  .app-showcase-heading {
+    display: grid;
+    gap: 4px;
+  }
+
+  .app-showcase-card {
+    min-height: auto;
   }
 
   .policy-grid h2 {
