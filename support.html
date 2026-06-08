@@ -98,6 +98,40 @@
             as each product is released.
           </p>
 
+          <h2 id="photomesh-support">PhotoMesh Studio setup and troubleshooting</h2>
+          <p>
+            PhotoMesh Studio is a local photo-to-GLB workflow. Real reconstruction requires
+            your own local Stable Fast 3D runner and model files; the photo-card backend is
+            only a flat preview card for testing the asset pipeline.
+          </p>
+          <ul>
+            <li>Open Settings and confirm the Stable Fast 3D command, model directory, executable, timeout, and rembg/u2net readiness checks.</li>
+            <li>If the app reports that local services did not start, use Try Again, close older PhotoMesh windows, and check for local port conflicts.</li>
+            <li>Use clear object photos, then inspect the preview, asset health, fixes, LODs, collision metadata, and engine-pack reports before using an asset.</li>
+            <li>One photo cannot perfectly infer hidden or back-side geometry, so generated models should be reviewed before shipping in a game or app.</li>
+          </ul>
+          <p>
+            For support, include your PhotoMesh version, macOS version, whether Stable Fast 3D
+            is marked ready, the exact error text, and a screenshot if possible.
+          </p>
+
+          <h2 id="m5steambridge-support">M5SteamBridge setup and troubleshooting</h2>
+          <p>
+            M5SteamBridge is a Steam setup helper for user-installed compatibility backends.
+            It does not include Steam, games, Whisky, CrossOver, Wine bottles, proprietary
+            runtimes, or any anti-cheat, DRM, ownership, platform, or account bypass.
+          </p>
+          <ul>
+            <li>Install your own compatibility backend, then run the first-run setup checks inside M5SteamBridge.</li>
+            <li>Use your own Steam installer, Steam account, and owned games.</li>
+            <li>Start with one owned lightweight game, run Check Game, then try the safe or performance profile before testing more titles.</li>
+            <li>If a game fails, capture diagnostics with preview enabled so private account data can be reviewed before sending anything.</li>
+          </ul>
+          <p>
+            For support, include your backend, game name, Steam App ID if known, health-check
+            result, selected profile, and the visible error message. Compatibility is game-by-game.
+          </p>
+
           <h2>Business project inquiries</h2>
           <p>
             For small business software, AI tools, dashboards, automation, or app MVPs,
@@ -123,6 +157,9 @@
           <h2>Start here</h2>
           <p>Send a concise note with the app, project, or business problem.</p>
           <a class="button primary" href="mailto:jonathan@jbcdevelopment.dev">Email support</a>
+          <a class="button secondary" href="/support.html#photomesh-support">PhotoMesh help</a>
+          <a class="button secondary" href="/support.html#m5steambridge-support">M5SteamBridge help</a>
+          <a class="button secondary" href="/downloads.html">Mac beta downloads</a>
           <a class="button secondary" href="/#intake">Project intake form</a>
           <a class="button secondary" href="/privacy.html">Privacy policy</a>
         </aside>
