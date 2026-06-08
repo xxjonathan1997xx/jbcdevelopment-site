@@ -89,11 +89,13 @@ Deployment, DNS changes, hosting changes, and public update announcements requir
 ## Files
 
 - `index.html`: company site content and metadata
+- `downloads.html`: Mac beta download page for PhotoMesh Studio and M5SteamBridge
 - `privacy.html`: public privacy policy for website inquiries and app support
 - `support.html`: public support page for apps, projects, and business inquiries
 - `styles.css`: responsive styling
 - `script.js`: mobile navigation and staged intake form behavior
 - `WEBSITE_RELEASE_CHECKLIST.md`: pre-deploy QA, contact form limitation, approval, and rollback checklist
+- `marketing/`: reusable launch and demo copy, including the PhotoMesh short-form video prompt
 - `assets/`: favicon and site visual asset
 
 ## Public Action Rule
