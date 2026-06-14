@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">M5SteamBridge</title>
+  <defs>
+    <linearGradient id="m5-bg" x1="74" y1="58" x2="438" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#05101D"/>
+      <stop offset="0.5" stop-color="#0B2F6F"/>
+      <stop offset="1" stop-color="#0B5FFF"/>
+    </linearGradient>
+    <linearGradient id="m5-accent" x1="126" y1="184" x2="386" y2="342" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7DD3FC"/>
+      <stop offset="1" stop-color="#0B5FFF"/>
+    </linearGradient>
+    <filter id="m5-shadow" x="54" y="54" width="404" height="404" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#031120" flood-opacity="0.26"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#071A33"/>
+  <rect x="56" y="56" width="400" height="400" rx="92" fill="url(#m5-bg)" filter="url(#m5-shadow)"/>
+  <path d="M134 316C160 242 199 205 256 205C313 205 352 242 378 316" fill="none" stroke="#DFF6FF" stroke-width="28" stroke-linecap="round"/>
+  <path d="M154 318H358" stroke="url(#m5-accent)" stroke-width="24" stroke-linecap="round"/>
+  <path d="M188 350H324" stroke="#7DD3FC" stroke-width="16" stroke-linecap="round" opacity="0.86"/>
+  <path d="M196 166h120c32 0 58 26 58 58v0" fill="none" stroke="#7DD3FC" stroke-width="18" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="182" cy="224" r="30" fill="#EAF6FF"/>
+  <circle cx="330" cy="224" r="30" fill="#7DD3FC"/>
+  <path d="M182 224h148" stroke="#0B5FFF" stroke-width="14" stroke-linecap="round"/>
+  <path d="M170 390h172" stroke="#DFF6FF" stroke-width="18" stroke-linecap="round" opacity="0.92"/>
+  <path d="M142 126h72" stroke="#7DD3FC" stroke-width="18" stroke-linecap="round"/>
+</svg>

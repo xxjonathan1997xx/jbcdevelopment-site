@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">PhotoMesh Studio</title>
+  <defs>
+    <linearGradient id="pm-bg" x1="72" y1="64" x2="444" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B5FFF"/>
+      <stop offset="0.52" stop-color="#138BFF"/>
+      <stop offset="1" stop-color="#7DD3FC"/>
+    </linearGradient>
+    <linearGradient id="pm-mesh" x1="112" y1="144" x2="392" y2="372" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF6FF"/>
+      <stop offset="1" stop-color="#9BD7FF"/>
+    </linearGradient>
+    <filter id="pm-shadow" x="54" y="54" width="404" height="404" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#031120" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#071A33"/>
+  <rect x="56" y="56" width="400" height="400" rx="92" fill="url(#pm-bg)" filter="url(#pm-shadow)"/>
+  <path d="M144 334L219 178L300 286L368 210L408 334H144Z" fill="rgba(3,9,18,0.22)"/>
+  <path d="M144 334L219 178L300 286L368 210L408 334H144Z" fill="none" stroke="url(#pm-mesh)" stroke-width="20" stroke-linejoin="round"/>
+  <path d="M219 178L300 286L144 334M300 286L408 334M300 286L368 210" fill="none" stroke="#DFF6FF" stroke-width="8" stroke-linecap="round" opacity="0.82"/>
+  <circle cx="219" cy="178" r="22" fill="#EAF6FF"/>
+  <circle cx="300" cy="286" r="22" fill="#7DD3FC"/>
+  <circle cx="368" cy="210" r="18" fill="#BFEAFF"/>
+  <circle cx="144" cy="334" r="18" fill="#38BDF8"/>
+  <circle cx="408" cy="334" r="18" fill="#EAF6FF"/>
+  <path d="M124 132h72" stroke="#DFF6FF" stroke-width="18" stroke-linecap="round" opacity="0.95"/>
+  <path d="M124 132h72" stroke="#031120" stroke-width="6" stroke-linecap="round" opacity="0.2"/>
+</svg>
