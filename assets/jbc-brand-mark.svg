@@ -1,27 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="JBC Development brand mark">
   <defs>
-    <linearGradient id="jbc-green" x1="18" y1="18" x2="110" y2="110" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#062c1f"/>
-      <stop offset=".48" stop-color="#075f3d"/>
-      <stop offset="1" stop-color="#021811"/>
+    <linearGradient id="jbc-blue" x1="18" y1="18" x2="110" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#071a33"/>
+      <stop offset=".48" stop-color="#0b5fff"/>
+      <stop offset="1" stop-color="#020817"/>
     </linearGradient>
     <linearGradient id="jbc-bar" x1="40" y1="84" x2="88" y2="38" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0b4b32"/>
-      <stop offset="1" stop-color="#6bb67c"/>
+      <stop offset="0" stop-color="#155eef"/>
+      <stop offset="1" stop-color="#7dd3fc"/>
     </linearGradient>
   </defs>
   <rect width="128" height="128" rx="26" fill="#ffffff"/>
   <path
     d="M64 10 107 34v50l-43 24-43-24V34L64 10Z"
     fill="none"
-    stroke="url(#jbc-green)"
+    stroke="url(#jbc-blue)"
     stroke-width="9"
     stroke-linejoin="round"
   />
   <path
     d="M21 84v14l43 24 43-24V84"
     fill="none"
-    stroke="url(#jbc-green)"
+    stroke="url(#jbc-blue)"
     stroke-width="9"
     stroke-linecap="round"
     stroke-linejoin="round"

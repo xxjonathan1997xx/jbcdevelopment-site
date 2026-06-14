@@ -23,52 +23,46 @@ const translations = {
     "Privacy": "Privacidad",
     "TikTok": "TikTok",
     "Instagram": "Instagram",
+    "YouTube": "YouTube",
+    "Facebook": "Facebook",
     "Contact": "Contacto",
     "Privacy Policy": "Politica de privacidad",
-    "JBC Development | Practical Software And DadBuildRepeat": "JBC Development | Software practico y DadBuildRepeat",
-    "JBC Development builds practical software for small businesses and shares the build-repeat process through DadBuildRepeat creator demos.": "JBC Development publica software practico y comparte el proceso de crear y repetir con demos de DadBuildRepeat.",
-    "Practical software, dashboards, AI workflow tools, and honest DadBuildRepeat creator demos.": "Software practico, herramientas utiles y demos honestas de DadBuildRepeat.",
-    "Practical software, tested in public.": "Software practico, probado en publico.",
-    "Practical software,": "Software practico,",
-    "tested in public.": "probado en publico.",
-    "JBC Development publishes apps, local Mac software, and practical tools. DadBuildRepeat shows the build log behind the work through honest tech, moto gear, and creator-tool demos.": "JBC Development publica apps, software local para Mac y herramientas practicas. DadBuildRepeat muestra el registro de construccion con demos honestas de tecnologia, equipo de moto y herramientas para creadores.",
+    "JBC Development | Software Development And Apps": "JBC Development | Desarrollo de software y apps",
+    "Software built for clear business workflows.": "Software creado para flujos de trabajo claros.",
+    "Software built for": "Software creado para",
+    "clear business workflows.": "flujos de trabajo claros.",
+    "JBC Development designs and ships practical apps, local Mac tools, AI workflow systems, and automation that stay easy to understand, support, and improve after release.": "JBC Development disena y publica apps practicas, herramientas locales para Mac, sistemas de flujo con IA y automatizacion faciles de entender, apoyar y mejorar despues del lanzamiento.",
     "View apps and software": "Ver apps y software",
-    "Watch DadBuildRepeat": "Ver DadBuildRepeat",
+    "Download Mac tools": "Descargar herramientas Mac",
     "Paw Care Academy": "Paw Care Academy",
     "PhotoMesh Studio": "PhotoMesh Studio",
     "M5SteamBridge": "M5SteamBridge",
-    "Creator demos": "Demos de creador",
+    "AI workflow tools": "Herramientas de flujo con IA",
+    "Discover": "Descubrir",
+    "Design": "Disenar",
     "Build": "Crear",
-    "Review": "Revisar",
-    "Record": "Grabar",
-    "Repeat": "Repetir",
+    "Ship": "Publicar",
     "Built in Florida. Scoped for maintainable releases.": "Creado en Florida. Alcance claro para lanzamientos mantenibles.",
-    "Ride cam test": "Prueba de camara en ruta",
-    "Creator workflow": "Flujo de creador",
-    "Honest demos, real build progress, and tools tested from zero.": "Demos honestas, progreso real y herramientas probadas desde cero.",
+    "Product build": "Construccion de producto",
+    "Software systems": "Sistemas de software",
+    "JBC Development": "JBC Development",
+    "Apps, local tools, and workflow software with clear support paths.": "Apps, herramientas locales y software de flujo de trabajo con rutas claras de soporte.",
     "Published apps": "Apps publicadas",
     "Local Mac software": "Software local para Mac",
     "Signed downloads": "Descargas firmadas",
     "Setup support": "Soporte de configuracion",
-    "Build logs": "Registros de construccion",
-    "Dad-tested tech": "Tecnologia probada por papa",
-    "DadBuildRepeat is the public build log.": "DadBuildRepeat es el registro publico del proceso.",
-    "The account documents realistic creator experiments, motorcycle gear, tech tools, and repeatable content systems. It gives JBC Development a human front door without making fake income claims or pretending every post is sponsored.": "La cuenta documenta experimentos realistas de creador, equipo de moto, herramientas tecnologicas y sistemas repetibles de contenido. Le da a JBC Development una entrada humana sin prometer ingresos falsos ni fingir que cada publicacion es patrocinada.",
-    "Plan": "Planear",
-    "Film": "Grabar",
-    "Post": "Publicar",
-    "Daily short-form tests": "Pruebas diarias en formato corto",
-    "Reels and profile hub": "Reels y centro del perfil",
-    "Build logs for apps and software.": "Registros de construccion para apps y software.",
-    "The same loop behind JBC software releases and DadBuildRepeat content.": "El mismo ciclo detras de los lanzamientos de JBC y el contenido de DadBuildRepeat.",
-    "Build the tool": "Crear la herramienta",
-    "Publish focused apps and local software with clear setup notes.": "Publicar apps enfocadas y software local con notas claras de configuracion.",
-    "Document the release": "Documentar el lanzamiento",
-    "Keep downloads, support pages, privacy notes, and limitations visible.": "Mantener visibles las descargas, soporte, privacidad y limitaciones.",
-    "Show the build log": "Mostrar el registro",
-    "Use DadBuildRepeat to share honest tests, demos, and lessons from the work.": "Usar DadBuildRepeat para compartir pruebas, demos y lecciones reales del trabajo.",
+    "AI workflows": "Flujos con IA",
+    "Automation": "Automatizacion",
+    "Software development with a practical release loop.": "Desarrollo de software con un ciclo practico de lanzamiento.",
+    "Plan the workflow, build the smallest useful version, document the limits, and improve from real use.": "Planificar el flujo, crear la version util mas pequena, documentar los limites y mejorar con uso real.",
+    "Map the workflow": "Mapear el flujo",
+    "Clarify the user, job, data, constraints, and support path before writing code.": "Aclarar el usuario, la tarea, los datos, las restricciones y la ruta de soporte antes de escribir codigo.",
+    "Build the release": "Crear el lanzamiento",
+    "Ship focused apps, Mac utilities, and automation tools with maintainable scope.": "Publicar apps enfocadas, utilidades Mac y herramientas de automatizacion con alcance mantenible.",
+    "Support the product": "Dar soporte al producto",
+    "Keep downloads, setup notes, privacy information, and known limits visible.": "Mantener visibles las descargas, notas de configuracion, privacidad y limites conocidos.",
     "Current software by JBC Development.": "Software actual de JBC Development.",
-    "Published apps and local Mac beta tools remain available while the creator brand grows.": "Las apps publicadas y herramientas beta locales para Mac siguen disponibles mientras crece la marca de creador.",
+    "Published apps and local Mac beta tools with direct support and release notes.": "Apps publicadas y herramientas beta locales para Mac con soporte directo y notas de lanzamiento.",
     "Education / Games": "Educacion / Juegos",
     "Kid-friendly pet-care learning.": "Aprendizaje de cuidado de mascotas para ninos.",
     "Open in App Store": "Abrir en App Store",
@@ -80,16 +74,24 @@ const translations = {
     "Verify checksums": "Verificar checksums",
     "Apps and software": "Apps y software",
     "What is active now.": "Lo que esta activo ahora.",
-    "Published apps, local software, and public build-log demos.": "Apps publicadas, software local y demos publicas del proceso.",
+    "Published apps, local software, and workflow tools in active development.": "Apps publicadas, software local y herramientas de flujo de trabajo en desarrollo activo.",
     "A pet-care learning app with updates focused on visuals, performance, clarity, and parent trust.": "Una app educativa de cuidado de mascotas con mejoras enfocadas en visuales, rendimiento, claridad y confianza para padres.",
     "App Store": "App Store",
     "Privacy policy": "Politica de privacidad",
     "PhotoMesh Studio and M5SteamBridge are local beta tools with setup help and checksums.": "PhotoMesh Studio y M5SteamBridge son herramientas beta locales con ayuda de configuracion y checksums.",
     "PhotoMesh": "PhotoMesh",
-    "DadBuildRepeat demos": "Demos de DadBuildRepeat",
-    "Moto gear, creator tools, camera setups, and repeatable content workflows.": "Equipo de moto, herramientas para creadores, configuraciones de camara y flujos repetibles de contenido.",
-    "Support for apps, software, and build logs.": "Soporte para apps, software y registros de construccion.",
-    "For app questions, Mac beta setup, download checks, privacy, or DadBuildRepeat collaborations.": "Para preguntas de apps, configuracion de betas Mac, descargas, privacidad o colaboraciones con DadBuildRepeat.",
+    "AI workflow systems": "Sistemas de flujo con IA",
+    "Practical internal tools and AI-assisted workflows for repetitive research, content, support, and operations tasks.": "Herramientas internas practicas y flujos asistidos por IA para tareas repetitivas de investigacion, contenido, soporte y operaciones.",
+    "AI tools": "Herramientas de IA",
+    "Personal channel": "Canal personal",
+    "DadBuildRepeat stays personal.": "DadBuildRepeat se mantiene personal.",
+    "DadBuildRepeat is Jonathan's hobby and creator account for motorcycle gear, camera setups, and personal content experiments. It is linked here for context, but JBC Development remains focused on apps and software.": "DadBuildRepeat es la cuenta personal y de hobby de Jonathan para equipo de moto, configuraciones de camara y experimentos de contenido. Se enlaza aqui como contexto, pero JBC Development se mantiene enfocado en apps y software.",
+    "Personal creator tests": "Pruebas personales de creador",
+    "Personal reels and hobby posts": "Reels personales y publicaciones de hobby",
+    "Shorts and longer ride edits": "Shorts y ediciones de rutas mas largas",
+    "Page updates and reels": "Actualizaciones de pagina y reels",
+    "Support for apps and software.": "Soporte para apps y software.",
+    "For app questions, Mac beta setup, download checks, privacy, or software support.": "Para preguntas de apps, configuracion beta para Mac, descargas, privacidad o soporte de software.",
     "Support page": "Pagina de soporte",
     "Privacy and support": "Privacidad y soporte",
     "Support and privacy resources stay available for every app and software release.": "Los recursos de soporte y privacidad permanecen disponibles para cada lanzamiento de app y software.",
@@ -100,7 +102,7 @@ const translations = {
     "Get support for JBC Software Development LLC apps, downloads, and local Mac beta software.": "Recibe soporte para apps, descargas y software beta local para Mac de JBC Software Development LLC.",
     "Support for JBC apps and software.": "Soporte para apps y software de JBC.",
     "Use this page for app support, Mac beta setup, download questions, privacy questions, or general contact with JBC Software Development LLC.": "Usa esta pagina para soporte de apps, configuracion beta para Mac, preguntas de descarga, privacidad o contacto general con JBC Software Development LLC.",
-    "Email jonathan@jbcdevelopment.dev for support, app, download, setup, privacy, or DadBuildRepeat questions.": "Escribe a jonathan@jbcdevelopment.dev para preguntas de soporte, apps, descargas, configuracion, privacidad o DadBuildRepeat.",
+    "Email jonathan@jbcdevelopment.dev for support, app, download, setup, privacy, or software questions.": "Escribe a jonathan@jbcdevelopment.dev para preguntas de soporte, apps, descargas, configuracion, privacidad o software.",
     "What to include": "Que incluir",
     "For the fastest review, include:": "Para una revision mas rapida, incluye:",
     "Your name and the app, software, or download you are asking about.": "Tu nombre y la app, software o descarga sobre la que preguntas.",
@@ -164,19 +166,17 @@ const attributeTranslations = {
     "Primary navigation": "Navegacion principal",
     "Language selector": "Selector de idioma",
     "Core app and software areas": "Areas principales de apps y software",
-    "Build repeat process preview": "Vista previa del proceso crear y repetir",
-    "DadBuildRepeat creator media": "Medio de creador de DadBuildRepeat",
-    "DadBuildRepeat motorcycle ride camera test at night": "Prueba nocturna de camara de DadBuildRepeat en motocicleta",
+    "Build repeat process preview": "Vista previa del proceso de lanzamiento",
+    "JBC Development software workspace": "Espacio de trabajo de software de JBC Development",
     "Current build themes": "Temas actuales de construccion",
     "DadBuildRepeat profile action shot": "Foto de accion del perfil DadBuildRepeat",
-    "DadBuildRepeat content cadence": "Cadencia de contenido de DadBuildRepeat",
-    "DadBuildRepeat social channels": "Canales sociales de DadBuildRepeat",
+    "Personal social channels": "Canales sociales personales",
     "JBC apps and software downloads": "Descargas de apps y software de JBC",
     "Paw Care Academy app icon": "Icono de la app Paw Care Academy",
     "Current projects": "Proyectos actuales",
     "Paw Care Academy resources": "Recursos de Paw Care Academy",
     "Local Mac software links": "Enlaces de software local para Mac",
-    "DadBuildRepeat links": "Enlaces de DadBuildRepeat",
+    "AI workflow resources": "Recursos de flujos con IA",
     "Support actions": "Acciones de soporte",
     "Privacy contact": "Contacto de privacidad",
   },
@@ -203,7 +203,7 @@ function initializeMotion() {
   document.body.classList.add("motion-ready");
   initializeHeaderState();
   initializeRevealMotion();
-  initializeRideFrameTilt();
+  initializeHeroFrameTilt();
 }
 
 function initializeHeaderState() {
@@ -219,7 +219,7 @@ function initializeHeaderState() {
 
 function initializeRevealMotion() {
   const revealTargets = document.querySelectorAll(
-    ".creator-panel, .process-step, .app-showcase-card, .project-card, .contact-panel, .policy-grid, .content-panel, .side-panel, .download-card, .download-product",
+    ".personal-panel, .process-step, .app-showcase-card, .project-card, .contact-panel, .policy-grid, .content-panel, .side-panel, .download-card, .download-product",
   );
 
   if (!revealTargets.length) return;
@@ -248,7 +248,7 @@ function initializeRevealMotion() {
   revealTargets.forEach((element) => revealObserver.observe(element));
 }
 
-function initializeRideFrameTilt() {
+function initializeHeroFrameTilt() {
   const heroMedia = document.querySelector(".hero-media");
   const mediaFrame = document.querySelector(".hero-media-frame");
   if (!heroMedia || !mediaFrame || reducedMotionQuery.matches) return;
@@ -257,13 +257,13 @@ function initializeRideFrameTilt() {
     const rect = heroMedia.getBoundingClientRect();
     const x = (event.clientX - rect.left) / rect.width - 0.5;
     const y = (event.clientY - rect.top) / rect.height - 0.5;
-    mediaFrame.style.setProperty("--ride-tilt-x", `${x * 5}deg`);
-    mediaFrame.style.setProperty("--ride-tilt-y", `${y * -5}deg`);
+    mediaFrame.style.setProperty("--hero-tilt-x", `${x * 5}deg`);
+    mediaFrame.style.setProperty("--hero-tilt-y", `${y * -5}deg`);
   });
 
   heroMedia.addEventListener("pointerleave", () => {
-    mediaFrame.style.removeProperty("--ride-tilt-x");
-    mediaFrame.style.removeProperty("--ride-tilt-y");
+    mediaFrame.style.removeProperty("--hero-tilt-x");
+    mediaFrame.style.removeProperty("--hero-tilt-y");
   });
 }
 

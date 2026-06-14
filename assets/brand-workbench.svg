@@ -1,84 +1,84 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-label="JBC Development software workspace">
   <defs>
-    <linearGradient id="deep-green" x1="120" y1="52" x2="620" y2="466" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#062c1f"/>
-      <stop offset=".52" stop-color="#075f3d"/>
-      <stop offset="1" stop-color="#021811"/>
+    <linearGradient id="deep-blue" x1="120" y1="52" x2="620" y2="466" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#071a33"/>
+      <stop offset=".52" stop-color="#0b5fff"/>
+      <stop offset="1" stop-color="#020817"/>
     </linearGradient>
-    <linearGradient id="bar-green" x1="246" y1="230" x2="332" y2="122" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0b4b32"/>
-      <stop offset="1" stop-color="#6bb67c"/>
+    <linearGradient id="bar-blue" x1="246" y1="230" x2="332" y2="122" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#155eef"/>
+      <stop offset="1" stop-color="#7dd3fc"/>
     </linearGradient>
     <linearGradient id="glass" x1="144" y1="66" x2="640" y2="468" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#f0f7f2"/>
+      <stop offset="1" stop-color="#eef6ff"/>
     </linearGradient>
     <filter id="panel-shadow" x="-14%" y="-16%" width="128%" height="132%">
-      <feDropShadow dx="0" dy="26" stdDeviation="22" flood-color="#082418" flood-opacity=".15"/>
+      <feDropShadow dx="0" dy="26" stdDeviation="22" flood-color="#08214c" flood-opacity=".15"/>
     </filter>
     <filter id="small-shadow" x="-18%" y="-18%" width="136%" height="136%">
-      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#082418" flood-opacity=".12"/>
+      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#08214c" flood-opacity=".12"/>
     </filter>
   </defs>
 
   <rect x="18" y="24" width="724" height="462" rx="32" fill="#ffffff"/>
-  <rect x="44" y="50" width="672" height="410" rx="28" fill="url(#glass)" stroke="#dbe7df"/>
-  <path d="M90 394h580" stroke="#dfe9e2" stroke-width="2"/>
+  <rect x="44" y="50" width="672" height="410" rx="28" fill="url(#glass)" stroke="#d6e5f7"/>
+  <path d="M90 394h580" stroke="#dbeafe" stroke-width="2"/>
 
   <g filter="url(#panel-shadow)">
-    <rect x="98" y="84" width="564" height="304" rx="26" fill="#ffffff" stroke="#dbe7df"/>
-    <rect x="124" y="110" width="512" height="38" rx="14" fill="#f6faf7"/>
-    <circle cx="148" cy="129" r="5" fill="#063522"/>
-    <circle cx="166" cy="129" r="5" fill="#2c8a58"/>
-    <circle cx="184" cy="129" r="5" fill="#95c77b"/>
-    <rect x="214" y="122" width="182" height="12" rx="6" fill="#dfe9e2"/>
-    <rect x="508" y="120" width="90" height="16" rx="8" fill="#063522" opacity=".9"/>
+    <rect x="98" y="84" width="564" height="304" rx="26" fill="#ffffff" stroke="#d6e5f7"/>
+    <rect x="124" y="110" width="512" height="38" rx="14" fill="#f6fbff"/>
+    <circle cx="148" cy="129" r="5" fill="#071a33"/>
+    <circle cx="166" cy="129" r="5" fill="#0b5fff"/>
+    <circle cx="184" cy="129" r="5" fill="#7dd3fc"/>
+    <rect x="214" y="122" width="182" height="12" rx="6" fill="#dbeafe"/>
+    <rect x="508" y="120" width="90" height="16" rx="8" fill="#071a33" opacity=".9"/>
 
     <g transform="translate(164 168)">
       <path
         d="M118-50 198-4v92l-80 46-80-46V-4l80-46Z"
         fill="none"
-        stroke="url(#deep-green)"
+        stroke="url(#deep-blue)"
         stroke-width="13"
         stroke-linejoin="round"
       />
       <path
         d="M38 88v26l80 46 80-46V88"
         fill="none"
-        stroke="url(#deep-green)"
+        stroke="url(#deep-blue)"
         stroke-width="13"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
-      <rect x="76" y="42" width="22" height="72" rx="7" fill="url(#bar-green)"/>
-      <rect x="110" y="16" width="22" height="98" rx="7" fill="url(#bar-green)"/>
-      <rect x="144" y="-18" width="22" height="132" rx="7" fill="url(#bar-green)"/>
+      <rect x="76" y="42" width="22" height="72" rx="7" fill="url(#bar-blue)"/>
+      <rect x="110" y="16" width="22" height="98" rx="7" fill="url(#bar-blue)"/>
+      <rect x="144" y="-18" width="22" height="132" rx="7" fill="url(#bar-blue)"/>
     </g>
 
-    <text x="134" y="326" fill="#063522" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="800">JBC</text>
-    <text x="134" y="354" fill="#0b5f3e" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">DEVELOPMENT</text>
+    <text x="134" y="326" fill="#071a33" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="800">JBC</text>
+    <text x="134" y="354" fill="#0b5fff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">DEVELOPMENT</text>
 
     <g transform="translate(430 174)">
-      <rect x="0" y="0" width="170" height="42" rx="12" fill="#f2f7f4" stroke="#dbe7df"/>
-      <rect x="18" y="14" width="76" height="8" rx="4" fill="#063522"/>
-      <rect x="18" y="28" width="112" height="5" rx="2.5" fill="#9aaca0"/>
+      <rect x="0" y="0" width="170" height="42" rx="12" fill="#f3f8ff" stroke="#d6e5f7"/>
+      <rect x="18" y="14" width="76" height="8" rx="4" fill="#071a33"/>
+      <rect x="18" y="28" width="112" height="5" rx="2.5" fill="#9fb3cc"/>
 
-      <rect x="0" y="62" width="170" height="42" rx="12" fill="#f2f7f4" stroke="#dbe7df"/>
-      <rect x="18" y="76" width="90" height="8" rx="4" fill="#0b5f3e"/>
-      <rect x="18" y="90" width="126" height="5" rx="2.5" fill="#9aaca0"/>
+      <rect x="0" y="62" width="170" height="42" rx="12" fill="#f3f8ff" stroke="#d6e5f7"/>
+      <rect x="18" y="76" width="90" height="8" rx="4" fill="#0b5fff"/>
+      <rect x="18" y="90" width="126" height="5" rx="2.5" fill="#9fb3cc"/>
 
-      <rect x="0" y="124" width="170" height="42" rx="12" fill="#f2f7f4" stroke="#dbe7df"/>
-      <rect x="18" y="138" width="96" height="8" rx="4" fill="#2c8a58"/>
-      <rect x="18" y="152" width="116" height="5" rx="2.5" fill="#9aaca0"/>
+      <rect x="0" y="124" width="170" height="42" rx="12" fill="#f3f8ff" stroke="#d6e5f7"/>
+      <rect x="18" y="138" width="96" height="8" rx="4" fill="#38bdf8"/>
+      <rect x="18" y="152" width="116" height="5" rx="2.5" fill="#9fb3cc"/>
     </g>
   </g>
 
   <g filter="url(#small-shadow)">
-    <rect x="130" y="414" width="146" height="36" rx="18" fill="#063522"/>
+    <rect x="130" y="414" width="146" height="36" rx="18" fill="#071a33"/>
     <text x="158" y="437" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Apps</text>
-    <rect x="294" y="414" width="146" height="36" rx="18" fill="#ffffff" stroke="#dbe7df"/>
-    <text x="323" y="437" fill="#063522" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Dashboards</text>
-    <rect x="458" y="414" width="146" height="36" rx="18" fill="#ffffff" stroke="#dbe7df"/>
-    <text x="491" y="437" fill="#063522" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Automation</text>
+    <rect x="294" y="414" width="146" height="36" rx="18" fill="#ffffff" stroke="#d6e5f7"/>
+    <text x="323" y="437" fill="#071a33" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Dashboards</text>
+    <rect x="458" y="414" width="146" height="36" rx="18" fill="#ffffff" stroke="#d6e5f7"/>
+    <text x="491" y="437" fill="#071a33" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Automation</text>
   </g>
 </svg>
