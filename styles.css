@@ -1495,11 +1495,13 @@ body.home-page .app-card-visual::before {
   height: 72px;
 }
 
-.app-icon-logo {
+.app-icon.app-icon-logo {
   position: relative;
   z-index: 1;
-  background: #071a33;
-  object-fit: cover;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  object-fit: contain;
 }
 
 .app-visual-status {
