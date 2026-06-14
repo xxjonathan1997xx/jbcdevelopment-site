@@ -25,7 +25,7 @@ One photo cannot perfectly know the hidden back side of an object, so every mode
 
 But for props, prototypes, and early game assets, this gives you a faster local starting point.
 
-Download the free Mac beta at jbcdevelopment.dev.
+Download the free Mac app at jbcdevelopment.dev.
 
 ## SCENE DIRECTIONS
 1. Show the JBC Development downloads page with PhotoMesh Studio visible.
@@ -40,7 +40,7 @@ Download the free Mac beta at jbcdevelopment.dev.
 ## ON-SCREEN TEXT
 Photo to 3D asset workflow
 
-Local Mac beta
+Local Mac app
 
 Upload object photo
 
@@ -54,16 +54,16 @@ Generate LODs
 
 Export for Unity, Godot, Three.js
 
-Free beta: jbcdevelopment.dev
+Free app: jbcdevelopment.dev
 
 ## CAPTION
-PhotoMesh Studio is a free local Mac beta for turning object photos into a game-ready GLB workflow. It helps with preview, optimization, fixes, LODs, collision metadata, and engine packs for Unity, Godot, and Three.js.
+PhotoMesh Studio is a free local Mac app for turning object photos into a game-ready GLB workflow. It helps with preview, optimization, fixes, LODs, collision metadata, and engine packs for Unity, Godot, and Three.js.
 
 ## HASHTAGS
 #GameDev #IndieGameDev #3DAssets #GLB #Godot #Unity3D #ThreeJS #MacApps #JBCDevelopment
 
 ## CTA
-Download the free Mac beta at https://jbcdevelopment.dev/downloads.html
+Download the free Mac app at https://jbcdevelopment.dev/downloads.html
 
 ## NOTES FOR INVIDEO AI
 Do not claim perfect reconstruction from one image. Do not claim Stable Fast 3D model weights are bundled. Do not show cloud upload, billing, or account setup. If Stable Fast 3D is mentioned, keep it clear that users provide their own local setup and that Stable Fast 3D support is powered by Stability AI and subject to its license.

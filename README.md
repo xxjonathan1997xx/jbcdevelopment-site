@@ -89,7 +89,7 @@ Deployment, DNS changes, hosting changes, and public update announcements requir
 ## Files
 
 - `index.html`: company site content and metadata
-- `downloads.html`: Mac beta download page for PhotoMesh Studio and M5SteamBridge
+- `downloads.html`: Mac app download page for PhotoMesh Studio and M5SteamBridge
 - `privacy.html`: public privacy policy for website inquiries and app support
 - `support.html`: public support page for apps, projects, and business inquiries
 - `styles.css`: responsive styling
