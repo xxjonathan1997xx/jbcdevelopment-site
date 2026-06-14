@@ -88,6 +88,10 @@
             <span>Build</span>
             <span>Ship</span>
           </div>
+          <div class="lab-console compact-console" aria-label="What JBC builds">
+            <span>What JBC builds</span>
+            <code data-lab-console aria-live="polite">local Mac tools</code>
+          </div>
           <p class="hero-note">Built in Florida. Scoped for maintainable releases.</p>
         </div>
 
@@ -99,6 +103,37 @@
               width="760"
               height="520"
             />
+            <div class="lab-overlay" aria-hidden="true">
+              <div class="lab-topline">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="code-stream">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+              <div class="lab-app lab-app-one">
+                <strong>Paw</strong>
+                <span>App Store</span>
+              </div>
+              <div class="lab-app lab-app-two">
+                <strong>PM</strong>
+                <span>Photo to GLB</span>
+              </div>
+              <div class="lab-app lab-app-three">
+                <strong>M5</strong>
+                <span>Mac helper</span>
+              </div>
+              <div class="lab-flow">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
             <span class="media-signal media-signal-top">Product build</span>
             <span class="media-signal media-signal-bottom">Software systems</span>
           </div>
@@ -150,6 +185,50 @@
         </div>
       </section>
 
+      <section class="lab-pipeline-section" aria-labelledby="lab-pipeline-title">
+        <div class="shell lab-pipeline-panel">
+          <div class="lab-pipeline-copy">
+            <p class="section-label">Build pipeline</p>
+            <h2 id="lab-pipeline-title">Release discipline, shown clearly.</h2>
+            <p>
+              JBC software work is presented with the setup details, release checks,
+              and support paths needed for practical users.
+            </p>
+          </div>
+
+          <div class="pipeline-track" aria-label="JBC release pipeline">
+            <article class="pipeline-step">
+              <span>01</span>
+              <div class="pipeline-step-copy">
+                <h3>Workflow mapped</h3>
+                <p>User job, constraints, and local setup are clarified first.</p>
+              </div>
+            </article>
+            <article class="pipeline-step">
+              <span>02</span>
+              <div class="pipeline-step-copy">
+                <h3>Beta signed</h3>
+                <p>Mac tools are prepared as signed and notarized downloads.</p>
+              </div>
+            </article>
+            <article class="pipeline-step">
+              <span>03</span>
+              <div class="pipeline-step-copy">
+                <h3>Checksums available</h3>
+                <p>Release files include verification paths for download confidence.</p>
+              </div>
+            </article>
+            <article class="pipeline-step">
+              <span>04</span>
+              <div class="pipeline-step-copy">
+                <h3>Support ready</h3>
+                <p>Support, privacy, limits, and setup notes stay visible.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="app-showcase-section" id="apps" aria-labelledby="apps-title">
         <div class="shell app-showcase-panel">
           <div class="app-showcase-heading">
@@ -165,13 +244,16 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                class="app-icon"
-                src="/assets/app-icons/paw-care-academy.jpg"
-                alt="Paw Care Academy app icon"
-                width="80"
-                height="80"
-              />
+              <span class="app-card-visual app-card-visual-paw">
+                <img
+                  class="app-icon"
+                  src="/assets/app-icons/paw-care-academy.jpg"
+                  alt="Paw Care Academy app icon"
+                  width="80"
+                  height="80"
+                />
+                <span class="app-visual-status">App Store</span>
+              </span>
               <span class="app-card-copy">
                 <span class="app-link-kicker">Education / Games</span>
                 <strong>Paw Care Academy</strong>
@@ -184,7 +266,15 @@
               class="app-showcase-card"
               href="/downloads.html#photomesh"
             >
-              <span class="app-icon app-icon-monogram app-icon-photomesh" aria-hidden="true">PM</span>
+              <span class="app-card-visual app-card-visual-mesh" aria-hidden="true">
+                <span class="app-icon app-icon-monogram app-icon-photomesh">PM</span>
+                <span class="mesh-dots">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </span>
+                <span class="app-visual-status">GLB flow</span>
+              </span>
               <span class="app-card-copy">
                 <span class="app-link-kicker">Mac beta / 3D assets</span>
                 <strong>PhotoMesh Studio</strong>
@@ -197,7 +287,15 @@
               class="app-showcase-card"
               href="/downloads.html#m5steambridge"
             >
-              <span class="app-icon app-icon-monogram app-icon-m5" aria-hidden="true">M5</span>
+              <span class="app-card-visual app-card-visual-bridge" aria-hidden="true">
+                <span class="app-icon app-icon-monogram app-icon-m5">M5</span>
+                <span class="bridge-status">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </span>
+                <span class="app-visual-status">Ready</span>
+              </span>
               <span class="app-card-copy">
                 <span class="app-link-kicker">Mac beta / Steam helper</span>
                 <strong>M5SteamBridge</strong>

@@ -6,8 +6,14 @@ const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
 
 const LANGUAGE_STORAGE_KEY = "jbcdevelopment-language";
 const SUPPORTED_LANGUAGES = new Set(["en", "es"]);
+const LAB_CONSOLE_PHRASES = {
+  en: ["local Mac tools", "AI workflows", "automation", "signed downloads"],
+  es: ["herramientas Mac locales", "flujos con IA", "automatizacion", "descargas firmadas"],
+};
 
 let currentLanguage = "en";
+let labConsoleIndex = 0;
+let labConsoleTimer;
 const originalTextNodes = [];
 const originalAttributeValues = [];
 
@@ -34,6 +40,8 @@ const translations = {
     "JBC Development designs and ships practical apps, local Mac tools, AI workflow systems, and automation that stay easy to understand, support, and improve after release.": "JBC Development disena y publica apps practicas, herramientas locales para Mac, sistemas de flujo con IA y automatizacion faciles de entender, apoyar y mejorar despues del lanzamiento.",
     "View apps and software": "Ver apps y software",
     "Download Mac tools": "Descargar herramientas Mac",
+    "What JBC builds": "Lo que crea JBC",
+    "local Mac tools": "herramientas Mac locales",
     "Paw Care Academy": "Paw Care Academy",
     "PhotoMesh Studio": "PhotoMesh Studio",
     "M5SteamBridge": "M5SteamBridge",
@@ -45,6 +53,8 @@ const translations = {
     "Built in Florida. Scoped for maintainable releases.": "Creado en Florida. Alcance claro para lanzamientos mantenibles.",
     "Product build": "Construccion de producto",
     "Software systems": "Sistemas de software",
+    "Photo to GLB": "Foto a GLB",
+    "Mac helper": "Ayuda Mac",
     "JBC Development": "JBC Development",
     "Apps, local tools, and workflow software with clear support paths.": "Apps, herramientas locales y software de flujo de trabajo con rutas claras de soporte.",
     "Published apps": "Apps publicadas",
@@ -53,6 +63,17 @@ const translations = {
     "Setup support": "Soporte de configuracion",
     "AI workflows": "Flujos con IA",
     "Automation": "Automatizacion",
+    "Build pipeline": "Pipeline de construccion",
+    "Release discipline, shown clearly.": "Disciplina de lanzamiento, mostrada con claridad.",
+    "JBC software work is presented with the setup details, release checks, and support paths needed for practical users.": "El trabajo de software de JBC se presenta con detalles de configuracion, verificaciones de lanzamiento y rutas de soporte para usuarios practicos.",
+    "Workflow mapped": "Flujo mapeado",
+    "User job, constraints, and local setup are clarified first.": "La tarea del usuario, las restricciones y la configuracion local se aclaran primero.",
+    "Beta signed": "Beta firmada",
+    "Mac tools are prepared as signed and notarized downloads.": "Las herramientas Mac se preparan como descargas firmadas y notarizadas.",
+    "Checksums available": "Checksums disponibles",
+    "Release files include verification paths for download confidence.": "Los archivos de lanzamiento incluyen rutas de verificacion para mayor confianza al descargar.",
+    "Support ready": "Soporte listo",
+    "Support, privacy, limits, and setup notes stay visible.": "Soporte, privacidad, limites y notas de configuracion permanecen visibles.",
     "Software development with a practical release loop.": "Desarrollo de software con un ciclo practico de lanzamiento.",
     "Plan the workflow, build the smallest useful version, document the limits, and improve from real use.": "Planificar el flujo, crear la version util mas pequena, documentar los limites y mejorar con uso real.",
     "Map the workflow": "Mapear el flujo",
@@ -66,6 +87,8 @@ const translations = {
     "Education / Games": "Educacion / Juegos",
     "Kid-friendly pet-care learning.": "Aprendizaje de cuidado de mascotas para ninos.",
     "Open in App Store": "Abrir en App Store",
+    "GLB flow": "Flujo GLB",
+    "Ready": "Listo",
     "Mac beta / 3D assets": "Beta Mac / activos 3D",
     "Local photo-to-GLB workflow for game assets.": "Flujo local de foto a GLB para activos de juegos.",
     "Setup and download": "Configurar y descargar",
@@ -169,6 +192,8 @@ const attributeTranslations = {
     "Build repeat process preview": "Vista previa del proceso de lanzamiento",
     "JBC Development software workspace": "Espacio de trabajo de software de JBC Development",
     "Current build themes": "Temas actuales de construccion",
+    "What JBC builds": "Lo que crea JBC",
+    "JBC release pipeline": "Pipeline de lanzamientos de JBC",
     "DadBuildRepeat profile action shot": "Foto de accion del perfil DadBuildRepeat",
     "Personal social channels": "Canales sociales personales",
     "JBC apps and software downloads": "Descargas de apps y software de JBC",
@@ -204,6 +229,7 @@ function initializeMotion() {
   initializeHeaderState();
   initializeRevealMotion();
   initializeHeroFrameTilt();
+  initializeLabConsole();
 }
 
 function initializeHeaderState() {
@@ -219,7 +245,7 @@ function initializeHeaderState() {
 
 function initializeRevealMotion() {
   const revealTargets = document.querySelectorAll(
-    ".personal-panel, .process-step, .app-showcase-card, .project-card, .contact-panel, .policy-grid, .content-panel, .side-panel, .download-card, .download-product",
+    ".personal-panel, .pipeline-step, .process-step, .app-showcase-card, .project-card, .contact-panel, .policy-grid, .content-panel, .side-panel, .download-card, .download-product",
   );
 
   if (!revealTargets.length) return;
@@ -265,6 +291,39 @@ function initializeHeroFrameTilt() {
     mediaFrame.style.removeProperty("--hero-tilt-x");
     mediaFrame.style.removeProperty("--hero-tilt-y");
   });
+}
+
+function initializeLabConsole() {
+  const consoleValue = document.querySelector("[data-lab-console]");
+  if (!consoleValue) return;
+
+  updateLabConsole({ animate: false });
+
+  if (reducedMotionQuery.matches) return;
+
+  labConsoleTimer = window.setInterval(() => {
+    labConsoleIndex += 1;
+    updateLabConsole({ animate: true });
+  }, 2200);
+}
+
+function updateLabConsole({ animate } = {}) {
+  const consoleValue = document.querySelector("[data-lab-console]");
+  if (!consoleValue) return;
+
+  const phrases = LAB_CONSOLE_PHRASES[currentLanguage] || LAB_CONSOLE_PHRASES.en;
+  const nextValue = phrases[labConsoleIndex % phrases.length];
+
+  if (!animate) {
+    consoleValue.textContent = nextValue;
+    return;
+  }
+
+  consoleValue.classList.add("is-swapping");
+  window.setTimeout(() => {
+    consoleValue.textContent = nextValue;
+    consoleValue.classList.remove("is-swapping");
+  }, 180);
 }
 
 function initializeTranslation() {
@@ -349,6 +408,8 @@ function setLanguage(language, options = {}) {
       // Language preference still works for the current page if storage is blocked.
     }
   }
+
+  updateLabConsole({ animate: false });
 }
 
 function getInitialLanguage() {
