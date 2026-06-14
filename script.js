@@ -1,12 +1,8 @@
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
-const intakeForm = document.querySelector("#intakeForm");
-const intakeMessage = document.querySelector("#intakeMessage");
-const intakeResult = document.querySelector("#intakeResult");
-const intakeSummary = document.querySelector("#intakeSummary");
-const intakeMailLink = document.querySelector("#intakeMailLink");
-const copyInquiryButton = document.querySelector("#copyInquiryButton");
 const languageButtons = document.querySelectorAll("[data-language-option]");
+const siteHeader = document.querySelector("[data-site-header]");
+const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 const LANGUAGE_STORAGE_KEY = "jbcdevelopment-language";
 const SUPPORTED_LANGUAGES = new Set(["en", "es"]);
@@ -15,318 +11,179 @@ let currentLanguage = "en";
 const originalTextNodes = [];
 const originalAttributeValues = [];
 
-const uiCopy = {
-  en: {
-    copyCopied: "Inquiry summary copied.",
-    copyFallback: "Select and copy the highlighted summary.",
-    honeypotSuccess: "Thanks. Please email jonathan@jbcdevelopment.dev directly if you need help.",
-    invalidEmail: "Please enter a valid email address.",
-    missingFields: "Please complete the required fields before preparing the inquiry.",
-    painPointDetail: "Please add a little more detail about the main problem or pain point.",
-    preparedSuccess: "Inquiry prepared. Review the summary, then open the email draft when ready.",
-    summaryTitle: "Website inquiry for JBC Software Development LLC",
-    summarySubject: "Website inquiry",
-    labels: {
-      budgetRange: "Budget range",
-      businessName: "Business name",
-      contactName: "Contact name",
-      desiredTimeline: "Desired timeline",
-      email: "Email",
-      notes: "Notes",
-      painPoint: "Main problem / pain point",
-      phone: "Phone",
-      serviceNeeded: "Service needed",
-    },
-    notProvided: "Not provided",
-    noAdditionalNotes: "No additional notes.",
-  },
-  es: {
-    copyCopied: "Resumen de consulta copiado.",
-    copyFallback: "Selecciona y copia el resumen resaltado.",
-    honeypotSuccess: "Gracias. Escribe directamente a jonathan@jbcdevelopment.dev si necesitas ayuda.",
-    invalidEmail: "Ingresa un correo electrónico válido.",
-    missingFields: "Completa los campos requeridos antes de preparar la consulta.",
-    painPointDetail: "Agrega un poco más de detalle sobre el problema principal.",
-    preparedSuccess: "Consulta preparada. Revisa el resumen y luego abre el borrador del correo.",
-    summaryTitle: "Consulta del sitio web para JBC Software Development LLC",
-    summarySubject: "Consulta del sitio web",
-    labels: {
-      budgetRange: "Rango de presupuesto",
-      businessName: "Nombre del negocio",
-      contactName: "Nombre de contacto",
-      desiredTimeline: "Tiempo deseado",
-      email: "Correo electrónico",
-      notes: "Notas",
-      painPoint: "Problema principal",
-      phone: "Teléfono",
-      serviceNeeded: "Servicio necesario",
-    },
-    notProvided: "No proporcionado",
-    noAdditionalNotes: "Sin notas adicionales.",
-  },
-};
-
 const translations = {
   es: {
     "Skip to content": "Saltar al contenido",
-    "Toggle navigation": "Alternar navegación",
-    "Services": "Servicios",
-    "How We Work": "Cómo trabajamos",
-    "Projects": "Proyectos",
-    "Intake": "Consulta",
-    "Privacy": "Privacidad",
-    "Support": "Soporte",
-    "Contact": "Contacto",
-    "Downloads": "Descargas",
-    "Privacy Policy": "Política de privacidad",
-    "Practical software for small businesses.": "Software práctico para pequeños negocios.",
-    "Custom apps, dashboards, AI tools, and automation built in clear, manageable phases.": "Apps, paneles, herramientas de IA y automatización creadas en fases claras y manejables.",
-    "Tell me what you need built": "Cuéntame qué necesitas crear",
-    "View services": "Ver servicios",
+    "Toggle navigation": "Alternar navegacion",
+    "Work": "Trabajo",
+    "DadBuildRepeat": "DadBuildRepeat",
     "Apps": "Apps",
-    "Dashboards": "Paneles",
-    "AI tools": "Herramientas de IA",
-    "Automation": "Automatización",
-    "Built in Florida. Carefully scoped. Easy to maintain.": "Creado en Florida. Alcance claro. Fácil de mantener.",
-    "Available apps": "Apps disponibles",
-    "Apps and software by JBC Development.": "Apps y software de JBC Development.",
-    "Download current apps and free local Mac beta software.": "Descarga apps actuales y software beta gratuito para Mac local.",
-    "Education": "Educación",
-    "Education / Games": "Educación / Juegos",
-    "Kid-friendly pet-care learning.": "Aprendizaje de cuidado de mascotas para niños.",
+    "Downloads": "Descargas",
+    "Support": "Soporte",
+    "Privacy": "Privacidad",
+    "TikTok": "TikTok",
+    "Instagram": "Instagram",
+    "Contact": "Contacto",
+    "Privacy Policy": "Politica de privacidad",
+    "JBC Development | Practical Software And DadBuildRepeat": "JBC Development | Software practico y DadBuildRepeat",
+    "JBC Development builds practical software for small businesses and shares the build-repeat process through DadBuildRepeat creator demos.": "JBC Development publica software practico y comparte el proceso de crear y repetir con demos de DadBuildRepeat.",
+    "Practical software, dashboards, AI workflow tools, and honest DadBuildRepeat creator demos.": "Software practico, herramientas utiles y demos honestas de DadBuildRepeat.",
+    "Practical software, tested in public.": "Software practico, probado en publico.",
+    "Practical software,": "Software practico,",
+    "tested in public.": "probado en publico.",
+    "JBC Development publishes apps, local Mac software, and practical tools. DadBuildRepeat shows the build log behind the work through honest tech, moto gear, and creator-tool demos.": "JBC Development publica apps, software local para Mac y herramientas practicas. DadBuildRepeat muestra el registro de construccion con demos honestas de tecnologia, equipo de moto y herramientas para creadores.",
+    "View apps and software": "Ver apps y software",
+    "Watch DadBuildRepeat": "Ver DadBuildRepeat",
+    "Paw Care Academy": "Paw Care Academy",
+    "PhotoMesh Studio": "PhotoMesh Studio",
+    "M5SteamBridge": "M5SteamBridge",
+    "Creator demos": "Demos de creador",
+    "Build": "Crear",
+    "Review": "Revisar",
+    "Record": "Grabar",
+    "Repeat": "Repetir",
+    "Built in Florida. Scoped for maintainable releases.": "Creado en Florida. Alcance claro para lanzamientos mantenibles.",
+    "Ride cam test": "Prueba de camara en ruta",
+    "Creator workflow": "Flujo de creador",
+    "Honest demos, real build progress, and tools tested from zero.": "Demos honestas, progreso real y herramientas probadas desde cero.",
+    "Published apps": "Apps publicadas",
+    "Local Mac software": "Software local para Mac",
+    "Signed downloads": "Descargas firmadas",
+    "Setup support": "Soporte de configuracion",
+    "Build logs": "Registros de construccion",
+    "Dad-tested tech": "Tecnologia probada por papa",
+    "DadBuildRepeat is the public build log.": "DadBuildRepeat es el registro publico del proceso.",
+    "The account documents realistic creator experiments, motorcycle gear, tech tools, and repeatable content systems. It gives JBC Development a human front door without making fake income claims or pretending every post is sponsored.": "La cuenta documenta experimentos realistas de creador, equipo de moto, herramientas tecnologicas y sistemas repetibles de contenido. Le da a JBC Development una entrada humana sin prometer ingresos falsos ni fingir que cada publicacion es patrocinada.",
+    "Plan": "Planear",
+    "Film": "Grabar",
+    "Post": "Publicar",
+    "Daily short-form tests": "Pruebas diarias en formato corto",
+    "Reels and profile hub": "Reels y centro del perfil",
+    "Build logs for apps and software.": "Registros de construccion para apps y software.",
+    "The same loop behind JBC software releases and DadBuildRepeat content.": "El mismo ciclo detras de los lanzamientos de JBC y el contenido de DadBuildRepeat.",
+    "Build the tool": "Crear la herramienta",
+    "Publish focused apps and local software with clear setup notes.": "Publicar apps enfocadas y software local con notas claras de configuracion.",
+    "Document the release": "Documentar el lanzamiento",
+    "Keep downloads, support pages, privacy notes, and limitations visible.": "Mantener visibles las descargas, soporte, privacidad y limitaciones.",
+    "Show the build log": "Mostrar el registro",
+    "Use DadBuildRepeat to share honest tests, demos, and lessons from the work.": "Usar DadBuildRepeat para compartir pruebas, demos y lecciones reales del trabajo.",
+    "Current software by JBC Development.": "Software actual de JBC Development.",
+    "Published apps and local Mac beta tools remain available while the creator brand grows.": "Las apps publicadas y herramientas beta locales para Mac siguen disponibles mientras crece la marca de creador.",
+    "Education / Games": "Educacion / Juegos",
+    "Kid-friendly pet-care learning.": "Aprendizaje de cuidado de mascotas para ninos.",
     "Open in App Store": "Abrir en App Store",
     "Mac beta / 3D assets": "Beta Mac / activos 3D",
-    "PhotoMesh Studio": "PhotoMesh Studio",
     "Local photo-to-GLB workflow for game assets.": "Flujo local de foto a GLB para activos de juegos.",
-    "Download notarized DMG": "Descargar DMG notarizado",
     "Setup and download": "Configurar y descargar",
-    "Mac beta / Steam helper": "Beta Mac / ayuda para Steam",
-    "M5SteamBridge": "M5SteamBridge",
-    "Local launcher helper for user-installed compatibility backends.": "Ayuda local de lanzamiento para capas de compatibilidad instaladas por el usuario.",
-    "Mac beta downloads are signed and notarized. PhotoMesh Studio requires users to configure their own local Stable Fast 3D model files and runner. Stable Fast 3D support is powered by Stability AI and subject to the Stability AI Community License. M5SteamBridge does not include Steam, games, Wine bottles, CrossOver, Whisky, or proprietary runtimes and does not bypass DRM, anti-cheat, ownership checks, or platform restrictions.": "Las descargas beta para Mac están firmadas y notarizadas. PhotoMesh Studio requiere que los usuarios configuren sus propios archivos de modelo y ejecutor local de Stable Fast 3D. El soporte de Stable Fast 3D funciona con tecnología de Stability AI y está sujeto a la licencia Stability AI Community License. M5SteamBridge no incluye Steam, juegos, botellas de Wine, CrossOver, Whisky ni runtimes propietarios, y no evita DRM, anti-cheat, verificaciones de propiedad ni restricciones de plataforma.",
+    "Mac beta / Steam helper": "Beta Mac / ayuda de Steam",
+    "Local launcher helper for user-installed compatibility backends.": "Ayudante local para capas de compatibilidad instaladas por el usuario.",
     "Verify checksums": "Verificar checksums",
-    "About": "Acerca de",
-    "Focused technology for real business work.": "Tecnología enfocada para el trabajo real del negocio.",
-    "JBC Software Development LLC builds simple, useful tools for small businesses that need better ways to collect requests, track work, and reduce repeat admin.": "JBC Software Development LLC crea herramientas simples y útiles para pequeños negocios que necesitan mejores formas de recibir solicitudes, dar seguimiento al trabajo y reducir tareas repetidas.",
-    "What JBC Development builds.": "Lo que crea JBC Development.",
-    "Focused software for everyday operations.": "Software enfocado para operaciones diarias.",
-    "Intake and quote workflows": "Flujos de consulta y cotización",
-    "Capture requests clearly and prepare the next step.": "Captura solicitudes con claridad y prepara el siguiente paso.",
-    "Internal dashboards": "Paneles internos",
-    "Track jobs, inventory, leads, approvals, and daily work.": "Da seguimiento a trabajos, inventario, prospectos, aprobaciones y tareas diarias.",
-    "AI workflow tools": "Herramientas de IA para flujos de trabajo",
-    "Summaries, review helpers, and internal assistants.": "Resúmenes, ayudas de revisión y asistentes internos.",
-    "Mobile app MVPs": "MVPs de apps móviles",
-    "Plan, build, and improve focused app releases.": "Planifica, crea y mejora lanzamientos enfocados de apps.",
-    "Reduce repeat work while keeping key decisions reviewed.": "Reduce trabajo repetido manteniendo revisadas las decisiones importantes.",
-    "Support and maintenance": "Soporte y mantenimiento",
-    "Fixes, improvements, documentation, and release prep.": "Correcciones, mejoras, documentación y preparación de lanzamientos.",
-    "Simple process. Clear scope.": "Proceso simple. Alcance claro.",
-    "Define the problem, build the useful version, improve from feedback.": "Define el problema, crea la versión útil y mejora con comentarios.",
-    "Understand the problem": "Entender el problema",
-    "Clarify the workflow, users, and goal.": "Aclarar el flujo de trabajo, los usuarios y el objetivo.",
-    "Build a focused solution": "Crear una solución enfocada",
-    "Start with the smallest useful version.": "Empezar con la versión útil más pequeña.",
-    "Improve and support it": "Mejorar y dar soporte",
-    "Refine with feedback, fixes, and support.": "Mejorar con comentarios, correcciones y soporte.",
-    "Apps and projects": "Apps y proyectos",
-    "Current focus.": "Enfoque actual.",
-    "Products and client work are built in reviewed phases.": "Los productos y trabajos para clientes se crean en fases revisadas.",
-    "Paw Care Academy": "Paw Care Academy",
+    "Apps and software": "Apps y software",
+    "What is active now.": "Lo que esta activo ahora.",
+    "Published apps, local software, and public build-log demos.": "Apps publicadas, software local y demos publicas del proceso.",
     "A pet-care learning app with updates focused on visuals, performance, clarity, and parent trust.": "Una app educativa de cuidado de mascotas con mejoras enfocadas en visuales, rendimiento, claridad y confianza para padres.",
     "App Store": "App Store",
-    "Privacy policy": "Política de privacidad",
-    "AI workflow systems": "Sistemas de trabajo con IA",
-    "Internal tools for priorities, approvals, feedback, and project updates.": "Herramientas internas para prioridades, aprobaciones, comentarios y actualizaciones de proyectos.",
-    "Future client projects": "Futuros proyectos de clientes",
-    "Small-business websites, dashboards, apps, and automation projects.": "Sitios web, paneles, apps y proyectos de automatización para pequeños negocios.",
-    "Small business focus": "Enfoque en pequeños negocios",
-    "Best fit.": "Mejor encaje.",
-    "Useful tools for teams that need structure without extra complexity.": "Herramientas útiles para equipos que necesitan estructura sin complejidad extra.",
-    "Operational tools": "Herramientas operativas",
-    "Requests, tasks, inventory, leads, and follow-up.": "Solicitudes, tareas, inventario, prospectos y seguimiento.",
-    "Customer-facing support": "Soporte para clientes",
-    "Forms, support pages, app resources, and intake flows.": "Formularios, páginas de soporte, recursos de apps y flujos de consulta.",
-    "Growth systems": "Sistemas de crecimiento",
-    "Marketing ideas, feedback, priorities, and review steps.": "Ideas de marketing, comentarios, prioridades y pasos de revisión.",
-    "AI and automation": "IA y automatización",
-    "AI support with guardrails.": "Soporte de IA con controles.",
-    "AI can help summarize, organize, and review work. Public actions, payments, and business commitments stay human-reviewed.": "La IA puede ayudar a resumir, organizar y revisar trabajo. Las acciones públicas, pagos y compromisos de negocio siguen revisados por una persona.",
-    "Discuss an automation idea": "Hablar sobre una idea de automatización",
-    "Project intake": "Consulta de proyecto",
-    "Tell me what you need built.": "Cuéntame qué necesitas crear.",
-    "Share the problem, timeline, and type of help you need. The form prepares an email draft for review.": "Comparte el problema, el tiempo deseado y el tipo de ayuda que necesitas. El formulario prepara un borrador de correo para revisar.",
-    "Business name": "Nombre del negocio",
-    "Contact name": "Nombre de contacto",
-    "Email": "Correo electrónico",
-    "Phone": "Teléfono",
-    "optional": "opcional",
-    "Service needed": "Servicio necesario",
-    "Select a service": "Selecciona un servicio",
-    "Custom app or dashboard": "App o panel personalizado",
-    "AI tool or agent": "Herramienta o agente de IA",
-    "Workflow automation": "Automatización de flujo de trabajo",
-    "Website or support page": "Sitio web o página de soporte",
-    "Customer intake or quote workflow": "Consulta de cliente o flujo de cotización",
-    "Mobile app MVP": "MVP de app móvil",
-    "Not sure yet": "Todavía no estoy seguro",
-    "Desired timeline": "Tiempo deseado",
-    "Select a timeline": "Selecciona un tiempo",
-    "As soon as practical": "Lo antes posible",
-    "Within 1 month": "Dentro de 1 mes",
-    "1 to 3 months": "1 a 3 meses",
-    "3+ months": "Más de 3 meses",
-    "Exploring options": "Explorando opciones",
-    "Budget range": "Rango de presupuesto",
-    "Prefer to discuss later": "Prefiero hablarlo después",
-    "Under $1,000": "Menos de $1,000",
-    "$1,000 to $3,000": "$1,000 a $3,000",
-    "$3,000 to $5,000": "$3,000 a $5,000",
-    "$5,000+": "$5,000+",
-    "Main problem or pain point": "Problema principal",
-    "Notes": "Notas",
-    "Website": "Sitio web",
-    "Nothing sends automatically. Do not include passwords, payment details, or private customer records.": "Nada se envía automáticamente. No incluyas contraseñas, datos de pago ni registros privados de clientes.",
-    "Prepare inquiry email": "Preparar correo de consulta",
-    "Open email draft": "Abrir borrador de correo",
-    "Inquiry summary": "Resumen de consulta",
-    "Copy inquiry summary": "Copiar resumen de consulta",
-    "Start with a clear problem and a simple next step.": "Empieza con un problema claro y un siguiente paso simple.",
-    "For apps, dashboards, AI tools, automation, or support.": "Para apps, paneles, herramientas de IA, automatización o soporte.",
+    "Privacy policy": "Politica de privacidad",
+    "PhotoMesh Studio and M5SteamBridge are local beta tools with setup help and checksums.": "PhotoMesh Studio y M5SteamBridge son herramientas beta locales con ayuda de configuracion y checksums.",
+    "PhotoMesh": "PhotoMesh",
+    "DadBuildRepeat demos": "Demos de DadBuildRepeat",
+    "Moto gear, creator tools, camera setups, and repeatable content workflows.": "Equipo de moto, herramientas para creadores, configuraciones de camara y flujos repetibles de contenido.",
+    "Support for apps, software, and build logs.": "Soporte para apps, software y registros de construccion.",
+    "For app questions, Mac beta setup, download checks, privacy, or DadBuildRepeat collaborations.": "Para preguntas de apps, configuracion de betas Mac, descargas, privacidad o colaboraciones con DadBuildRepeat.",
+    "Support page": "Pagina de soporte",
     "Privacy and support": "Privacidad y soporte",
-    "Support and privacy resources are reviewed before each release.": "Los recursos de soporte y privacidad se revisan antes de cada lanzamiento.",
+    "Support and privacy resources stay available for every app and software release.": "Los recursos de soporte y privacidad permanecen disponibles para cada lanzamiento de app y software.",
     "Contact support": "Contactar soporte",
-    "Privacy Policy": "Política de privacidad",
     "All rights reserved.": "Todos los derechos reservados.",
-    "Support for apps, software projects, and business inquiries.": "Soporte para apps, proyectos de software y consultas de negocio.",
-    "Use this page for app support, website questions, project inquiries, privacy questions, or general contact with JBC Software Development LLC.": "Usa esta página para soporte de apps, preguntas del sitio web, consultas de proyectos, privacidad o contacto general con JBC Software Development LLC.",
-    "for support, business, app, website, AI tool, or automation questions.": "para preguntas de soporte, negocio, apps, sitio web, herramientas de IA o automatización.",
-    "What to include": "Qué incluir",
-    "For the fastest review, include:": "Para una revisión más rápida, incluye:",
-    "Your name and the app, website, or project you are asking about.": "Tu nombre y la app, sitio web o proyecto sobre el que preguntas.",
-    "A short description of the issue or request.": "Una descripción corta del problema o solicitud.",
-    "The device, browser, or operating system if this is a technical issue.": "El dispositivo, navegador o sistema operativo si es un problema técnico.",
+    "Support | JBC Software Development LLC": "Soporte | JBC Software Development LLC",
+    "Support and contact information for JBC Software Development LLC apps and local software.": "Informacion de soporte y contacto para apps y software local de JBC Software Development LLC.",
+    "Get support for JBC Software Development LLC apps, downloads, and local Mac beta software.": "Recibe soporte para apps, descargas y software beta local para Mac de JBC Software Development LLC.",
+    "Support for JBC apps and software.": "Soporte para apps y software de JBC.",
+    "Use this page for app support, Mac beta setup, download questions, privacy questions, or general contact with JBC Software Development LLC.": "Usa esta pagina para soporte de apps, configuracion beta para Mac, preguntas de descarga, privacidad o contacto general con JBC Software Development LLC.",
+    "Email jonathan@jbcdevelopment.dev for support, app, download, setup, privacy, or DadBuildRepeat questions.": "Escribe a jonathan@jbcdevelopment.dev para preguntas de soporte, apps, descargas, configuracion, privacidad o DadBuildRepeat.",
+    "What to include": "Que incluir",
+    "For the fastest review, include:": "Para una revision mas rapida, incluye:",
+    "Your name and the app, software, or download you are asking about.": "Tu nombre y la app, software o descarga sobre la que preguntas.",
+    "A short description of the issue or request.": "Una descripcion corta del problema o solicitud.",
+    "The device, browser, or operating system if this is a technical issue.": "El dispositivo, navegador o sistema operativo si es un problema tecnico.",
     "Steps to reproduce a bug, if relevant.": "Pasos para reproducir un error, si aplica.",
     "Any screenshot or error message that helps explain the issue.": "Cualquier captura o mensaje de error que ayude a explicar el problema.",
     "App support": "Soporte de apps",
-    "For current or future JBC Software Development LLC apps, include the app name and the version number if available. App-specific support links may be added as each product is released.": "Para apps actuales o futuras de JBC Software Development LLC, incluye el nombre de la app y el número de versión si está disponible. Los enlaces de soporte específicos de cada app pueden agregarse cuando se lance cada producto.",
-    "PhotoMesh Studio setup and troubleshooting": "Configuración y solución de problemas de PhotoMesh Studio",
-    "PhotoMesh Studio is a local photo-to-GLB workflow. Real reconstruction requires your own local Stable Fast 3D runner and model files; the photo-card backend is only a flat preview card for testing the asset pipeline.": "PhotoMesh Studio es un flujo local de foto a GLB. La reconstrucción real requiere tu propio ejecutor local de Stable Fast 3D y archivos de modelo; el backend photo-card es solo una tarjeta plana de vista previa para probar el flujo de activos.",
-    "Open Settings and confirm the Stable Fast 3D command, model directory, executable, timeout, and rembg/u2net readiness checks.": "Abre Ajustes y confirma las revisiones del comando de Stable Fast 3D, directorio del modelo, ejecutable, tiempo límite y rembg/u2net.",
-    "If the app reports that local services did not start, use Try Again, close older PhotoMesh windows, and check for local port conflicts.": "Si la app informa que los servicios locales no iniciaron, usa Intentar de nuevo, cierra ventanas antiguas de PhotoMesh y revisa conflictos de puertos locales.",
-    "Use clear object photos, then inspect the preview, asset health, fixes, LODs, collision metadata, and engine-pack reports before using an asset.": "Usa fotos claras de objetos y luego revisa la vista previa, salud del activo, correcciones, LODs, metadatos de colisión y reportes de paquetes de motor antes de usar un activo.",
-    "One photo cannot perfectly infer hidden or back-side geometry, so generated models should be reviewed before shipping in a game or app.": "Una sola foto no puede inferir perfectamente la geometría oculta o trasera, así que los modelos generados deben revisarse antes de publicarse en un juego o app.",
-    "For support, include your PhotoMesh version, macOS version, whether Stable Fast 3D is marked ready, the exact error text, and a screenshot if possible.": "Para soporte, incluye tu versión de PhotoMesh, versión de macOS, si Stable Fast 3D aparece como listo, el texto exacto del error y una captura si es posible.",
-    "M5SteamBridge setup and troubleshooting": "Configuración y solución de problemas de M5SteamBridge",
-    "M5SteamBridge is a Steam setup helper for user-installed compatibility backends. It does not include Steam, games, Whisky, CrossOver, Wine bottles, proprietary runtimes, or any anti-cheat, DRM, ownership, platform, or account bypass.": "M5SteamBridge es una ayuda de configuración de Steam para capas de compatibilidad instaladas por el usuario. No incluye Steam, juegos, Whisky, CrossOver, botellas de Wine, runtimes propietarios ni evasiones de anti-cheat, DRM, propiedad, plataforma o cuenta.",
-    "Install your own compatibility backend, then run the first-run setup checks inside M5SteamBridge.": "Instala tu propia capa de compatibilidad y luego ejecuta las revisiones iniciales dentro de M5SteamBridge.",
-    "Start with one owned lightweight game, run Check Game, then try the safe or performance profile before testing more titles.": "Empieza con un juego liviano que ya tengas, ejecuta Check Game y luego prueba el perfil seguro o de rendimiento antes de probar más títulos.",
-    "If a game fails, capture diagnostics with preview enabled so private account data can be reviewed before sending anything.": "Si un juego falla, captura diagnósticos con vista previa activada para revisar datos privados de cuenta antes de enviar cualquier cosa.",
-    "For support, include your backend, game name, Steam App ID if known, health-check result, selected profile, and the visible error message. Compatibility is game-by-game.": "Para soporte, incluye tu capa de compatibilidad, nombre del juego, Steam App ID si lo conoces, resultado de salud, perfil seleccionado y el mensaje de error visible. La compatibilidad se revisa juego por juego.",
-    "Business project inquiries": "Consultas de proyectos de negocio",
-    "For small business software, AI tools, dashboards, automation, or app MVPs, use the intake form on the home page or send a short email explaining the workflow problem you need help solving.": "Para software de pequeños negocios, herramientas de IA, paneles, automatización o MVPs de apps, usa el formulario de consulta de la página principal o envía un correo corto explicando el problema de flujo de trabajo que necesitas resolver.",
+    "For current or future JBC Software Development LLC apps, include the app name and the version number if available. App-specific support links may be added as each product is released.": "Para apps actuales o futuras de JBC Software Development LLC, incluye el nombre de la app y la version si esta disponible. Los enlaces de soporte especificos se agregaran segun se publique cada producto.",
     "Safety and privacy": "Seguridad y privacidad",
-    "Do not send passwords, payment details, private customer records, or other sensitive data by email unless a secure process has been approved first.": "No envíes contraseñas, datos de pago, registros privados de clientes u otros datos sensibles por correo a menos que primero se haya aprobado un proceso seguro.",
+    "Do not send passwords, payment details, private customer records, or other sensitive data by email unless a secure process has been approved first.": "No envies contrasenas, datos de pago, registros privados de clientes u otros datos sensibles por email a menos que primero se apruebe un proceso seguro.",
     "Response expectations": "Expectativas de respuesta",
-    "Support and business inquiries are reviewed manually. No automatic support tickets, proposals, billing, deployments, or external actions are created from this website.": "Las consultas de soporte y negocio se revisan manualmente. Este sitio no crea tickets, propuestas, facturación, despliegues ni acciones externas automáticamente.",
-    "Start here": "Empieza aquí",
-    "Send a concise note with the app, project, or business problem.": "Envía una nota breve con la app, proyecto o problema del negocio.",
-    "Email support": "Enviar correo a soporte",
+    "Support requests are reviewed manually. No automatic support tickets, proposals, billing, deployments, or external actions are created from this website.": "Las solicitudes de soporte se revisan manualmente. Este sitio no crea tickets automaticos, propuestas, facturacion, despliegues ni acciones externas.",
+    "Start here": "Empieza aqui",
+    "Send a concise note with the app, software, or download question.": "Envia una nota breve con la pregunta sobre app, software o descarga.",
+    "Email support": "Enviar email a soporte",
     "PhotoMesh help": "Ayuda de PhotoMesh",
     "M5SteamBridge help": "Ayuda de M5SteamBridge",
-    "Project intake form": "Formulario de consulta",
-    "Privacy for website inquiries and app support.": "Privacidad para consultas del sitio web y soporte de apps.",
-    "JBC Software Development LLC keeps privacy practices simple: collect only what is needed to respond to inquiries, avoid unnecessary sensitive data, and review app-specific privacy needs before launch.": "JBC Software Development LLC mantiene prácticas de privacidad simples: recopilar solo lo necesario para responder consultas, evitar datos sensibles innecesarios y revisar las necesidades de privacidad de cada app antes del lanzamiento.",
-    "Last updated: May 23, 2026": "Última actualización: 23 de mayo de 2026",
-    "Information you choose to share": "Información que decides compartir",
-    "If you contact JBC Software Development LLC by email or prepare an inquiry through the website form, you may choose to share your name, business name, email address, phone number, project needs, timeline, budget range, and notes.": "Si contactas a JBC Software Development LLC por correo o preparas una consulta con el formulario del sitio, puedes decidir compartir tu nombre, nombre del negocio, correo electrónico, teléfono, necesidades del proyecto, tiempo deseado, rango de presupuesto y notas.",
-    "Do not send passwords, payment information, private customer records, medical information, or other sensitive information through the website or email unless it has been specifically requested through a secure, approved process.": "No envíes contraseñas, información de pago, registros privados de clientes, información médica u otros datos sensibles por el sitio o correo a menos que se haya solicitado específicamente mediante un proceso seguro y aprobado.",
-    "Website intake form": "Formulario de consulta del sitio web",
-    "The website intake form is currently static. It validates the required fields in your browser, prepares a copyable inquiry summary, and creates an email draft for you to review before sending.": "El formulario de consulta del sitio es estático por ahora. Valida los campos requeridos en tu navegador, prepara un resumen que puedes copiar y crea un borrador de correo para revisar antes de enviar.",
-    "The form does not automatically send email, store submissions, create leads, or add your information to a database.": "El formulario no envía correos automáticamente, no guarda envíos, no crea prospectos ni agrega tu información a una base de datos.",
-    "The language switcher may save your English or Spanish preference in your browser only. This preference is not sent by this website.": "El selector de idioma puede guardar tu preferencia de inglés o español solo en tu navegador. Esta preferencia no se envía desde este sitio web.",
-    "How information is used": "Cómo se usa la información",
-    "Information you choose to send may be used to:": "La información que decidas enviar puede usarse para:",
-    "Respond to business, project, support, or app-related inquiries.": "Responder consultas de negocio, proyectos, soporte o apps.",
-    "Understand requested services or software needs.": "Entender servicios solicitados o necesidades de software.",
-    "Prepare internal notes, estimates, or proposal drafts after review.": "Preparar notas internas, estimados o borradores de propuestas después de revisar.",
-    "Provide support for JBC Software Development LLC products or services.": "Dar soporte a productos o servicios de JBC Software Development LLC.",
-    "App privacy policies": "Políticas de privacidad de apps",
-    "App-specific privacy details may vary by product. When a JBC Software Development LLC app is released publicly, its App Store listing or support materials should identify any app-specific privacy practices that apply.": "Los detalles de privacidad pueden variar por producto. Cuando una app de JBC Software Development LLC se lance públicamente, su ficha de App Store o materiales de soporte deben identificar las prácticas de privacidad específicas que apliquen.",
-    "Third-party services": "Servicios de terceros",
-    "JBC Software Development LLC may use ordinary business services such as email, hosting, domain services, analytics, app stores, development tools, or support tools. These providers may process information according to their own terms and privacy policies.": "JBC Software Development LLC puede usar servicios comerciales comunes como correo, hosting, servicios de dominio, analíticas, tiendas de apps, herramientas de desarrollo o herramientas de soporte. Estos proveedores pueden procesar información según sus propios términos y políticas de privacidad.",
-    "Data retention": "Retención de datos",
-    "Inquiry and support information may be kept as long as needed to respond, maintain records, manage projects, or meet normal business needs. You may ask for correction or deletion of information you previously provided.": "La información de consultas y soporte puede conservarse el tiempo necesario para responder, mantener registros, gestionar proyectos o cubrir necesidades normales del negocio. Puedes solicitar corrección o eliminación de información que hayas proporcionado anteriormente.",
-    "For privacy, support, or app-related questions, email": "Para preguntas de privacidad, soporte o apps, escribe a",
-    "Need help?": "¿Necesitas ayuda?",
-    "Use email for privacy, support, app, or project questions.": "Usa el correo para preguntas de privacidad, soporte, apps o proyectos.",
-    "Email JBC Development": "Enviar correo a JBC Development",
-    "Open support page": "Abrir página de soporte",
     "Mac beta downloads": "Descargas beta para Mac",
-    "Local Mac tools for 3D assets and Steam setup help.": "Herramientas locales para Mac para activos 3D y ayuda con la configuración de Steam.",
-    "These free beta downloads are signed, notarized, and built for local use on Mac. They do not include cloud accounts, billing, hosted storage, Steam, games, or Stable Fast 3D model weights.": "Estas descargas beta gratuitas están firmadas, notarizadas y creadas para uso local en Mac. No incluyen cuentas en la nube, facturación, almacenamiento hospedado, Steam, juegos ni pesos de modelos de Stable Fast 3D.",
-    "Turn object photos into game-ready GLB workflows.": "Convierte fotos de objetos en flujos GLB listos para juegos.",
-    "PhotoMesh Studio runs a local app and Python worker on your Mac. When a user configures their own Stable Fast 3D model files and local runner, PhotoMesh can reconstruct a raw GLB, inspect it, optimize it, generate fixes, create LODs, and export engine packs for Unity, Godot, and Three.js.": "PhotoMesh Studio ejecuta una app local y un worker de Python en tu Mac. Cuando el usuario configura sus propios archivos de modelo de Stable Fast 3D y su ejecutor local, PhotoMesh puede reconstruir un GLB inicial, inspeccionarlo, optimizarlo, generar correcciones, crear LODs y exportar paquetes para Unity, Godot y Three.js.",
-    "Download PhotoMesh Studio": "Descargar PhotoMesh Studio",
-    "Release notes": "Notas de la versión",
-    "Setup help": "Ayuda de configuración",
-    "Version": "Versión",
-    "0.1.0 local beta": "0.1.0 beta local",
-    "Mac build": "Compilación Mac",
-    "Apple silicon DMG": "DMG para Apple silicon",
-    "SHA-256": "SHA-256",
-    "First-run setup": "Configuración inicial",
-    "Download the DMG, open it, and drag PhotoMesh Studio to Applications.": "Descarga el DMG, ábrelo y arrastra PhotoMesh Studio a Aplicaciones.",
-    "Open PhotoMesh Studio and review Settings.": "Abre PhotoMesh Studio y revisa Ajustes.",
-    "Configure your local Stable Fast 3D command and model directory.": "Configura tu comando local de Stable Fast 3D y el directorio del modelo.",
-    "Upload a clear object photo and run local reconstruction.": "Sube una foto clara del objeto y ejecuta la reconstrucción local.",
-    "Review the 3D preview, then export a GLB or engine pack.": "Revisa la vista 3D y luego exporta un GLB o paquete de motor.",
-    "Important limits": "Límites importantes",
-    "Stable Fast 3D model weights are not bundled.": "Los pesos del modelo Stable Fast 3D no están incluidos.",
-    "One photo cannot perfectly reveal hidden back-side geometry.": "Una sola foto no puede revelar perfectamente la geometría oculta de la parte trasera.",
-    "Generated assets should be reviewed before use in a shipped game or app.": "Los activos generados deben revisarse antes de usarse en un juego o app publicada.",
-    "Stable Fast 3D support is powered by Stability AI and subject to the Stability AI Community License.": "El soporte de Stable Fast 3D funciona con tecnología de Stability AI y está sujeto a la licencia Stability AI Community License.",
-    "Set up and launch Windows Steam through your own Mac compatibility backend.": "Configura y lanza Steam de Windows mediante tu propia capa de compatibilidad en Mac.",
-    "M5SteamBridge is a local helper for users who install their own backend such as Whisky or CrossOver. It provides first-run checks, Steam launch helpers, per-game profiles, compatibility scanning, health checks, and error recovery guidance without bundling Steam or games.": "M5SteamBridge es una ayuda local para usuarios que instalan su propia capa de compatibilidad, como Whisky o CrossOver. Incluye revisiones iniciales, ayudas para lanzar Steam, perfiles por juego, análisis de compatibilidad, revisiones de salud y guía de recuperación de errores sin incluir Steam ni juegos.",
-    "Download M5SteamBridge": "Descargar M5SteamBridge",
-    "Local beta": "Beta local",
-    "Signed and notarized DMG": "DMG firmado y notarizado",
-    "Download the DMG, open it, and drag M5SteamBridge to Applications.": "Descarga el DMG, ábrelo y arrastra M5SteamBridge a Aplicaciones.",
-    "Install your own compatibility backend, such as Whisky or CrossOver.": "Instala tu propia capa de compatibilidad, como Whisky o CrossOver.",
-    "Use your own Steam installer, Steam account, and owned games.": "Usa tu propio instalador de Steam, cuenta de Steam y juegos comprados.",
-    "Run the first-run checks and install DXVK when prompted.": "Ejecuta las revisiones iniciales e instala DXVK cuando se solicite.",
-    "Launch Steam, scan installed games, and apply per-game profiles as needed.": "Lanza Steam, analiza los juegos instalados y aplica perfiles por juego según sea necesario.",
-    "M5SteamBridge does not include Steam, games, Wine bottles, Whisky, CrossOver, or proprietary runtimes.": "M5SteamBridge no incluye Steam, juegos, botellas de Wine, Whisky, CrossOver ni runtimes propietarios.",
-    "It does not bypass DRM, anti-cheat, ownership checks, or platform restrictions.": "No evita DRM, anti-cheat, verificaciones de propiedad ni restricciones de plataforma.",
-    "Compatibility varies by game, backend, graphics stack, launcher behavior, and anti-cheat support.": "La compatibilidad varía según el juego, la capa de compatibilidad, la pila gráfica, el comportamiento del launcher y el soporte de anti-cheat.",
-    "Blocked anti-cheat is a compatibility limit, not a bypass target.": "Un anti-cheat bloqueado es un límite de compatibilidad, no un objetivo para evadir.",
-    "After downloading, compare each file against the SHA-256 checksum above or download the checksum file from the release.": "Después de descargar, compara cada archivo con el checksum SHA-256 de arriba o descarga el archivo de checksums desde la versión.",
+    "Privacy Policy | JBC Software Development LLC": "Politica de privacidad | JBC Software Development LLC",
+    "Privacy policy for JBC Software Development LLC, a Florida-based software and mobile app development company.": "Politica de privacidad de JBC Software Development LLC, una empresa de software y apps con sede en Florida.",
+    "How JBC Software Development LLC handles website inquiries, app support requests, and privacy-sensitive information.": "Como JBC Software Development LLC maneja contacto del sitio, soporte de apps e informacion sensible de privacidad.",
+    "Privacy for app and software support.": "Privacidad para soporte de apps y software.",
+    "JBC Software Development LLC keeps privacy practices simple: collect only what is needed to respond to support questions, avoid unnecessary sensitive data, and review app-specific privacy needs before launch.": "JBC Software Development LLC mantiene practicas de privacidad simples: recopilar solo lo necesario para responder preguntas de soporte, evitar datos sensibles innecesarios y revisar necesidades de privacidad de cada app antes del lanzamiento.",
+    "Last updated: May 23, 2026": "Ultima actualizacion: 23 de mayo de 2026",
+    "Information you choose to share": "Informacion que decides compartir",
+    "If you contact JBC Software Development LLC by email, you may choose to share your name, email address, app or software details, device details, screenshots, and notes needed to answer your support question.": "Si contactas a JBC Software Development LLC por email, puedes compartir tu nombre, correo, detalles de la app o software, dispositivo, capturas y notas necesarias para responder tu pregunta de soporte.",
+    "Website contact": "Contacto del sitio",
+    "This website uses direct email links for support and contact. It does not automatically send forms, store submissions, create leads, or add your information to a database.": "Este sitio usa enlaces directos de email para soporte y contacto. No envia formularios automaticamente, no guarda envios, no crea prospectos ni agrega tu informacion a una base de datos.",
+    "The language switcher may save your English or Spanish preference in your browser only. This preference is not sent by this website.": "El selector de idioma puede guardar tu preferencia de ingles o espanol solo en tu navegador. Esta preferencia no se envia por este sitio.",
+    "How information is used": "Como se usa la informacion",
+    "Information you choose to send may be used to:": "La informacion que decides enviar puede usarse para:",
+    "Respond to support, privacy, app, or software questions.": "Responder preguntas de soporte, privacidad, apps o software.",
+    "Understand app, download, setup, or troubleshooting needs.": "Entender necesidades de apps, descargas, configuracion o solucion de problemas.",
+    "Prepare internal notes after review.": "Preparar notas internas despues de revisar.",
+    "Provide support for JBC Software Development LLC apps and software.": "Dar soporte a apps y software de JBC Software Development LLC.",
+    "App privacy policies": "Politicas de privacidad de apps",
+    "Third-party services": "Servicios de terceros",
+    "Data retention": "Retencion de datos",
+    "For privacy, support, or app-related questions, email jonathan@jbcdevelopment.dev.": "Para preguntas de privacidad, soporte o apps, escribe a jonathan@jbcdevelopment.dev.",
+    "Need help?": "Necesitas ayuda?",
+    "Use email for privacy, support, app, or project questions.": "Usa email para preguntas de privacidad, soporte, apps o proyectos.",
+    "Email JBC Development": "Enviar email a JBC Development",
+    "Open support page": "Abrir pagina de soporte",
+    "JBC apps and software downloads.": "Descargas de apps y software de JBC.",
+    "Download current apps and free local Mac beta software.": "Descarga apps actuales y software beta local gratuito para Mac.",
+    "Available apps and local software": "Apps disponibles y software local",
+    "Download apps, Mac beta tools, and release verification files from JBC Development.": "Descarga apps, herramientas beta para Mac y archivos de verificacion de lanzamientos de JBC Development.",
+    "Available downloads": "Descargas disponibles",
+    "Current apps and software downloads.": "Apps actuales y descargas de software.",
+    "Download current App Store products and local Mac beta software from JBC Development.": "Descarga productos actuales del App Store y software beta local para Mac de JBC Development.",
+    "Open support": "Abrir soporte",
     "Download CHECKSUMS.sha256": "Descargar CHECKSUMS.sha256",
-    "Open GitHub Release": "Abrir versión en GitHub",
+    "Open GitHub Release": "Abrir version en GitHub",
   },
 };
 
 const attributeTranslations = {
   es: {
     "JBC Software Development LLC home": "Inicio de JBC Software Development LLC",
-    "Primary navigation": "Navegación principal",
+    "Primary navigation": "Navegacion principal",
     "Language selector": "Selector de idioma",
-    "Core service areas": "Áreas principales de servicio",
-    "JBC apps and software downloads": "Apps y descargas de software de JBC",
-    "Paw Care Academy app icon": "Ícono de la app Paw Care Academy",
-    "Website and dashboard build workspace": "Espacio de trabajo de sitio web y panel",
-    "Website and dashboard workspace showing software planning, interface building, and automation review": "Espacio de trabajo con planificación de software, interfaces y revisión de automatización",
-    "Software services": "Servicios de software",
+    "Core app and software areas": "Areas principales de apps y software",
+    "Build repeat process preview": "Vista previa del proceso crear y repetir",
+    "DadBuildRepeat creator media": "Medio de creador de DadBuildRepeat",
+    "DadBuildRepeat motorcycle ride camera test at night": "Prueba nocturna de camara de DadBuildRepeat en motocicleta",
+    "Current build themes": "Temas actuales de construccion",
+    "DadBuildRepeat profile action shot": "Foto de accion del perfil DadBuildRepeat",
+    "DadBuildRepeat content cadence": "Cadencia de contenido de DadBuildRepeat",
+    "DadBuildRepeat social channels": "Canales sociales de DadBuildRepeat",
+    "JBC apps and software downloads": "Descargas de apps y software de JBC",
+    "Paw Care Academy app icon": "Icono de la app Paw Care Academy",
     "Current projects": "Proyectos actuales",
     "Paw Care Academy resources": "Recursos de Paw Care Academy",
-    "What is slowing the business down or creating repeat work?": "¿Qué está frenando el negocio o creando trabajo repetido?",
-    "Useful context, current tools, links, or questions. Please do not include passwords, payment details, or private customer records.": "Contexto útil, herramientas actuales, enlaces o preguntas. No incluyas contraseñas, datos de pago ni registros privados de clientes.",
+    "Local Mac software links": "Enlaces de software local para Mac",
+    "DadBuildRepeat links": "Enlaces de DadBuildRepeat",
     "Support actions": "Acciones de soporte",
     "Privacy contact": "Contacto de privacidad",
   },
 };
 
 initializeTranslation();
+initializeMotion();
 
 if (navToggle && navLinks) {
   navToggle.addEventListener("click", () => {
@@ -342,118 +199,72 @@ if (navToggle && navLinks) {
   });
 }
 
-if (intakeForm && intakeMessage && intakeResult && intakeSummary && intakeMailLink) {
-  intakeForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    clearIntakeMessage();
-
-    const inquiry = readInquiryForm(intakeForm);
-    const validationMessage = validateInquiry(inquiry);
-
-    if (validationMessage) {
-      showIntakeMessage(validationMessage, "error");
-      intakeForm.reportValidity();
-      return;
-    }
-
-    if (inquiry.websiteUrl) {
-      showIntakeMessage(getUiCopy("honeypotSuccess"), "success");
-      return;
-    }
-
-    const summary = formatInquirySummary(inquiry);
-    intakeSummary.value = summary;
-    intakeMailLink.href = buildMailtoLink(inquiry, summary);
-    intakeMailLink.hidden = false;
-    intakeResult.hidden = false;
-    showIntakeMessage(getUiCopy("preparedSuccess"), "success");
-  });
+function initializeMotion() {
+  document.body.classList.add("motion-ready");
+  initializeHeaderState();
+  initializeRevealMotion();
+  initializeRideFrameTilt();
 }
 
-if (copyInquiryButton && intakeSummary) {
-  copyInquiryButton.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(intakeSummary.value);
-      showIntakeMessage(getUiCopy("copyCopied"), "success");
-    } catch {
-      intakeSummary.focus();
-      intakeSummary.select();
-      showIntakeMessage(getUiCopy("copyFallback"), "success");
-    }
-  });
-}
+function initializeHeaderState() {
+  if (!siteHeader) return;
 
-function readInquiryForm(form) {
-  const data = new FormData(form);
-  return {
-    businessName: cleanInput(data.get("businessName")),
-    contactName: cleanInput(data.get("contactName")),
-    email: cleanInput(data.get("email")),
-    phone: cleanInput(data.get("phone")),
-    serviceNeeded: cleanInput(data.get("serviceNeeded")),
-    painPoint: cleanInput(data.get("painPoint")),
-    desiredTimeline: cleanInput(data.get("desiredTimeline")),
-    budgetRange: cleanInput(data.get("budgetRange")),
-    notes: cleanInput(data.get("notes")),
-    websiteUrl: cleanInput(data.get("websiteUrl")),
+  const updateHeaderState = () => {
+    siteHeader.classList.toggle("is-scrolled", window.scrollY > 8);
   };
+
+  updateHeaderState();
+  window.addEventListener("scroll", updateHeaderState, { passive: true });
 }
 
-function validateInquiry(inquiry) {
-  if (!intakeForm.checkValidity()) {
-    return getUiCopy("missingFields");
+function initializeRevealMotion() {
+  const revealTargets = document.querySelectorAll(
+    ".creator-panel, .process-step, .app-showcase-card, .project-card, .contact-panel, .policy-grid, .content-panel, .side-panel, .download-card, .download-product",
+  );
+
+  if (!revealTargets.length) return;
+
+  revealTargets.forEach((element, index) => {
+    element.classList.add("reveal");
+    element.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
+  });
+
+  if (!("IntersectionObserver" in window) || reducedMotionQuery.matches) {
+    revealTargets.forEach((element) => element.classList.add("is-visible"));
+    return;
   }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inquiry.email)) {
-    return getUiCopy("invalidEmail");
-  }
-  if (inquiry.painPoint.length < 20) {
-    return getUiCopy("painPointDetail");
-  }
-  return "";
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -12% 0px", threshold: 0.16 },
+  );
+
+  revealTargets.forEach((element) => revealObserver.observe(element));
 }
 
-function formatInquirySummary(inquiry) {
-  const labels = getUiCopy("labels");
-  return [
-    getUiCopy("summaryTitle"),
-    "",
-    `${labels.businessName}: ${inquiry.businessName}`,
-    `${labels.contactName}: ${inquiry.contactName}`,
-    `${labels.email}: ${inquiry.email}`,
-    `${labels.phone}: ${inquiry.phone || getUiCopy("notProvided")}`,
-    `${labels.serviceNeeded}: ${inquiry.serviceNeeded}`,
-    `${labels.desiredTimeline}: ${inquiry.desiredTimeline}`,
-    `${labels.budgetRange}: ${inquiry.budgetRange || getUiCopy("notProvided")}`,
-    "",
-    `${labels.painPoint}:`,
-    inquiry.painPoint,
-    "",
-    `${labels.notes}:`,
-    inquiry.notes || getUiCopy("noAdditionalNotes"),
-  ].join("\n");
-}
+function initializeRideFrameTilt() {
+  const heroMedia = document.querySelector(".hero-media");
+  const mediaFrame = document.querySelector(".hero-media-frame");
+  if (!heroMedia || !mediaFrame || reducedMotionQuery.matches) return;
 
-function buildMailtoLink(inquiry, summary) {
-  const subject = `${getUiCopy("summarySubject")}: ${inquiry.businessName}`;
-  return `mailto:jonathan@jbcdevelopment.dev?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(summary)}`;
-}
+  heroMedia.addEventListener("pointermove", (event) => {
+    const rect = heroMedia.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    mediaFrame.style.setProperty("--ride-tilt-x", `${x * 5}deg`);
+    mediaFrame.style.setProperty("--ride-tilt-y", `${y * -5}deg`);
+  });
 
-function cleanInput(value) {
-  return String(value || "").replace(/\s+/g, " ").trim();
-}
-
-function showIntakeMessage(message, type) {
-  if (!intakeMessage) return;
-  intakeMessage.textContent = message;
-  intakeMessage.className = `form-message ${type}`;
-  intakeMessage.hidden = false;
-}
-
-function clearIntakeMessage() {
-  if (!intakeMessage) return;
-  intakeMessage.textContent = "";
-  intakeMessage.className = "form-message";
-  intakeMessage.hidden = true;
+  heroMedia.addEventListener("pointerleave", () => {
+    mediaFrame.style.removeProperty("--ride-tilt-x");
+    mediaFrame.style.removeProperty("--ride-tilt-y");
+  });
 }
 
 function initializeTranslation() {
@@ -560,10 +371,6 @@ function getTranslation(key) {
 function getAttributeTranslation(key) {
   if (currentLanguage === "en") return key;
   return attributeTranslations[currentLanguage]?.[key] || key;
-}
-
-function getUiCopy(key) {
-  return uiCopy[currentLanguage]?.[key] || uiCopy.en[key];
 }
 
 function normalizeLanguage(language) {
