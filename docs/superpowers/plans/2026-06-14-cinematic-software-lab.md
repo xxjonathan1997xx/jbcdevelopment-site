@@ -26,7 +26,7 @@ Expected visible copy:
 - `release.pipeline`
 - `signed, checked, supported`
 - `active.tools`
-- `Paw, PhotoMesh, M5SteamBridge`
+- `Paw, M5SteamBridge, iOS games`
 
 - [ ] **Step 2: Add Spanish translation keys**
 

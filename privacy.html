@@ -18,11 +18,18 @@
       property="og:description"
       content="How JBC Software Development LLC handles app support requests, software questions, and privacy-sensitive information."
     />
-    <meta property="og:image" content="https://jbcdevelopment.dev/assets/brand-workbench.svg" />
+    <meta property="og:image" content="https://jbcdevelopment.dev/assets/og-share.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://jbcdevelopment.dev/assets/og-share.jpg" />
     <meta name="theme-color" content="#0b5fff" />
+    <link rel="alternate" hreflang="en" href="https://jbcdevelopment.dev/privacy.html" />
+    <link rel="alternate" hreflang="es" href="https://jbcdevelopment.dev/privacy.html" />
+    <link rel="alternate" hreflang="x-default" href="https://jbcdevelopment.dev/privacy.html" />
 
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/styles.css" as="style" />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/script.js" defer></script>
   </head>
@@ -49,8 +56,9 @@
         </button>
 
         <div class="nav-links" id="nav-links">
-          <a href="/#process">Work</a>
+          <a href="/#ship">How we ship</a>
           <a href="/#apps">Apps</a>
+          <a href="/store.html">Store</a>
           <a href="/downloads.html">Downloads</a>
           <a href="/support.html">Support</a>
           <a href="/privacy.html">Privacy</a>
@@ -110,33 +118,6 @@
           </ul>
 
           <h2>App privacy policies</h2>
-          <p id="jetski-racing-privacy">
-            <strong>Jetski Racing</strong> is an iOS game with no ads, tracking, third-party analytics,
-            custom account system, custom cloud save, chat, or push notifications. The app
-            uses Apple StoreKit for one optional non-consumable Full Game Unlock and Game
-            Center for leaderboards and achievements when the user chooses to use Apple
-            Game Center. JBC Software Development LLC does not operate a separate purchase,
-            account, analytics, cloud-save, or gameplay data server for Jetski Racing.
-          </p>
-          <p>
-            Jetski Racing stores local progress on the device, including credits, stars,
-            medals, best times, selected jetski, upgrades, cosmetics, settings, and a cached
-            full-game entitlement after a successful Apple purchase or restore. This local
-            cache supports offline play for already-unlocked content and is not uploaded to
-            a JBC server.
-          </p>
-          <p id="highway-fury-privacy">
-            <strong>Highway Fury</strong> is an iOS game with no ads, tracking, third-party analytics,
-            custom account system, custom cloud save, chat, social features, or push notifications.
-            The app uses Apple Game Center for leaderboards and achievements when the user
-            chooses to use Apple Game Center. JBC Software Development LLC does not operate a
-            separate purchase, account, analytics, cloud-save, or gameplay data server for Highway Fury.
-          </p>
-          <p>
-            Highway Fury stores local progress on the device, including credits, crates,
-            unlocked motorcycles, cosmetics, best distances, race times, settings, and
-            garage customization. This data is kept local and is not uploaded to a JBC server.
-          </p>
           <p id="paw-care-academy-privacy">
             <strong>Paw Care Academy</strong> is an iOS app for kids and parents with no ads,
             tracking, third-party analytics, custom account system, custom cloud save, chat,
@@ -152,15 +133,13 @@
             offline play and is not uploaded to a JBC server.
           </p>
           <p>
-            PhotoMesh Studio and M5SteamBridge are local Mac apps distributed from this
-            website. PhotoMesh keeps uploads, generated GLB files, reports, and local
-            Stable Fast 3D settings on the user's Mac. M5SteamBridge keeps setup status,
+            M5SteamBridge is a local Mac app distributed from this website. M5SteamBridge keeps setup status,
             compatibility settings, and diagnostics previews local unless a user chooses
             to send support information by email.
           </p>
           <p>
-            Both apps use manual update checks only. When a user clicks Check for Updates,
-            the app reads a static JBC Development update manifest. The apps do not run
+            The app uses manual update checks only. When a user clicks Check for Updates,
+            the app reads a static JBC Development update manifest. The app does not run
             background telemetry, create accounts, upload files to hosted storage, or
             install updates automatically.
           </p>

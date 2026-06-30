@@ -1,19 +1,7 @@
 {
-  "generatedAt": "2026-06-14T00:00:00.000Z",
+  "generatedAt": "2026-06-30T00:00:00.000Z",
   "channel": "Gold",
   "apps": [
-    {
-      "id": "photomesh-studio",
-      "name": "PhotoMesh Studio",
-      "latestVersion": "1.0.0",
-      "channel": "Gold",
-      "releaseDate": "2026-06-14",
-      "dmgUrl": "https://github.com/xxjonathan1997xx/jbcdevelopment-site/releases/download/jbc-mac-gold-2026-06-14/PhotoMesh.Studio-1.0.0-arm64.dmg",
-      "sha256": "5ec123816b2ddd5b4e5847aa0ba3ca916a6c368f880b850a59fb8160589324ad",
-      "releaseNotesUrl": "https://github.com/xxjonathan1997xx/jbcdevelopment-site/releases/tag/jbc-mac-gold-2026-06-14",
-      "minimumMacOS": "14.0",
-      "critical": false
-    },
     {
       "id": "m5steambridge",
       "name": "M5SteamBridge",

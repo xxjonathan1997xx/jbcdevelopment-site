@@ -1,6 +1,6 @@
 # JBC Software Development LLC Site
 
-Static one-page company website for `jbcdevelopment.dev`.
+Static company website for `jbcdevelopment.dev`.
 
 The site presents JBC Software Development LLC as a practical software/app
 development business focused on:
@@ -12,30 +12,27 @@ development business focused on:
 - Automation and workflow systems
 - Practical technology for local business growth
 
-## Client Intake Form
+## Contact Links
 
-The website includes a staged "Tell me what you need built" intake form.
+The website uses direct email contact links for support, privacy, app, download,
+setup, and software questions.
 
 Current behavior:
 
-- Validates required fields in the browser
-- Uses a simple honeypot field and message-length checks
-- Prepares a copyable inquiry summary
-- Creates a user-reviewed email draft to `jonathan@jbcdevelopment.dev`
+- Opens a user-reviewed email draft to `jbcsdevs@gmail.com`
 - Does not store submissions, send automatic emails, create proposals, or make commitments
+- Keeps support and privacy pages available as static pages
 
-The public domain email remains `jonathan@jbcdevelopment.dev`. The mailbox is
-handled through Gmail/Google Workspace, and DNS email records should be reviewed
-against Google Workspace MX, SPF, DKIM, and DMARC requirements before deployment
-or provider changes.
+The public contact email is `jbcsdevs@gmail.com`. It is a direct Gmail contact
+address, so the current website contact links do not require domain email DNS.
+Review MX, SPF, DKIM, and DMARC requirements only before reintroducing
+`jbcdevelopment.dev` domain email or changing providers.
 
-This Google Workspace note applies only to JBC Development and should not be
-used to change other projects without a separate review.
-
-Because this is a static site, there is no server-side submission storage yet.
-To activate direct form capture later, add an approved backend/form handler such
-as Netlify Forms, a Vercel/Cloudflare Function, or another reviewed intake
-endpoint. Do not add automated replies or external sending without approval.
+Because this is a static site, there is no server-side submission storage. To
+activate direct form capture later, add an approved backend/form handler such as
+Netlify Forms, a Vercel/Cloudflare Function, or another reviewed intake
+endpoint. Do not add automated replies, external sending, or CRM syncing without
+approval.
 
 ## Language Support
 
@@ -89,13 +86,13 @@ Deployment, DNS changes, hosting changes, and public update announcements requir
 ## Files
 
 - `index.html`: company site content and metadata
-- `downloads.html`: Mac app download page for PhotoMesh Studio and M5SteamBridge
+- `downloads.html`: Mac app download page for M5SteamBridge
 - `privacy.html`: public privacy policy for website inquiries and app support
 - `support.html`: public support page for apps, projects, and business inquiries
 - `styles.css`: responsive styling
-- `script.js`: mobile navigation and staged intake form behavior
-- `WEBSITE_RELEASE_CHECKLIST.md`: pre-deploy QA, contact form limitation, approval, and rollback checklist
-- `marketing/`: reusable launch and demo copy, including the PhotoMesh short-form video prompt
+- `script.js`: mobile navigation, language switching, and lab console rotation
+- `WEBSITE_RELEASE_CHECKLIST.md`: pre-deploy QA, contact link behavior, approval, and rollback checklist
+- `marketing/`: reusable launch and demo copy for Mac tools and apps
 - `assets/`: favicon and site visual asset
 
 ## Public Action Rule

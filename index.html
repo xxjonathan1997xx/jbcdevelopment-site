@@ -3,27 +3,65 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>JBC Development | Software Development And Apps</title>
+    <title>JBC Development | iOS Apps &amp; Mac Tools</title>
     <meta
       name="description"
-      content="JBC Development builds practical apps, local Mac software, AI workflow tools, and automation systems for maintainable releases."
+      content="JBC Development ships App Store apps and signed Mac tools from Florida — notarized downloads, custom scoped work, and support with checksums."
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://jbcdevelopment.dev/" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jbcdevelopment.dev/" />
-    <meta property="og:title" content="JBC Development | Software Development And Apps" />
+    <meta property="og:title" content="JBC Development | iOS Apps & Mac Tools" />
     <meta
       property="og:description"
-      content="Practical software development, local apps, AI workflow tools, and automation systems."
+      content="JBC Development ships App Store apps and signed Mac tools from Florida — notarized downloads, custom scoped work, and support with checksums."
     />
-    <meta property="og:image" content="https://jbcdevelopment.dev/assets/brand-workbench.svg" />
+    <meta property="og:image" content="https://jbcdevelopment.dev/assets/og-share.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://jbcdevelopment.dev/assets/og-share.jpg" />
     <meta name="theme-color" content="#0b5fff" />
+    <link rel="alternate" hreflang="en" href="https://jbcdevelopment.dev/" />
+    <link rel="alternate" hreflang="es" href="https://jbcdevelopment.dev/" />
+    <link rel="alternate" hreflang="x-default" href="https://jbcdevelopment.dev/" />
 
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="/styles.css" as="style" />
     <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://jbcdevelopment.dev/#organization",
+            "name": "JBC Software Development LLC",
+            "alternateName": "JBC Development",
+            "url": "https://jbcdevelopment.dev/",
+            "logo": "https://jbcdevelopment.dev/assets/jbc-brand-mark.svg",
+            "email": "jbcsdevs@gmail.com",
+            "description": "Practical apps, local Mac software, AI workflow tools, and automation systems for maintainable releases."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://jbcdevelopment.dev/#website",
+            "url": "https://jbcdevelopment.dev/",
+            "name": "JBC Development",
+            "publisher": { "@id": "https://jbcdevelopment.dev/#organization" },
+            "inLanguage": ["en", "es"]
+          }
+        ]
+      }
+    </script>
     <script src="/script.js" defer></script>
   </head>
   <body class="home-page">
@@ -49,8 +87,10 @@
         </button>
 
         <div class="nav-links" id="nav-links">
-          <a href="#process">Work</a>
+          <a href="#ship">How we ship</a>
           <a href="#apps">Apps</a>
+          <a href="#custom-work">Custom work</a>
+          <a href="/store.html">Store</a>
           <a href="/downloads.html">Downloads</a>
           <a href="/support.html">Support</a>
           <a href="/privacy.html">Privacy</a>
@@ -66,210 +106,151 @@
     <main id="main">
       <section class="hero shell">
         <div class="hero-copy">
-          <h1>Practical software, <span>built in the lab.</span></h1>
+          <p class="hero-eyebrow">Florida indie app studio</p>
+          <h1>iOS apps &amp; Mac tools, <span>signed and supported.</span></h1>
           <p>
-            JBC Development designs apps, local Mac tools, AI workflow systems,
-            and automation with visible release discipline.
+            JBC Development ships App Store apps and notarized Mac downloads — with
+            support, privacy details, checksums, and scoped custom work when the fit is right.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#apps">View apps and software</a>
-            <a class="button secondary" href="/downloads.html">Download Mac tools</a>
+            <a
+              class="button primary"
+              href="https://apps.apple.com/us/app/paw-care-academy/id6768147697"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get Paw Care Academy
+            </a>
+            <a class="button secondary" href="/downloads.html#m5steambridge">Download M5SteamBridge</a>
           </div>
-          <div class="hero-points" aria-label="Core app and software areas">
-            <span>Paw Care Academy</span>
-            <span>PhotoMesh Studio</span>
-            <span>M5SteamBridge</span>
-            <span>AI workflow tools</span>
+          <p class="hero-trust">
+            Every Mac build is signed, notarized, and checksum-verified.
+            <a href="https://github.com/xxjonathan1997xx/jbcdevelopment-site/releases/download/jbc-mac-gold-2026-06-14/CHECKSUMS.sha256" target="_blank" rel="noopener noreferrer">Verify downloads</a>
+          </p>
+          <div class="product-rotator" aria-label="Current JBC products">
+            <span>Now shipping</span>
+            <code data-lab-console aria-live="polite">Paw Care Academy</code>
           </div>
-          <div class="build-loop" aria-label="Build repeat process preview">
-            <span>Discover</span>
-            <span>Design</span>
-            <span>Build</span>
-            <span>Ship</span>
-          </div>
-          <div class="lab-console compact-console" aria-label="What JBC builds">
-            <span>What JBC builds</span>
-            <code data-lab-console aria-live="polite">local Mac tools</code>
-          </div>
-          <p class="hero-note">Built in Florida. Scoped for maintainable releases.</p>
         </div>
 
-        <figure class="hero-media" aria-label="JBC Development software workspace">
-          <div class="hero-media-frame">
-            <img
-              src="/assets/brand-workbench.svg"
-              alt="JBC Development software workspace"
-              width="760"
-              height="520"
-            />
-            <div class="lab-overlay" aria-hidden="true">
-              <div class="lab-topline">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div class="code-stream">
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-              </div>
-              <div class="lab-status-stack">
-                <div class="lab-status-row">
-                  <span>release.pipeline</span>
-                  <strong>signed, checked, supported</strong>
-                </div>
-                <div class="lab-status-row">
-                  <span>active.tools</span>
-                  <strong>Paw, PhotoMesh, M5SteamBridge</strong>
-                </div>
-              </div>
-              <div class="lab-app lab-app-one">
-                <strong>Paw</strong>
-                <span>App Store</span>
-              </div>
-              <div class="lab-app lab-app-two">
-                <strong>PM</strong>
-                <span>Photo to GLB</span>
-              </div>
-              <div class="lab-app lab-app-three">
-                <strong>M5</strong>
-                <span>Mac helper</span>
-              </div>
-              <div class="lab-flow">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            <span class="media-signal media-signal-top">Product build</span>
-            <span class="media-signal media-signal-bottom">Software systems</span>
+        <figure class="hero-media hero-media-products" aria-label="JBC Development apps and tools">
+          <div class="hero-product-stack">
+            <a
+              class="hero-product hero-product-featured"
+              href="https://apps.apple.com/us/app/paw-care-academy/id6768147697"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/assets/app-icons/paw-care-academy.jpg"
+                alt="Paw Care Academy app icon"
+                width="128"
+                height="128"
+                fetchpriority="high"
+                decoding="async"
+              />
+              <span>Paw Care Academy</span>
+              <em>App Store</em>
+            </a>
+            <a
+              class="hero-product hero-product-secondary"
+              href="/downloads.html#m5steambridge"
+            >
+              <img
+                src="/assets/app-icons/m5steambridge.png?v=20260630"
+                alt="M5SteamBridge app icon"
+                width="72"
+                height="72"
+                loading="lazy"
+              />
+              <span>M5SteamBridge</span>
+              <em>Mac download</em>
+            </a>
           </div>
           <figcaption class="hero-proof">
-            <strong>JBC Development</strong>
-            <span>Apps, local tools, and workflow software with clear support paths.</span>
+            <strong>Real products</strong>
+            <span>App Store apps and Mac tools with support paths on this site.</span>
           </figcaption>
         </figure>
       </section>
 
-      <section class="proof-strip shell" aria-label="Current build themes">
-        <div class="proof-track">
-          <span>Published apps</span>
-          <span>Local Mac software</span>
-          <span>Signed downloads</span>
-          <span>Setup support</span>
-          <span>AI workflows</span>
-          <span>Automation</span>
+      <section class="proof-strip shell" aria-label="Release proof">
+        <div class="proof-track proof-track-links">
+          <a class="proof-badge" href="https://apps.apple.com/us/app/paw-care-academy/id6768147697" target="_blank" rel="noopener noreferrer">App Store app</a>
+          <a class="proof-badge" href="/downloads.html#m5steambridge">Signed macOS download</a>
+          <a class="proof-badge" href="https://github.com/xxjonathan1997xx/jbcdevelopment-site/releases/download/jbc-mac-gold-2026-06-14/CHECKSUMS.sha256" target="_blank" rel="noopener noreferrer">SHA-256 checksums</a>
+          <span class="proof-badge proof-badge-static">Built in Florida</span>
         </div>
       </section>
 
-      <section class="process-section" id="process" aria-labelledby="process-title">
+      <section class="ship-section" id="ship" aria-labelledby="ship-title">
         <div class="shell">
           <div class="section-heading">
-            <p class="section-label">Work</p>
-            <h2 id="process-title">Software development with a practical release loop.</h2>
-            <p>Plan the workflow, build the smallest useful version, document the limits, and improve from real use.</p>
+            <p class="section-label">How we ship</p>
+            <h2 id="ship-title">Release discipline you can verify.</h2>
+            <p>Map the job, ship the smallest useful build, document the limits, and keep support visible.</p>
           </div>
 
-          <div class="process-grid">
-            <article class="process-step">
+          <div class="ship-grid">
+            <article class="ship-step">
               <span>01</span>
-              <h3>Map the workflow</h3>
-              <p>Clarify the user, job, data, constraints, and support path before writing code.</p>
+              <h3>Scope the product</h3>
+              <p>Clarify the user, constraints, and support path before code ships.</p>
             </article>
-
-            <article class="process-step">
+            <article class="ship-step">
               <span>02</span>
-              <h3>Build the release</h3>
-              <p>Ship focused apps, Mac utilities, and automation tools with maintainable scope.</p>
+              <h3>Sign the Mac build</h3>
+              <p>Local Mac tools ship as signed, notarized DMGs with published checksums.</p>
             </article>
-
-            <article class="process-step">
+            <article class="ship-step">
               <span>03</span>
-              <h3>Support the product</h3>
-              <p>Keep downloads, setup notes, privacy information, and known limits visible.</p>
+              <h3>Document limits</h3>
+              <p>Setup notes, privacy details, and known limits stay on this site.</p>
+            </article>
+            <article class="ship-step">
+              <span>04</span>
+              <h3>Support the release</h3>
+              <p>Per-app support pages and direct email for troubleshooting.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="lab-pipeline-section" aria-labelledby="lab-pipeline-title">
-        <div class="shell lab-pipeline-panel">
-          <div class="lab-pipeline-copy">
-            <p class="section-label">Build pipeline</p>
-            <h2 id="lab-pipeline-title">Release discipline, shown clearly.</h2>
-            <p>
-              JBC software work is presented with the setup details, release checks,
-              and support paths needed for practical users.
-            </p>
+      <section class="featured-product-section shell" aria-labelledby="featured-title">
+        <article class="featured-product-card">
+          <img
+            class="featured-product-icon"
+            src="/assets/app-icons/paw-care-academy.jpg"
+            alt="Paw Care Academy app icon"
+            width="112"
+            height="112"
+            loading="lazy"
+          />
+          <div class="featured-product-copy">
+            <p class="section-label">Featured app</p>
+            <h2 id="featured-title">Paw Care Academy</h2>
+            <p>Kid-friendly pet-care learning on iOS — the clearest place to start with JBC.</p>
+            <a
+              class="button primary"
+              href="https://apps.apple.com/us/app/paw-care-academy/id6768147697"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open in App Store
+            </a>
           </div>
-
-          <div class="pipeline-track" aria-label="JBC release pipeline">
-            <article class="pipeline-step">
-              <span>01</span>
-              <div class="pipeline-step-copy">
-                <h3>Workflow mapped</h3>
-                <p>User job, constraints, and local setup are clarified first.</p>
-              </div>
-            </article>
-            <article class="pipeline-step">
-              <span>02</span>
-              <div class="pipeline-step-copy">
-                <h3>Gold signed</h3>
-                <p>Mac tools are prepared as signed and notarized downloads.</p>
-              </div>
-            </article>
-            <article class="pipeline-step">
-              <span>03</span>
-              <div class="pipeline-step-copy">
-                <h3>Checksums available</h3>
-                <p>Release files include verification paths for download confidence.</p>
-              </div>
-            </article>
-            <article class="pipeline-step">
-              <span>04</span>
-              <div class="pipeline-step-copy">
-                <h3>Support ready</h3>
-                <p>Support, privacy, limits, and setup notes stay visible.</p>
-              </div>
-            </article>
-          </div>
-        </div>
+        </article>
       </section>
 
       <section class="app-showcase-section" id="apps" aria-labelledby="apps-title">
         <div class="shell app-showcase-panel">
           <div class="app-showcase-heading">
             <p class="section-label">Apps</p>
-            <h2 id="apps-title">Current software by JBC Development.</h2>
-            <p>Published apps and local Mac tools with direct support and release notes.</p>
+            <h2 id="apps-title">All JBC apps and tools.</h2>
+            <p>App Store apps and signed Mac downloads with direct support links.</p>
           </div>
 
           <div class="app-showcase-grid" aria-label="JBC apps and software downloads">
-            <a
-              class="app-showcase-card"
-              id="jetski-racing"
-              href="/support.html#jetski-racing-support"
-            >
-              <span class="app-card-visual app-card-visual-bridge" aria-hidden="true">
-                <img
-                  class="app-icon app-icon-logo"
-                  src="/assets/jbc-brand-mark.svg"
-                  alt=""
-                  width="80"
-                  height="80"
-                />
-                <span class="app-visual-status">iOS game</span>
-              </span>
-              <span class="app-card-copy">
-                <span class="app-link-kicker">Games / Racing</span>
-                <strong>Jetski Racing</strong>
-                <span>Free-to-try arcade water racing with six free tracks and a one-time Island Pro unlock.</span>
-                <em>Support and release info</em>
-              </span>
-            </a>
-
             <a
               class="app-showcase-card"
               href="https://apps.apple.com/us/app/paw-care-academy/id6768147697"
@@ -296,40 +277,13 @@
 
             <a
               class="app-showcase-card"
-              href="/downloads.html#photomesh"
-            >
-              <span class="app-card-visual app-card-visual-mesh" aria-hidden="true">
-                <img
-                  class="app-icon app-icon-logo"
-                  src="/assets/app-icons/photomesh-studio.png"
-                  alt=""
-                  width="80"
-                  height="80"
-                />
-                <span class="mesh-dots">
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                </span>
-                <span class="app-visual-status">GLB flow</span>
-              </span>
-              <span class="app-card-copy">
-                <span class="app-link-kicker">Mac app / 3D assets</span>
-                <strong>PhotoMesh Studio</strong>
-                <span>Local photo-to-GLB workflow for game assets.</span>
-                <em>Setup and download</em>
-              </span>
-            </a>
-
-            <a
-              class="app-showcase-card"
               href="/downloads.html#m5steambridge"
             >
               <span class="app-card-visual app-card-visual-bridge" aria-hidden="true">
                 <img
-                  class="app-icon app-icon-logo"
-                  src="/assets/app-icons/m5steambridge.png"
-                  alt=""
+                  class="app-icon"
+                  src="/assets/app-icons/m5steambridge.png?v=20260630"
+                  alt="M5SteamBridge app icon"
                   width="80"
                   height="80"
                 />
@@ -350,7 +304,7 @@
           </div>
 
           <p class="app-showcase-note">
-            Mac downloads are signed and notarized. PhotoMesh Studio requires users to configure their own local Stable Fast 3D model files and runner. Stable Fast 3D support is powered by Stability AI and subject to the Stability AI Community License. M5SteamBridge does not include Steam, games, Wine bottles, CrossOver, Whisky, or proprietary runtimes and does not bypass DRM, anti-cheat, ownership checks, or platform restrictions.
+            Mac downloads are signed and notarized. M5SteamBridge does not include Steam, games, Wine bottles, CrossOver, Whisky, or proprietary runtimes and does not bypass DRM, anti-cheat, ownership checks, or platform restrictions.
             <a
               href="https://github.com/xxjonathan1997xx/jbcdevelopment-site/releases/download/jbc-mac-gold-2026-06-14/CHECKSUMS.sha256"
               target="_blank"
@@ -360,103 +314,32 @@
         </div>
       </section>
 
-      <section class="projects-section" id="projects" aria-labelledby="projects-title">
-        <div class="shell">
-          <div class="section-heading">
-            <p class="section-label">Apps and software</p>
-            <h2 id="projects-title">What is active now.</h2>
-            <p>Published apps, local software, and workflow tools in active development.</p>
+      <section class="custom-work-section shell" id="custom-work" aria-labelledby="custom-work-title">
+        <div class="custom-work-panel">
+          <div class="custom-work-copy">
+            <p class="section-label">Custom development</p>
+            <h2 id="custom-work-title">Need a scoped app, Mac tool, or workflow?</h2>
+            <p>
+              JBC takes on small custom jobs when the scope is clear: iOS apps, signed Mac
+              utilities, automation, and AI-assisted internal tools.
+            </p>
+            <ul class="custom-work-list">
+              <li>iOS or Mac app builds and prototypes</li>
+              <li>Local Mac utilities and launchers</li>
+              <li>Automation, AI workflows, and support tooling</li>
+            </ul>
           </div>
-
-          <div class="project-grid" aria-label="Current projects">
-            <article class="project-card featured-card">
-              <div>
-                <h3>Paw Care Academy</h3>
-                <p>
-                  A pet-care learning app with updates focused on visuals,
-                  performance, clarity, and parent trust.
-                </p>
-              </div>
-              <div class="resource-list" aria-label="Paw Care Academy resources">
-                <a
-                  href="https://apps.apple.com/us/app/paw-care-academy/id6768147697"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  App Store
-                </a>
-                <a href="/support.html">Support</a>
-                <a href="/privacy.html">Privacy policy</a>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <h3>Local Mac software</h3>
-              <p>
-                PhotoMesh Studio and M5SteamBridge are local Mac tools with setup help and checksums.
-              </p>
-              <div class="resource-list" aria-label="Local Mac software links">
-                <a href="/downloads.html#photomesh">PhotoMesh</a>
-                <a href="/downloads.html#m5steambridge">M5SteamBridge</a>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <h3>AI workflow systems</h3>
-              <p>
-                Practical internal tools and AI-assisted workflows for repetitive research,
-                content, support, and operations tasks.
-              </p>
-              <div class="resource-list" aria-label="AI workflow resources">
-                <span>Automation</span>
-                <span>AI tools</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="personal-section" id="personal" aria-labelledby="personal-title">
-        <div class="shell personal-panel">
-          <div class="personal-intro">
-            <img
-              src="/assets/dadbuildrepeat-profile-action.jpg"
-              alt="DadBuildRepeat profile action shot"
-              width="160"
-              height="160"
-            />
-            <div>
-              <p class="section-label">Personal channel</p>
-              <h2 id="personal-title">DadBuildRepeat stays personal.</h2>
-              <p>
-                DadBuildRepeat is Jonathan's hobby and creator account for motorcycle gear,
-                camera setups, and personal content experiments. It is linked here for
-                context, but JBC Development remains focused on apps and software.
-              </p>
-            </div>
-          </div>
-
-          <div class="social-grid" aria-label="Personal social channels">
-            <a class="social-card" href="https://www.tiktok.com/@jonathann_b11" target="_blank" rel="noopener noreferrer">
-              <span>TikTok</span>
-              <strong>@jonathann_b11</strong>
-              <em>Personal creator tests</em>
+          <div class="custom-work-actions">
+            <a
+              class="button primary"
+              href="mailto:jbcsdevs@gmail.com?subject=Custom%20project%20inquiry&amp;body=Project%20summary%3A%0APlatform%3A%0ATimeline%3A%0ABudget%20range%3A"
+            >
+              Request a custom quote
             </a>
-            <a class="social-card" href="https://www.instagram.com/dadbuildrepeat/" target="_blank" rel="noopener noreferrer">
-              <span>Instagram</span>
-              <strong>@dadbuildrepeat</strong>
-              <em>Personal reels and hobby posts</em>
-            </a>
-            <a class="social-card" href="https://www.youtube.com/channel/UCbPlehgfIHyNPma0zeYQfPQ" target="_blank" rel="noopener noreferrer">
-              <span>YouTube</span>
-              <strong>DadBuildRepeat</strong>
-              <em>Shorts and longer ride edits</em>
-            </a>
-            <a class="social-card" href="https://www.facebook.com/61590364175156/" target="_blank" rel="noopener noreferrer">
-              <span>Facebook</span>
-              <strong>DadBuildRepeat</strong>
-              <em>Page updates and reels</em>
-            </a>
+            <p class="custom-work-note">
+              Include your goal, platform, timeline, and budget range for the fastest reply.
+            </p>
+            <a class="button secondary" href="mailto:jbcsdevs@gmail.com">Email JBC Development</a>
           </div>
         </div>
       </section>
@@ -471,8 +354,8 @@
             </p>
           </div>
           <div class="contact-actions">
-            <a class="contact-link" href="mailto:jonathan@jbcdevelopment.dev">
-              jonathan@jbcdevelopment.dev
+            <a class="contact-link" href="mailto:jbcsdevs@gmail.com">
+              jbcsdevs@gmail.com
             </a>
             <a class="contact-link secondary-contact" href="/support.html">
               Support page
@@ -489,7 +372,7 @@
               Support and privacy resources stay available for every app and software release.
             </p>
           </div>
-          <a class="button secondary" href="mailto:jonathan@jbcdevelopment.dev">
+          <a class="button secondary" href="mailto:jbcsdevs@gmail.com">
             Contact support
           </a>
         </div>
@@ -501,10 +384,13 @@
         <p>&copy; 2026 JBC Software Development LLC. All rights reserved.</p>
         <div class="footer-links">
           <a href="#apps">Apps</a>
+          <a href="#custom-work">Custom work</a>
+          <a href="/store.html">Store</a>
           <a href="/downloads.html">Downloads</a>
           <a href="/privacy.html">Privacy Policy</a>
           <a href="/support.html">Support</a>
           <a href="#contact">Contact</a>
+          <a href="https://www.instagram.com/dadbuildrepeat/" target="_blank" rel="noopener noreferrer">DadBuildRepeat</a>
         </div>
       </div>
     </footer>
