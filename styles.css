@@ -2504,6 +2504,16 @@ body.home-page .custom-work-panel .section-label {
   box-shadow: 0 18px 46px rgba(8, 33, 76, 0.07);
 }
 
+.store-card-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 8px);
+  border: 1px solid rgba(11, 95, 255, 0.12);
+  background: #eaf3ff;
+  display: block;
+}
+
 .store-card-tag {
   align-self: flex-start;
   padding: 4px 12px;

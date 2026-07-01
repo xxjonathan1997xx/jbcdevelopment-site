@@ -7,12 +7,12 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
 ## Release Details
 
 - Release label: Store launch (digital products) - `store.html`
-- Commit:
+- Commit: (deploying from this release; rollback to `16ba866`)
 - Target host:
 - Domain: `jbcdevelopment.dev`
 - Reviewer:
 - Date: 2026-06-30
-- Final decision: Hold until approved (real Payhip/itch.io/Ko-fi links must replace placeholders first)
+- Final decision: Ready to deploy - awaiting owner approval (all 8 Payhip products created, links wired, covers added)
 
 ## Checklist
 
@@ -21,7 +21,7 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
 | Mobile QA | Verified | `store.html` at 390px: hamburger nav, single-column cards (screenshot `jbc-store-mobile-en.png`) | None for store page | Re-check after real product links added |
 | Desktop QA | Verified | `store.html` full layout EN + ES toggle verified via local preview (`jbc-store-desktop-en.png`) | None for store page | Re-check after real product links added |
 | Navigation links | Updated | Store added to header + footer on index, store, downloads, support, privacy | Index uses "How we ship"/`#ship`; subpages use "Work"/`/#process` (pre-existing) | Verify every header and footer link before deploy |
-| Store / digital products | Added | `store.html` (Payhip embed + 4 product categories), EN/ES translations, `STORE_SETUP.md` | Payhip/itch.io/Ko-fi links are placeholders (`REPLACE-...`) | Create products, replace links per `STORE_SETUP.md` before deploy |
+| Store / digital products | Verified | `store.html`: 8 live Payhip products across 4 categories; runtime check confirms `window.Payhip` loaded, 8 buy buttons, all hrefs real (no `REPLACE-`), EN/ES translations | None - placeholders replaced with live links (2Ddxz, aTA1v, JfW6G, qFs4B, lsonC, RXgS4, Q0ox1, 0lgG7) | Deploy after approval |
 | Contact email | Pending | `jbcsdevs@gmail.com` | Contact email review not recorded | Search for outdated email or placeholders |
 | Privacy/support pages | Updated | Added Highway Fury support; homepage app parity for iOS games | Public page review not recorded | Verify page copy, links, and mobile layout |
 | Email DNS records | Pending | Current contact link uses direct Gmail; domain email DNS only needs review before reintroducing `jbcdevelopment.dev` email | DNS email record review not recorded | Review DNS outside this workflow before provider or domain-email changes |
