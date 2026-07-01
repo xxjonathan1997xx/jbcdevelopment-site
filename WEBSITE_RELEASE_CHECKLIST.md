@@ -7,12 +7,12 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
 ## Release Details
 
 - Release label: Store launch (digital products) - `store.html`
-- Commit: (deploying from this release; rollback to `16ba866`)
+- Commit: `c0484bd` (rollback to `16ba866`)
 - Target host:
 - Domain: `jbcdevelopment.dev`
 - Reviewer:
 - Date: 2026-06-30
-- Final decision: Ready to deploy - awaiting owner approval (all 8 Payhip products created, links wired, covers added)
+- Final decision: Deployed 2026-06-30 (`c0484bd` on `main`)
 
 ## Checklist
 
