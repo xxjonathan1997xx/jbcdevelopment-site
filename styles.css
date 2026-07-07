@@ -2988,6 +2988,40 @@ body.home-page .custom-work-panel .section-label {
   }
 }
 
+.how-work-section {
+  background:
+    radial-gradient(circle at 82% 15%, rgba(56, 189, 248, 0.22), transparent 30rem),
+    linear-gradient(180deg, #05101d 0, #0b2038 100%);
+  border-block-color: transparent;
+}
+
+.how-work-section .section-heading h2,
+.how-work-section .section-heading p {
+  color: #ffffff;
+}
+
+.how-work-section .section-heading p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.how-work-section .ship-step {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: none;
+}
+
+.how-work-section .ship-step span {
+  color: #7dd3fc;
+}
+
+.how-work-section .ship-step h3 {
+  color: #ffffff;
+}
+
+.how-work-section .ship-step p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
