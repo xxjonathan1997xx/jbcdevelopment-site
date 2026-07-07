@@ -293,6 +293,8 @@ const translations = {
     "What \"custom work\" means here.": "Que significa \"trabajo personalizado\" aqui.",
     "Ready to scope your project?": "Listo para definir el alcance de tu proyecto?",
     "Send the details or book a call — either way, expect a direct reply, not a form queue.": "Envia los detalles o reserva una llamada: en ambos casos, espera una respuesta directa, no una fila de formularios.",
+    "Mac downloads are signed and notarized. M5SteamBridge does not include Steam, games, Wine bottles, CrossOver, Whisky, or proprietary runtimes and does not bypass DRM, anti-cheat, ownership checks, or platform restrictions.": "Las descargas Mac estan firmadas y notarizadas. M5SteamBridge no incluye Steam, juegos, botellas Wine, CrossOver, Whisky ni runtimes propietarios, y no evita DRM, sistemas anti-trampas, verificaciones de propiedad ni restricciones de plataforma.",
+    "See how custom work gets scoped and shipped": "Mira como se acota y publica el trabajo personalizado",
   },
 };
 
