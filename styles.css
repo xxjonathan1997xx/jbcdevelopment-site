@@ -56,6 +56,19 @@ body.custom-work-page {
     linear-gradient(180deg, #05101d 0, #071a33 520px, #f7fbff 521px, #ffffff 100%);
 }
 
+body.custom-work-page .hero h1 {
+  color: #ffffff;
+  text-shadow: 0 18px 54px rgba(0, 0, 0, 0.24);
+}
+
+body.custom-work-page .hero h1 span {
+  color: #7dd3fc;
+}
+
+body.custom-work-page .hero-copy p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
 img,
 svg {
   display: block;
