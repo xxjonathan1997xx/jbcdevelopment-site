@@ -49,6 +49,13 @@ body.home-page {
     linear-gradient(180deg, #05101d 0, #071a33 760px, #f7fbff 761px, #ffffff 100%);
 }
 
+body.custom-work-page {
+  background:
+    radial-gradient(circle at 78% 8%, rgba(56, 189, 248, 0.3), transparent 27rem),
+    radial-gradient(circle at 18% 18%, rgba(11, 95, 255, 0.28), transparent 30rem),
+    linear-gradient(180deg, #05101d 0, #071a33 520px, #f7fbff 521px, #ffffff 100%);
+}
+
 img,
 svg {
   display: block;
