@@ -8,14 +8,14 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
 
 - Branch: `codex/m5steambridge-open-source-launch`
 - Proposed path: `/m5steambridge/`
-- Status: local review-ready; not deployed
+- Status: approved for deployment on 2026-07-11
 - Desktop QA: verified at 1440×1000 with no horizontal overflow
 - Mobile QA: verified at 390×844 with no horizontal overflow; mobile navigation opens
 - Language QA: EN/ES switch verified
 - Media QA: 209 KB poster and 361 KB privacy-reviewed, window-only MP4; video duration 40.08 seconds
 - Static QA: `script.js` syntax passes; landing page, poster, video, downloads, and support return HTTP 200 locally
-- External blockers: proposed GitHub source and issue links do not exist until the public repository is approved and created
-- Deployment blocker: explicit approval is still required after the public source links are live and rechecked
+- External links: public GitHub source, issue forms, signed DMG, and setup-help targets rechecked successfully
+- Deployment approval: Jonathan approved deployment on 2026-07-11
 
 ## Release Details
 
