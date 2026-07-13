@@ -4,6 +4,19 @@ Use this checklist before deploying updates to `jbcdevelopment.dev`.
 
 This file is for readiness review only. It does not deploy, publish, change DNS, send email, or contact anyone.
 
+## Pending Review: M5SteamBridge Open-Source Landing Page
+
+- Branch: `codex/m5steambridge-open-source-launch`
+- Proposed path: `/m5steambridge/`
+- Status: approved for deployment on 2026-07-11
+- Desktop QA: verified at 1440×1000 with no horizontal overflow
+- Mobile QA: verified at 390×844 with no horizontal overflow; mobile navigation opens
+- Language QA: EN/ES switch verified
+- Media QA: 209 KB poster and 361 KB privacy-reviewed, window-only MP4; video duration 40.08 seconds
+- Static QA: `script.js` syntax passes; landing page, poster, video, downloads, and support return HTTP 200 locally
+- External links: public GitHub source, issue forms, signed DMG, and setup-help targets rechecked successfully
+- Deployment approval: Jonathan approved deployment on 2026-07-11
+
 ## Release Details
 
 - Release label: ClearWaive landing page (`clearwaive.html`) + homepage nav/apps card + sitemap
