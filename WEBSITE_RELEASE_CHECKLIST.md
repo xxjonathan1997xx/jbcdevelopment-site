@@ -6,13 +6,13 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
 
 ## Release Details
 
-- Release label: Store launch (digital products) - `store.html`
-- Commit: `c0484bd` (rollback to `16ba866`)
+- Release label: ClearWaive landing page (`clearwaive.html`) + homepage nav/apps card + sitemap
+- Commit: pending (not committed yet); rollback to last known-good `dced5dc` on `main`
 - Target host:
 - Domain: `jbcdevelopment.dev`
 - Reviewer:
-- Date: 2026-06-30
-- Final decision: Deployed 2026-06-30 (`c0484bd` on `main`)
+- Date: 2026-07-13
+- Final decision: Pending approval — not committed or deployed
 
 ## Checklist
 
