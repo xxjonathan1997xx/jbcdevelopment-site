@@ -19,31 +19,28 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
 
 ## Release Details
 
-- Release label: ClearWaive landing page (`clearwaive.html`) + homepage nav/apps card + sitemap
-- Commit: pending (not committed yet); rollback to last known-good `dced5dc` on `main`
-- Target host:
+- Release label: ClearWaive landing page (`clearwaive.html`) + homepage links for ClearWaive & M5SteamBridge + sitemap
+- Commit: `d54da11` on `main` (rollback to last known-good `dced5dc`)
+- Target host: GitHub Pages (legacy build, source `main` branch, root path)
 - Domain: `jbcdevelopment.dev`
-- Reviewer:
+- Reviewer: Jonathan
 - Date: 2026-07-13
-- Final decision: Pending approval — not committed or deployed
+- Final decision: Approved and deployed 2026-07-13 — live, Pages build succeeded, live URLs verified 200
 
 ## Checklist
 
 | Check Area | Status | Evidence | Blocker | Next Action |
 |---|---|---|---|---|
-| Mobile QA | Verified | `store.html` at 390px: hamburger nav, single-column cards (screenshot `jbc-store-mobile-en.png`) | None for store page | Re-check after real product links added |
-| Desktop QA | Verified | `store.html` full layout EN + ES toggle verified via local preview (`jbc-store-desktop-en.png`) | None for store page | Re-check after real product links added |
-| Navigation links | Updated | Store added to header + footer on index, store, downloads, support, privacy | Index uses "How we ship"/`#ship`; subpages use "Work"/`/#process` (pre-existing) | Verify every header and footer link before deploy |
-| Store / digital products | Verified | `store.html`: 8 live Payhip products across 4 categories; runtime check confirms `window.Payhip` loaded, 8 buy buttons, all hrefs real (no `REPLACE-`), EN/ES translations | None - placeholders replaced with live links (2Ddxz, aTA1v, JfW6G, qFs4B, lsonC, RXgS4, Q0ox1, 0lgG7) | Deploy after approval |
-| Contact email | Pending | `jbcsdevs@gmail.com` | Contact email review not recorded | Search for outdated email or placeholders |
-| Privacy/support pages | Updated | Added Highway Fury support; homepage app parity for iOS games | Public page review not recorded | Verify page copy, links, and mobile layout |
-| Email DNS records | Pending | Current contact link uses direct Gmail; domain email DNS only needs review before reintroducing `jbcdevelopment.dev` email | DNS email record review not recorded | Review DNS outside this workflow before provider or domain-email changes |
-| Contact link behavior | Pending | Direct `mailto:` links open a user-reviewed email draft to `jbcsdevs@gmail.com` | Static site does not store submissions | Verify contact links before deploy |
-| SEO title/description | Updated | `index.html` metadata, JSON-LD, raster `og-share.jpg`, hreflang | Metadata refreshed 2026-06-30 |
-| Sitemap/robots | Updated | `sitemap.xml` adds `store.html` (lastmod 2026-06-30) | Review static files |
-| Performance basics | Improved | `_headers` cache for CSS/JS/HTML, hero `fetchpriority`, lazy images | Run local browser check |
-| Privacy/safety notes | Pending | Support and privacy copy warns against passwords, payment details, and sensitive records | Safety wording review not recorded | Confirm copy before deploy |
-| No secrets committed | Pending | No `.env`, `.env.local`, tokens, credentials, keys, or private data | Secret review not recorded | Run git status and targeted scan |
+| Desktop QA | Verified | `clearwaive.html` + homepage `#apps` at 1280px via Chrome DevTools: 3-card apps row, nav shows ClearWaive + M5SteamBridge, no h1 overflow, no horizontal scroll | None | — |
+| Mobile QA | Verified | `clearwaive.html` at 375/500px: hamburger nav, full-width buttons, badges reflow, no overflow | None | — |
+| Navigation links | Verified | ClearWaive + M5SteamBridge added to header + footer on `index.html`; M5 apps card repointed to `/m5steambridge/`; all internal hrefs resolve (200) | None | — |
+| New page: ClearWaive | Verified | `clearwaive.html` live 200, h1 present; copy sourced from ClearWaive MVP (no fabricated claims); "View live demo" → `clearwaive-mvp.vercel.app` confirmed 200; reuses existing components/tokens | Demo video is a marked placeholder (no YouTube upload yet) | Swap `VIDEO_ID` when uploaded |
+| Contact link behavior | Verified | ClearWaive uses `mailto:jbcsdevs@gmail.com` intake pattern; no backend, no submission storage | None | — |
+| SEO title/description | Verified | `clearwaive.html` full title/description/canonical/og/hreflang matching `index.html` pattern | None | — |
+| Sitemap/robots | Verified | `sitemap.xml` adds `clearwaive.html` + `custom-work.html` (lastmod 2026-07-13); live sitemap serves both; valid XML | None | — |
+| No secrets committed | Verified | Only `clearwaive.html`, `index.html`, `sitemap.xml`, `WEBSITE_RELEASE_CHECKLIST.md` changed; no `.env`/tokens/keys; `CLAUDE.md` pre-existing local edit left untouched | None | — |
+| Deploy + live verify | Verified | Pushed to `main`; GitHub Pages build `built`; live URLs 200 (`/clearwaive.html`, `/m5steambridge/`, sitemap) | None | — |
+| Merge integrity | Verified | Two rounds of remote divergence (teammate M5 page, then NextRole support/privacy) merged cleanly — no conflicts, no work lost | None | — |
 
 ## Contact Link Limitation
 
