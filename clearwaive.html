@@ -113,25 +113,17 @@
         </div>
       </section>
 
-      <!--
-        DEMO VIDEO — PLACEHOLDER.
-        TODO: Video not yet on YouTube. When live, replace VIDEO_ID below with the real
-        (or unlisted) ID and delete the placeholder poster block. Keep title/loading attrs.
-        Embed form: https://www.youtube-nocookie.com/embed/VIDEO_ID
-      -->
       <section class="ship-section" id="demo" aria-labelledby="demo-title">
         <div class="shell">
           <div class="section-heading">
             <h2 id="demo-title">See a payment run get checked.</h2>
             <p>A short walkthrough: add a vendor, track the paperwork, and watch a non-compliant sub get held before the check goes out.</p>
           </div>
-          <div class="video-frame" style="max-width: 860px; margin: 0 auto; aspect-ratio: 16 / 9; border-radius: var(--radius, 16px); overflow: hidden; background: #0b1220; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(11, 95, 255, 0.25);">
-            <!-- Replace this placeholder block with the iframe embed once the video is live: -->
-            <!-- <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="ClearWaive product walkthrough" loading="lazy" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-            <p style="color: rgba(255,255,255,0.7); text-align: center; padding: 1.5rem; max-width: 40ch;">
-              Demo video coming soon. In the meantime,
-              <a href="https://clearwaive-mvp.vercel.app" target="_blank" rel="noopener noreferrer" style="color: #7ea9ff;">try the live demo</a>.
-            </p>
+          <div class="video-frame" style="max-width: 860px; margin: 0 auto; aspect-ratio: 16 / 9; border-radius: var(--radius, 16px); overflow: hidden; background: #0b1220; border: 1px solid rgba(11, 95, 255, 0.25);">
+            <video controls preload="metadata" playsinline poster="/assets/clearwaive/clearwaive-demo-poster.jpg" style="display: block; width: 100%; height: 100%; object-fit: contain; background: #0b1220;">
+              <source src="/assets/clearwaive/clearwaive-demo.mp4" type="video/mp4" />
+              Your browser does not support HTML video. <a href="/assets/clearwaive/clearwaive-demo.mp4">Download the ClearWaive demo</a>.
+            </video>
           </div>
         </div>
       </section>
