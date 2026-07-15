@@ -118,42 +118,125 @@
           </ul>
 
           <h2>App privacy policies</h2>
-          <section id="nextrole-privacy" aria-labelledby="nextrole-privacy-heading">
+          <section id="nextrole-privacy" aria-labelledby="nextrole-privacy-heading" data-policy-version="2026-07-15">
             <h3 id="nextrole-privacy-heading">Privacy Policy for NextRole</h3>
-            <p><strong>Last updated: July 13, 2026</strong></p>
+            <p><strong>Last updated: July 15, 2026</strong></p>
             <p>
-              NextRole is a job-search organizer. When the public beta opens, it will use an
-              account so each user can access only their own information. Information a user
-              chooses to enter may include an email address, display name, structured resume
-              content, career profile, search preferences, saved jobs, application status,
-              dates, and notes.
+              NextRole is operated by JBC Software Development LLC and provides tools for
+              organizing a job search. A user may explore synthetic sample data without an
+              account. Signed-in users use passwordless email authentication so their
+              information can be stored in an owner-scoped account and accessed across
+              supported devices.
+            </p>
+
+            <h4>Information users provide</h4>
+            <p>
+              Information a user chooses to enter can include an email address, display
+              name, phone number, free-form location, structured resume content, career
+              profile, role and work preferences, desired salary, saved-job salary ranges
+              and posting links, application status, dates, and notes. NextRole assigns an
+              account identifier to keep each user's records separate.
             </p>
             <p>
-              The public beta is planned to use Supabase for account authentication and
-              owner-scoped data storage and Resend for sign-in email delivery. Production
-              accounts will not open until those hosted services and their privacy controls
-              are configured and verified. Service providers process information only to
-              operate NextRole under their own terms and privacy practices.
+              NextRole does not request access to contacts, photos, camera, microphone,
+              inbox, calendar, or precise device location. The initial public beta does not
+              accept uploaded resume files.
+            </p>
+
+            <h4>How information is used</h4>
+            <p>
+              NextRole uses information to authenticate and maintain an account; provide
+              resume, onboarding, Today, Jobs, Tracker, and Strategy features; save and
+              synchronize records a user enters; prepare account exports; process account
+              deletion; protect and operate the service; investigate failures; prevent
+              abuse; and respond to support requests.
             </p>
             <p>
-              NextRole does not use advertising, behavioral tracking, or third-party product
-              analytics. The initial public beta will not use external AI, apply to jobs on a
-              user's behalf, monitor email or calendars, or accept resume file uploads. Links
-              to job postings open external websites governed by their own privacy practices.
+              NextRole does not use advertising, behavioral tracking, third-party product
+              analytics, or external AI. It does not automatically apply to jobs or monitor
+              email or calendars. NextRole does not sell personal information.
+            </p>
+
+            <h4>Service providers and operational data</h4>
+            <p>
+              NextRole uses Supabase for passwordless authentication, owner-scoped database
+              storage, account export, account deletion, security, debugging, and service
+              availability. Supabase and its network provider can process and temporarily
+              retain authentication and request metadata such as user ID, IP address,
+              country derived from IP address, user-agent, request path, response status,
+              and latency. The current Supabase Pro configuration retains API/database logs
+              for seven days and daily database backups for seven days. NextRole does not
+              configure a separate log drain or long-term analytics copy.
             </p>
             <p>
-              Users can request a complete JSON export of their account data and can permanently
-              delete their account from account settings. Account deletion removes the active
-              account and owner-scoped records. A service provider may retain encrypted backup
-              copies for a limited recovery period before routine deletion.
+              NextRole uses Resend to deliver magic-link sign-in email. Resend processes the
+              recipient email address, sender identity, message content, delivery status,
+              and related delivery or security metadata. Resend documents 30-day retention
+              for email data. Resume, saved-job, application, and strategy content is not
+              sent through Resend.
             </p>
             <p>
-              Resume PDF export is initiated by the user through the device or browser print
-              workflow. The user chooses where an exported file is saved or shared, and that
+              JBC Software Development LLC processes only information a user voluntarily
+              sends to <a href="mailto:jbcsdevs@gmail.com?subject=NextRole%20privacy">jbcsdevs@gmail.com</a>
+              for support, privacy, deletion, or security assistance. Users should not email
+              passwords, authentication links, tokens, full account exports, or unnecessary
+              resume content.
+            </p>
+
+            <h4>Job-posting links and exports</h4>
+            <p>
+              User-entered job-posting links open external websites only when the user
+              chooses to visit them. Those websites operate under their own privacy
+              practices.
+            </p>
+            <p>
+              Resume PDF export and account JSON export occur only when initiated by the
+              user. The user chooses where an exported file is saved or shared, and that
               destination handles the exported copy under its own privacy practices.
             </p>
+
+            <h4>Retention and deletion</h4>
             <p>
-              For NextRole privacy questions or account help, email
+              Account and job-search records remain while an account is active unless the
+              user edits or deletes them. Signed-in users can request a complete JSON export
+              of active account data and can permanently delete the account from Account
+              settings. Account deletion immediately removes the active authentication
+              account and owner-scoped database records. Previously created encrypted
+              backups can retain the deleted state until the seven-day Supabase backup
+              window expires. NextRole does not use backups to recreate an individually
+              deleted account. Files a user previously exported or shared must be deleted
+              separately from the locations the user chose.
+            </p>
+
+            <h4>Security</h4>
+            <p>
+              NextRole uses encrypted network connections, owner-scoped database policies,
+              authenticated sessions, restricted administrative credentials, and release
+              checks intended to prevent one account from accessing another account's
+              records. No system can guarantee absolute security. A user who believes an
+              account or information is at risk should contact support promptly.
+            </p>
+
+            <h4>Children</h4>
+            <p>
+              NextRole is a general job-search organization service and is not directed to
+              children under 13. If JBC Software Development LLC learns that information was
+              collected from a child under 13 without appropriate authorization, it will
+              take steps to delete it.
+            </p>
+
+            <h4>Changes</h4>
+            <p>
+              This policy may be updated when NextRole's features, providers, or legal
+              obligations change. The last-updated date will be revised, and material
+              changes will be communicated through an appropriate service or support
+              channel.
+            </p>
+
+            <h4>Contact</h4>
+            <p>
+              For support, privacy questions, export help, deletion problems, or security
+              concerns, email
               <a href="mailto:jbcsdevs@gmail.com?subject=NextRole%20privacy">jbcsdevs@gmail.com</a>.
             </p>
           </section>
