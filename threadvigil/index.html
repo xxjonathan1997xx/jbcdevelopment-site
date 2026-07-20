@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ThreadVigil | Mission Control for Coding Agents on macOS</title>
+    <meta
+      name="description"
+      content="Monitor Claude Code, Codex, OpenCode, and Cursor from one private, native macOS dashboard. See waiting agents, local cost estimates, and paste-ready handoffs."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jbcdevelopment.dev/threadvigil/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jbcdevelopment.dev/threadvigil/" />
+    <meta property="og:title" content="ThreadVigil | Never lose track of an agent again" />
+    <meta
+      property="og:description"
+      content="Private, native mission control for Claude Code, Codex, OpenCode, and Cursor on your Mac."
+    />
+    <meta property="og:image" content="https://jbcdevelopment.dev/threadvigil/screenshots/01-overview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0b5fff" />
+
+    <link rel="icon" href="/threadvigil/icon.png" type="image/png" />
+    <link rel="preload" href="/styles.css" as="style" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+    <style>
+      .threadvigil-page { padding-bottom: 5rem; }
+      .threadvigil-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+        gap: clamp(2rem, 6vw, 5rem);
+        align-items: center;
+      }
+      .threadvigil-icon {
+        width: 104px;
+        height: 104px;
+        border-radius: 24px;
+        box-shadow: 0 18px 50px rgba(11, 95, 255, 0.2);
+      }
+      .threadvigil-price { font-size: 1.05rem; font-weight: 800; }
+      .threadvigil-proof {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+        margin-top: 1.25rem;
+      }
+      .threadvigil-proof span {
+        border: 1px solid var(--border-color, #dbe3ef);
+        border-radius: 999px;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+      .threadvigil-shot {
+        margin: 0;
+        overflow: hidden;
+        border: 1px solid var(--border-color, #dbe3ef);
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: 0 20px 60px rgba(20, 36, 64, 0.1);
+      }
+      .threadvigil-shot img { width: 100%; height: auto; display: block; }
+      .threadvigil-gallery {
+        display: grid;
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+      .threadvigil-gallery figure { margin: 0; }
+      .threadvigil-gallery figcaption {
+        padding: 1rem 1.2rem 1.25rem;
+        font-weight: 700;
+      }
+      .threadvigil-feature-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+      .threadvigil-feature {
+        padding: 1.4rem;
+        border: 1px solid var(--border-color, #dbe3ef);
+        border-radius: 16px;
+      }
+      .threadvigil-feature h3 { margin-top: 0; }
+      .threadvigil-privacy { margin-top: 2rem; }
+      @media (max-width: 760px) {
+        .threadvigil-hero,
+        .threadvigil-feature-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-site-header>
+      <nav class="nav shell" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="JBC Software Development LLC home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="/assets/jbc-brand-mark.svg" alt="" width="44" height="44" />
+          </span>
+          <span class="brand-name">
+            <strong>JBC Development</strong>
+            <small>Software Development LLC</small>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="/#apps">Apps</a>
+          <a href="/store.html">Store</a>
+          <a href="/downloads.html">Downloads</a>
+          <a href="/support.html">Support</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="content-page shell threadvigil-page">
+      <header class="content-header threadvigil-hero">
+        <div>
+          <p class="section-label">Private mission control for coding agents</p>
+          <h1>Never lose track of an agent again.</h1>
+          <p>
+            ThreadVigil brings Claude Code, Codex, OpenCode, and Cursor into one native
+            macOS dashboard. See what is working, what is waiting for you, and what each
+            supported session costs—without sending your coding history to another cloud.
+          </p>
+          <p class="threadvigil-price">$49 USD · One-time purchase</p>
+          <div class="page-actions">
+            <a class="button primary" href="https://gumroad.com/l/limhtf">
+              Buy ThreadVigil
+            </a>
+            <a class="button secondary" href="#screenshots">See it in action</a>
+          </div>
+          <div class="threadvigil-proof" aria-label="Release facts">
+            <span>macOS 14+</span>
+            <span>Signed and notarized</span>
+            <span>Local-first</span>
+            <span>Automatic updates</span>
+          </div>
+        </div>
+        <img
+          class="threadvigil-icon"
+          src="/threadvigil/icon.png"
+          alt="ThreadVigil app icon"
+          width="104"
+          height="104"
+        />
+      </header>
+
+      <section class="content-panel" aria-labelledby="features-title">
+        <div class="m5-section-heading">
+          <h2 id="features-title">One glance. Every agent.</h2>
+          <p>Stay focused on the work instead of checking terminals one by one.</p>
+        </div>
+        <div class="threadvigil-feature-grid">
+          <article class="threadvigil-feature">
+            <h3>Know who needs you</h3>
+            <p>Get a local notification when a supported session explicitly starts waiting for input.</p>
+          </article>
+          <article class="threadvigil-feature">
+            <h3>Track local cost estimates</h3>
+            <p>Review input, output, and cache token estimates using a transparent pricing table.</p>
+          </article>
+          <article class="threadvigil-feature">
+            <h3>Hand off without rediscovery</h3>
+            <p>Generate an editable, paste-ready continuation handoff locally when you request it.</p>
+          </article>
+          <article class="threadvigil-feature">
+            <h3>Keep coding history private</h3>
+            <p>Normalized session history stays on your Mac. Full transcripts are not stored by ThreadVigil.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="screenshots" aria-labelledby="screenshots-title">
+        <div class="m5-section-heading">
+          <h2 id="screenshots-title">Built for real multi-agent work.</h2>
+          <p>Monitor active tools, catch waiting sessions, and create a clean continuation handoff.</p>
+        </div>
+        <div class="threadvigil-gallery">
+          <figure class="threadvigil-shot">
+            <img
+              src="/threadvigil/screenshots/01-overview.png"
+              alt="ThreadVigil overview showing multiple active coding-agent providers, waiting state, and local cost estimate"
+              loading="lazy"
+            />
+            <figcaption>Overview: active providers, waiting work, and estimated daily cost.</figcaption>
+          </figure>
+          <figure class="threadvigil-shot">
+            <img
+              src="/threadvigil/screenshots/02-menubar-waiting.png"
+              alt="ThreadVigil compact menu-bar window showing working and waiting coding-agent sessions"
+              loading="lazy"
+            />
+            <figcaption>Menu bar: see the next session that needs attention without opening the dashboard.</figcaption>
+          </figure>
+          <figure class="threadvigil-shot">
+            <img
+              src="/threadvigil/screenshots/03-handoff.png"
+              alt="ThreadVigil local handoff preview with objective, current state, and exact next steps"
+              loading="lazy"
+            />
+            <figcaption>Local handoff: preview an editable continuation brief before copying it.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-panel threadvigil-privacy" aria-labelledby="privacy-title">
+        <h2 id="privacy-title">Local by design.</h2>
+        <p>
+          ThreadVigil reads supported local coding-agent session data to determine status,
+          estimate costs, and generate a handoff only when requested. It stores normalized
+          metadata for seven days rather than full transcripts. Routine network access is
+          limited to Gumroad license verification and Sparkle update checks.
+        </p>
+        <p>
+          Cursor detail depends on the stable, privacy-safe local formats available on your Mac
+          and may be limited to process-level monitoring.
+        </p>
+      </section>
+
+      <section class="contact-panel" aria-labelledby="buy-title">
+        <div>
+          <h2 id="buy-title">Keep every coding agent in view.</h2>
+          <p>ThreadVigil is $49 USD as a one-time purchase for macOS 14 or later.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="contact-link" href="https://gumroad.com/l/limhtf">Buy ThreadVigil</a>
+          <a class="contact-link secondary-contact" href="/support.html">Get support</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>&copy; 2026 JBC Software Development LLC. <span>All rights reserved.</span></p>
+        <div class="footer-links">
+          <a href="/#apps">Apps</a>
+          <a href="/store.html">Store</a>
+          <a href="/downloads.html">Downloads</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/support.html">Support</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
