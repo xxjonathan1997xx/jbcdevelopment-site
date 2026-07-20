@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>ThreadVigil</title>
+        <item>
+            <title>0.1.0</title>
+            <pubDate>Mon, 20 Jul 2026 05:45:21 -0400</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description sparkle:format="markdown"><![CDATA[# ThreadVigil 0.1.0
+
+Initial commercial release candidate. ThreadVigil monitors supported local coding-agent sessions, keeps normalized local history, and provides licensed cost and handoff tools.
+]]></description>
+            <enclosure url="https://jbcdevelopment.dev/threadvigil/ThreadVigil.zip" length="1563750" type="application/octet-stream" sparkle:edSignature="zoBnYI2HeWZOEFi3C4s24PjB69sp+lSiVHFEh9uG7dJUxJh4+NL0JM/jziULwW0Incst6eSbACmso+fVDwOYBw=="></enclosure>
+        </item>
+    </channel>
+</rss><!-- sparkle-signatures:
+edSignature: bXGs9MQHmIagpTSfVUpY6s12TRW7Mi82bpHN2FDG3mw4Hi9/kw3wB+koh5/CxMExbU3cxrj1k7x1ygUY2SOFBA==
+length: 1293
+-->
