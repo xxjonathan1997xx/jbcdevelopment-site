@@ -86,10 +86,8 @@
       </header>
 
       <!--
-        STORE NOTE: Checkout is handled by Payhip (instant file delivery, EU VAT handled).
-        All Buy buttons link to live Payhip products. Keep class="button primary
-        payhip-buy-button" and the data-theme attribute so the overlay checkout works
-        (payhip.js is loaded at the bottom of this page).
+        STORE NOTE: Most checkout is handled by Payhip. ThreadVigil uses Gumroad for
+        software license-key delivery and direct license verification in the Mac app.
       -->
 
       <section class="store-section" id="products" aria-labelledby="store-ebooks-title">
@@ -185,6 +183,22 @@
           <p>Licensed local tools and scripts with setup notes and clear limits.</p>
         </div>
         <div class="store-grid" aria-label="Software and tools">
+          <article class="store-card">
+            <img
+              class="store-card-thumb"
+              src="/threadvigil/icon.png"
+              alt="ThreadVigil app icon"
+              loading="lazy"
+              decoding="async"
+            >
+            <span class="store-card-tag">macOS software</span>
+            <h3>ThreadVigil</h3>
+            <p>Private mission control for Claude Code, Codex, OpenCode, and Cursor on your Mac.</p>
+            <div class="store-card-foot">
+              <span class="store-price">$49</span>
+              <a class="button primary" href="/threadvigil/">Learn more</a>
+            </div>
+          </article>
           <article class="store-card">
             <img class="store-card-thumb" src="/assets/store/scripts.jpg" alt="" loading="lazy" decoding="async">
             <span class="store-card-tag">Software</span>
