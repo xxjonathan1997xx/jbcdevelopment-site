@@ -5,21 +5,21 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <title>ThreadVigil</title>
         <item>
             <title>0.1.0</title>
-            <pubDate>Thu, 30 Jul 2026 10:28:18 -0400</pubDate>
-            <link>https://jbcdevelopment.dev/threadvigil/</link>
-            <sparkle:version>4</sparkle:version>
+            <pubDate>Thu, 30 Jul 2026 12:18:36 -0400</pubDate>
+            <sparkle:version>5</sparkle:version>
             <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[# ThreadVigil 0.1.0 Private Beta 2
+            <description sparkle:format="markdown"><![CDATA[# ThreadVigil 0.1.0 Private Beta 3
 
-Replacement private beta with a rotated Sparkle update-signing key.
+Build 5 introduces ThreadVigil's refined production app icon.
 
-ThreadVigil is free and local-first. Your session data stays on your Mac.
+ThreadVigil remains free and local-first. Session history and cost estimates
+stay on the Mac.
 ]]></description>
-            <enclosure url="https://jbcdevelopment.dev/threadvigil/ThreadVigil.zip" length="4133421" type="application/octet-stream" sparkle:edSignature="DIg24GPTVMGItae/4cua233T53IK0lnNO5NN5K3dLDPgQMPrMNpUOGU41oOsuiZklxBSiM5TjsaYko36jpCGDw=="></enclosure>
+            <enclosure url="https://jbcdevelopment.dev/threadvigil/ThreadVigil.zip" length="1979252" type="application/octet-stream" sparkle:edSignature="ixzX+kXb/Y7bsSHABE/oFTQpIrRDrptzGd8TOiX6RHl1pOBY5TzOExdDp6b4EhTumtV5LvVcxQvbZcSzD0WtAA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 0mynDz6ULaiat7H+a1kHxgaMOW1IZfMMfYJ36yYQfrPlc8mGZ5skFGPHQ0MrISgiWuwNtbaZUrn4ANE4A2XKCg==
-length: 1340
+edSignature: tZcBaaFr8l27zy4TxHkbvdUGgzwv8+Fd0J250BmeFz5ImOczfKsHqn1K86cc6znBsaLYYlx5kDpXD+GHRijtCA==
+length: 1289
 -->
