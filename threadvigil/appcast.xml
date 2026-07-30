@@ -5,21 +5,18 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <title>ThreadVigil</title>
         <item>
             <title>0.1.0</title>
-            <pubDate>Thu, 30 Jul 2026 12:18:36 -0400</pubDate>
-            <sparkle:version>5</sparkle:version>
+            <pubDate>Thu, 30 Jul 2026 18:03:14 -0400</pubDate>
+            <sparkle:version>6</sparkle:version>
             <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description sparkle:format="markdown"><![CDATA[# ThreadVigil 0.1.0 Private Beta 3
+            <description sparkle:format="markdown"><![CDATA[# ThreadVigil 0.1.0
 
-Build 5 introduces ThreadVigil's refined production app icon.
-
-ThreadVigil remains free and local-first. Session history and cost estimates
-stay on the Mac.
+Initial free public release. ThreadVigil monitors supported local coding-agent sessions, keeps normalized local history, provides local cost estimates and handoff tools, and lets users silence notification sounds while keeping alerts visible.
 ]]></description>
-            <enclosure url="https://jbcdevelopment.dev/threadvigil/ThreadVigil.zip" length="1979252" type="application/octet-stream" sparkle:edSignature="ixzX+kXb/Y7bsSHABE/oFTQpIrRDrptzGd8TOiX6RHl1pOBY5TzOExdDp6b4EhTumtV5LvVcxQvbZcSzD0WtAA=="></enclosure>
+            <enclosure url="https://jbcdevelopment.dev/threadvigil/ThreadVigil.zip" length="1984816" type="application/octet-stream" sparkle:edSignature="1/oHt39FqhQ1qe+M6dMTO5Hzttbm7yluQ84QLr2Cq5OqK6gj8aQJZItC9y7r2c6WX/PTkm8hNkxeJl0UVC9ZBg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: tZcBaaFr8l27zy4TxHkbvdUGgzwv8+Fd0J250BmeFz5ImOczfKsHqn1K86cc6znBsaLYYlx5kDpXD+GHRijtCA==
-length: 1289
+edSignature: 9sa/OgrM9l1JjBRhajBrE+O+7Na6O1l/blXNEqM/YfSFsm2C2nFCHgZFUC7PACjEPfEH1QP6uZCGcTI+JdE2Cg==
+length: 1360
 -->
