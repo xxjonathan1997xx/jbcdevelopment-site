@@ -35,8 +35,8 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" href="/styles.css" as="style" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preload" href="/styles.css?v=20260731-home-motion" as="style" />
+    <link rel="stylesheet" href="/styles.css?v=20260731-home-motion" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -62,7 +62,7 @@
         ]
       }
     </script>
-    <script src="/script.js" defer></script>
+    <script src="/script.js?v=20260731-home-motion" defer></script>
   </head>
   <body class="home-page">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -87,15 +87,10 @@
         </button>
 
         <div class="nav-links" id="nav-links">
-          <a href="#ship">How we ship</a>
           <a href="/projects.html">Projects</a>
-          <a href="/clearwaive.html">ClearWaive</a>
-          <a href="/m5steambridge/">M5SteamBridge</a>
           <a href="#custom-work">Custom work</a>
           <a href="/store.html">Store</a>
-          <a href="/downloads.html">Downloads</a>
           <a href="/support.html">Support</a>
-          <a href="/privacy.html">Privacy</a>
           <a href="#contact">Contact</a>
           <div class="language-switcher" aria-label="Language selector">
             <button type="button" class="language-option" data-language-option="en" aria-pressed="true">EN</button>
@@ -109,10 +104,10 @@
       <section class="hero shell">
         <div class="hero-copy">
           <p class="hero-eyebrow">Florida indie app studio</p>
-          <h1>iOS apps &amp; Mac tools, <span>signed and supported.</span></h1>
+          <h1>iOS apps, <span>private and supported.</span></h1>
           <p>
-            JBC Development ships App Store apps and notarized Mac downloads — with
-            support, privacy details, checksums, and scoped custom work when the fit is right.
+            JBC Development ships focused App Store products with visible privacy details,
+            direct support, and scoped custom work when the fit is right.
           </p>
           <div class="hero-actions">
             <a
@@ -123,11 +118,18 @@
             >
               Get Paw Care Academy
             </a>
-            <a class="button secondary" href="/downloads.html#m5steambridge">Download M5SteamBridge</a>
+            <a
+              class="button secondary"
+              href="https://apps.apple.com/us/app/paintrail/id6785262063"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get PainTrail
+            </a>
           </div>
           <p class="hero-trust">
-            Every Mac build is signed, notarized, and checksum-verified.
-            <a href="https://github.com/xxjonathan1997xx/jbcdevelopment-site/releases/download/jbc-mac-gold-2026-06-14/CHECKSUMS.sha256" target="_blank" rel="noopener noreferrer">Verify downloads</a>
+            No accounts, ads, or analytics in Paw Care Academy or PainTrail.
+            <a href="/privacy.html">Read the privacy details</a>
           </p>
           <div class="product-rotator" aria-label="Current JBC products">
             <span>Now shipping</span>
@@ -146,8 +148,8 @@
               <img
                 src="/assets/app-icons/paw-care-academy.jpg"
                 alt="Paw Care Academy app icon"
-                width="128"
-                height="128"
+                width="96"
+                height="96"
                 fetchpriority="high"
                 decoding="async"
               />
@@ -156,22 +158,24 @@
             </a>
             <a
               class="hero-product hero-product-secondary"
-              href="/downloads.html#m5steambridge"
+              href="https://apps.apple.com/us/app/paintrail/id6785262063"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                src="/assets/app-icons/m5steambridge-256.png"
-                alt="M5SteamBridge app icon"
-                width="72"
-                height="72"
+                src="/assets/app-icons/paintrail-256.png"
+                alt="PainTrail app icon"
+                width="96"
+                height="96"
                 loading="lazy"
               />
-              <span>M5SteamBridge</span>
-              <em>Mac download</em>
+              <span>PainTrail</span>
+              <em>App Store</em>
             </a>
           </div>
           <figcaption class="hero-proof">
             <strong>Real products</strong>
-            <span>App Store apps and Mac tools with support paths on this site.</span>
+            <span>App Store apps with clear privacy and support paths.</span>
           </figcaption>
         </figure>
       </section>
@@ -246,7 +250,7 @@
         <div class="shell app-showcase-panel">
           <div class="app-showcase-heading">
             <h2 id="apps-title">All JBC apps and tools.</h2>
-            <p>App Store apps and signed Mac downloads with direct support links.</p>
+            <p>Public App Store apps and software with direct support links.</p>
           </div>
 
           <div class="app-showcase-grid" aria-label="JBC apps and software downloads">
@@ -276,34 +280,38 @@
 
             <a
               class="app-showcase-card"
-              href="/m5steambridge/"
+              href="https://apps.apple.com/us/app/paintrail/id6785262063"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span class="app-card-visual app-card-visual-bridge" aria-hidden="true">
+              <span class="app-card-visual app-card-visual-paintrail">
                 <img
                   class="app-icon"
-                  src="/assets/app-icons/m5steambridge-256.png"
-                  alt="M5SteamBridge app icon"
+                  src="/assets/app-icons/paintrail-256.png"
+                  alt="PainTrail app icon"
                   width="80"
                   height="80"
                 />
-                <span class="bridge-status">
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                </span>
-                <span class="app-visual-status">Ready</span>
+                <span class="app-visual-status">App Store</span>
               </span>
               <span class="app-card-copy">
-                <span class="app-link-kicker">Mac app / Steam helper</span>
-                <strong>M5SteamBridge</strong>
-                <span>Local launcher helper for user-installed compatibility backends.</span>
-                <em>Learn more and download</em>
+                <span class="app-link-kicker">Health &amp; Fitness / Journal</span>
+                <strong>PainTrail</strong>
+                <span>Private pain tracking and clearer visit preparation.</span>
+                <em>Open in App Store</em>
               </span>
             </a>
 
             <a class="app-showcase-card" href="/clearwaive.html">
-              <span class="app-card-visual app-card-visual-bridge" aria-hidden="true">
-                <span class="app-visual-status">Private beta</span>
+              <span class="app-card-visual app-card-visual-clearwaive">
+                <img
+                  class="app-icon"
+                  src="/assets/app-icons/clearwaive.svg"
+                  alt="ClearWaive logo"
+                  width="80"
+                  height="80"
+                />
+                <span class="app-visual-status">Public pilot</span>
               </span>
               <span class="app-card-copy">
                 <span class="app-link-kicker">Web app / Construction</span>
@@ -314,14 +322,6 @@
             </a>
           </div>
 
-          <p class="app-showcase-note">
-            Mac downloads are signed and notarized. M5SteamBridge does not include Steam, games, Wine bottles, CrossOver, Whisky, or proprietary runtimes and does not bypass DRM, anti-cheat, ownership checks, or platform restrictions.
-            <a
-              href="https://github.com/xxjonathan1997xx/jbcdevelopment-site/releases/download/jbc-mac-gold-2026-06-14/CHECKSUMS.sha256"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Verify checksums</a>.
-          </p>
           <p class="app-showcase-note">
             <a href="/projects.html">See all publicly available JBC products</a>.
           </p>
@@ -385,7 +385,6 @@
         <div class="footer-links">
           <a href="/projects.html">Projects</a>
           <a href="/clearwaive.html">ClearWaive</a>
-          <a href="/m5steambridge/">M5SteamBridge</a>
           <a href="#custom-work">Custom work</a>
           <a href="/store.html">Store</a>
           <a href="/downloads.html">Downloads</a>

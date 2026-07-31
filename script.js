@@ -7,8 +7,8 @@ const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
 const LANGUAGE_STORAGE_KEY = "jbcdevelopment-language";
 const SUPPORTED_LANGUAGES = new Set(["en", "es"]);
 const LAB_CONSOLE_PHRASES = {
-  en: ["Paw Care Academy", "M5SteamBridge"],
-  es: ["Paw Care Academy", "M5SteamBridge"],
+  en: ["Paw Care Academy", "PainTrail"],
+  es: ["Paw Care Academy", "PainTrail"],
 };
 
 let currentLanguage = "en";
@@ -79,6 +79,21 @@ const translations = {
     "An early family-game experiment retained for reference, with no active release work.": "Un experimento temprano de juego familiar conservado como referencia, sin trabajo activo de lanzamiento.",
     "A reusable game-asset workspace kept as background material rather than a current product.": "Un espacio de recursos reutilizables para juegos conservado como material de apoyo, no como producto actual.",
     "Florida indie app studio": "Estudio indie de apps en Florida",
+    "iOS apps,": "Apps iOS,",
+    "private and supported.": "privadas y con soporte.",
+    "JBC Development ships focused App Store products with visible privacy details, direct support, and scoped custom work when the fit is right.": "JBC Development publica productos enfocados en el App Store con privacidad visible, soporte directo y trabajo personalizado acotado cuando encaja.",
+    "Get PainTrail": "Obtener PainTrail",
+    "No accounts, ads, or analytics in Paw Care Academy or PainTrail.": "Sin cuentas, anuncios ni analiticas en Paw Care Academy o PainTrail.",
+    "Read the privacy details": "Leer los detalles de privacidad",
+    "App Store apps with clear privacy and support paths.": "Apps del App Store con privacidad y soporte claros.",
+    "Public App Store apps and software with direct support links.": "Apps publicas del App Store y software con enlaces directos de soporte.",
+    "Health & Fitness / Journal": "Salud y bienestar / Diario",
+    "Private pain tracking and clearer visit preparation.": "Registro privado del dolor y preparacion mas clara para consultas.",
+    "PainTrail app icon": "Icono de la app PainTrail",
+    "ClearWaive logo": "Logo de ClearWaive",
+    "Web app / Construction": "App web / Construccion",
+    "COI, lien waiver, and payment-hold tracking for small general contractors.": "Seguimiento de seguros, renuncias de gravamen y retenciones de pago para pequenos contratistas generales.",
+    "See ClearWaive": "Ver ClearWaive",
     "iOS apps & Mac tools,": "Apps iOS y herramientas Mac,",
     "signed and supported.": "firmados y con soporte.",
     "JBC Development | iOS Apps & Mac Tools": "JBC Development | Apps iOS y herramientas Mac",
