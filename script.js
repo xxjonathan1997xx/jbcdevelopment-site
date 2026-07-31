@@ -23,6 +23,60 @@ const translations = {
     "Toggle navigation": "Alternar navegacion",
     "Work": "Trabajo",
     "How we ship": "Como publicamos",
+    "Projects": "Proyectos",
+    "JBC products": "Productos JBC",
+    "Software you can use today.": "Software que puedes usar hoy.",
+    "Released apps, Mac tools, and public software from JBC Development, with direct access and support paths where available.": "Apps publicadas, herramientas Mac y software publico de JBC Development, con acceso directo y soporte cuando estan disponibles.",
+    "Available now": "Disponible ahora",
+    "Public apps and tools.": "Apps y herramientas publicas.",
+    "Only products that are released or already publicly accessible appear here.": "Aqui solo aparecen productos publicados o que ya son accesibles al publico.",
+    "Public pilot": "Piloto publico",
+    "See all publicly available JBC products": "Ver todos los productos JBC disponibles al publico",
+    "Product ledger": "Registro de productos",
+    "What JBC is shipping, building, and leaving behind.": "Lo que JBC publica, construye y deja atras.",
+    "A transparent view of released products, work in progress, and experiments that are paused or archived. Statuses were reconciled with the project notes on July 30, 2026.": "Una vista transparente de productos publicados, trabajos en curso y experimentos pausados o archivados. Los estados se conciliaron con las notas de proyecto el 30 de julio de 2026.",
+    "Current projects": "Proyectos actuales",
+    "Paused and archived": "Pausados y archivados",
+    "Current": "Actuales",
+    "Released and actively developed.": "Publicados y en desarrollo activo.",
+    "Public releases, pilots, submissions, and products under active development.": "Lanzamientos publicos, pilotos, envios y productos en desarrollo activo.",
+    "Live on App Store": "Disponible en App Store",
+    "Released": "Publicado",
+    "Post-launch development": "Desarrollo posterior al lanzamiento",
+    "In App Review": "En revision de App Store",
+    "Pre-release": "Prelanzamiento",
+    "Active development": "Desarrollo activo",
+    "MVP development": "Desarrollo de MVP",
+    "Pilot": "Piloto",
+    "Kid-friendly pet-care learning for iPhone and iPad. Version 1.4 is live; the Godot 2.0 migration is in final device and release validation.": "Aprendizaje de cuidado de mascotas para iPhone y iPad. La version 1.4 esta disponible; la migracion a Godot 2.0 esta en validacion final de dispositivo y lanzamiento.",
+    "Open in App Store": "Abrir en App Store",
+    "A free, local-first macOS dashboard for monitoring Claude Code, Codex, OpenCode, and Cursor sessions.": "Un panel gratuito y local para macOS que supervisa sesiones de Claude Code, Codex, OpenCode y Cursor.",
+    "A free, open-source Mac helper for checking and troubleshooting user-installed Windows Steam compatibility setups.": "Una herramienta Mac gratuita y de codigo abierto para comprobar y resolver problemas de configuraciones de compatibilidad de Windows Steam instaladas por el usuario.",
+    "View M5SteamBridge": "Ver M5SteamBridge",
+    "View ThreadVigil": "Ver ThreadVigil",
+    "A mobile-first career manager. Version 1.2 development follows the initial release and subscription review work.": "Un gestor profesional pensado primero para movil. El desarrollo de la version 1.2 sigue al lanzamiento inicial y la revision de suscripciones.",
+    "A private pain journal and visit-preparation app. Version 0.2.1, build 44, was submitted for App Review on July 28.": "Un diario privado del dolor y app de preparacion de consultas. La version 0.2.1, compilacion 44, se envio a revision el 28 de julio.",
+    "A native iPhone arcade water racer with five tracks and championship play. Build 18 is awaiting device QA and store metadata.": "Un juego de carreras acuaticas arcade nativo para iPhone con cinco pistas y campeonato. La compilacion 18 espera pruebas en dispositivo y metadatos de la tienda.",
+    "A native iOS downhill mountain-bike racer built around time trials, ghost racing, and local-first play.": "Un juego nativo de ciclismo de montana cuesta abajo para iOS, centrado en contrarreloj, carreras fantasma y juego local.",
+    "A cooperative Godot delivery game. Its core delivery loop and co-op foundation are working; release-quality content and polish remain.": "Un juego cooperativo de entregas en Godot. El ciclo principal y la base cooperativa funcionan; faltan contenido y pulido de calidad de lanzamiento.",
+    "A safety-focused couples platform. The routing, access model, backend, and native foundations exist; the product UI is being built.": "Una plataforma para parejas enfocada en la seguridad. El enrutamiento, modelo de acceso, backend y bases nativas existen; se esta construyendo la interfaz.",
+    "A native Mac and iPhone dictation app. Private on-device transcription works; the polished cloud path remains in development.": "Una app nativa de dictado para Mac y iPhone. La transcripcion privada en el dispositivo funciona; la ruta pulida en la nube sigue en desarrollo.",
+    "A construction compliance tool for tracking insurance, lien waivers, and payment holds. The MVP is live for pilot outreach.": "Una herramienta de cumplimiento para construccion que controla seguros, renuncias de gravamen y retenciones de pago. El MVP esta activo para pilotos.",
+    "View ClearWaive": "Ver ClearWaive",
+    "Paused or archived": "Pausados o archivados",
+    "Experiments with an honest ending.": "Experimentos con un final honesto.",
+    "Preserved for lessons or possible reuse, but not represented as current releases.": "Conservados por sus aprendizajes o posible reutilizacion, pero no presentados como lanzamientos actuales.",
+    "Archived": "Archivado",
+    "Superseded": "Reemplazado",
+    "Paused": "Pausado",
+    "Blocked": "Bloqueado",
+    "The motorcycle racer was preserved in source control and replaced by Same Day Shipping Co.": "El juego de motos se conservo en el control de versiones y fue reemplazado por Same Day Shipping Co.",
+    "The earlier Godot racing build was superseded by the native Swift project Wave Rush!": "La version anterior de carreras en Godot fue reemplazada por el proyecto nativo Swift Wave Rush!",
+    "The photo-to-3D Mac experiment was removed from the public product lineup and is not under active development.": "El experimento Mac de foto a 3D se retiro del catalogo publico y no esta en desarrollo activo.",
+    "A background experiment currently blocked and not being presented as a shipping product.": "Un experimento secundario actualmente bloqueado que no se presenta como producto publicado.",
+    "A background game prototype retained in the project archive without active release work.": "Un prototipo de juego conservado en el archivo sin trabajo activo de lanzamiento.",
+    "An early family-game experiment retained for reference, with no active release work.": "Un experimento temprano de juego familiar conservado como referencia, sin trabajo activo de lanzamiento.",
+    "A reusable game-asset workspace kept as background material rather than a current product.": "Un espacio de recursos reutilizables para juegos conservado como material de apoyo, no como producto actual.",
     "Florida indie app studio": "Estudio indie de apps en Florida",
     "iOS apps & Mac tools,": "Apps iOS y herramientas Mac,",
     "signed and supported.": "firmados y con soporte.",
@@ -272,10 +326,8 @@ const translations = {
     "Refunds and support": "Reembolsos y soporte",
     "For purchase questions, download issues, or refund requests, email": "Para preguntas de compra, problemas de descarga o solicitudes de reembolso, escribe a",
     "with your order details.": "con los detalles de tu pedido.",
-    "Also available on": "Tambien disponible en",
-    "Some products are listed on free marketplaces for extra reach.": "Algunos productos se publican en tiendas gratuitas para mayor alcance.",
-    "itch.io store": "Tienda itch.io",
-    "Ko-fi shop": "Tienda Ko-fi",
+    "Need help with an order?": "¿Necesitas ayuda con un pedido?",
+    "Get direct help with purchases, downloads, license keys, or refunds.": "Obtén ayuda directa con compras, descargas, claves de licencia o reembolsos.",
     "Purchase support": "Soporte de compras",
     "Custom software, built and shipped": "Software personalizado, construido y publicado",
     "iOS, Mac, and AI tooling —": "Herramientas iOS, Mac y IA —",
@@ -353,6 +405,13 @@ const translations = {
     "See the setup-check workflow": "Mira el flujo de comprobacion",
     "The demo uses the real app: review readiness, profile guidance, error recovery, and the diagnostics privacy preview.": "La demostracion usa la app real: revisa la preparacion, la guia de perfiles, la recuperacion de errores y la vista previa de privacidad de diagnosticos.",
     "Your browser does not support embedded video.": "Tu navegador no admite video incrustado.",
+    "This 40-second screen recording has no audio. The visual sequence is described below.": "Esta grabación de pantalla de 40 segundos no tiene audio. La secuencia visual se describe a continuación.",
+    "Read the video transcript": "Leer la transcripción del video",
+    "M5SteamBridge opens to its readiness overview and checks the user-installed compatibility backend.": "M5SteamBridge abre su resumen de preparación y comprueba la capa de compatibilidad instalada por el usuario.",
+    "The overview identifies which setup components are ready and which need attention.": "El resumen identifica qué componentes están listos y cuáles necesitan atención.",
+    "Game Profiles shows local, game-by-game checks and conservative launch guidance.": "Perfiles de juegos muestra comprobaciones locales para cada juego y orientación prudente para iniciarlos.",
+    "Troubleshooting organizes recovery steps for common launch failures.": "Solución de problemas organiza pasos de recuperación para fallos de inicio comunes.",
+    "The diagnostics preview shows what information will be shared before the user exports it.": "La vista previa de diagnóstico muestra qué información se compartirá antes de que el usuario la exporte.",
     "One companion for the confusing parts.": "Un companero para las partes confusas.",
     "M5SteamBridge does not replace CrossOver, Wine, or Steam. It makes their setup state and common failures easier to understand.": "M5SteamBridge no reemplaza CrossOver, Wine ni Steam. Facilita entender su configuracion y sus fallos comunes.",
     "Verify readiness.": "Verifica la preparacion.",
@@ -430,6 +489,13 @@ initializeTranslation();
 initializeMotion();
 
 if (navToggle && navLinks) {
+  const closeNavigation = ({ restoreFocus = false } = {}) => {
+    if (!navLinks.classList.contains("is-open")) return;
+    navLinks.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    if (restoreFocus) navToggle.focus();
+  };
+
   navToggle.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("is-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
@@ -437,9 +503,20 @@ if (navToggle && navLinks) {
 
   navLinks.addEventListener("click", (event) => {
     if (event.target instanceof HTMLAnchorElement) {
-      navLinks.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
+      closeNavigation();
     }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeNavigation({ restoreFocus: true });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!siteHeader?.contains(event.target)) closeNavigation();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) closeNavigation();
   });
 }
 
