@@ -54,6 +54,7 @@ const translations = {
     "A free, open-source Mac helper for checking and troubleshooting user-installed Windows Steam compatibility setups.": "Una herramienta Mac gratuita y de codigo abierto para comprobar y resolver problemas de configuraciones de compatibilidad de Windows Steam instaladas por el usuario.",
     "View M5SteamBridge": "Ver M5SteamBridge",
     "View ThreadVigil": "Ver ThreadVigil",
+    "A private, account-free pain journal for logging pain, context, and medications, then preparing clearer visit summaries.": "Un diario privado del dolor, sin cuenta, para registrar dolor, contexto y medicamentos, y preparar resumenes mas claros para las consultas.",
     "A mobile-first career manager. Version 1.2 development follows the initial release and subscription review work.": "Un gestor profesional pensado primero para movil. El desarrollo de la version 1.2 sigue al lanzamiento inicial y la revision de suscripciones.",
     "A private pain journal and visit-preparation app. Version 0.2.1, build 44, was submitted for App Review on July 28.": "Un diario privado del dolor y app de preparacion de consultas. La version 0.2.1, compilacion 44, se envio a revision el 28 de julio.",
     "A native iPhone arcade water racer with five tracks and championship play. Build 18 is awaiting device QA and store metadata.": "Un juego de carreras acuaticas arcade nativo para iPhone con cinco pistas y campeonato. La compilacion 18 espera pruebas en dispositivo y metadatos de la tienda.",
