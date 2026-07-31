@@ -2,6 +2,21 @@
 
 Use this checklist before deploying updates to `jbcdevelopment.dev`.
 
+## PainTrail First 100 Feedback Campaign — July 31, 2026
+
+- Scope: replace the referral offer with an honest product-feedback offer on
+  `paintrail-referral.html`, update the matching PainTrail disclosure in
+  `privacy.html`, and replace the social preview artwork.
+- Approval: Jonathan explicitly approved publishing the campaign on July 31,
+  2026.
+- Privacy: participants are told not to submit health information; no App Store
+  rating or review is required or rewarded.
+- Intake: existing user-reviewed `mailto:` flow only; no backend, analytics,
+  tracking, or automatic response was added.
+- Rollback point: record the pre-deploy `main` commit immediately before push.
+- Validation: local HTTP, copy-length, mailto template, 100-slot ledger, HTML
+  structure, internal links, and whitespace checks must pass before push.
+
 This file is for readiness review only. It does not deploy, publish, change DNS, send email, or contact anyone.
 
 ## Pending Review: M5SteamBridge Open-Source Landing Page
