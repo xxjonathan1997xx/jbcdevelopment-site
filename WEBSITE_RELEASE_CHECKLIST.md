@@ -19,6 +19,26 @@ Use this checklist before deploying updates to `jbcdevelopment.dev`.
 
 This file is for readiness review only. It does not deploy, publish, change DNS, send email, or contact anyone.
 
+## SocialBar Landing Page — August 2, 2026
+
+- Scope: new `/socialbar/` landing page plus `/socialbar/selectors.json` (the app's
+  remote badge-selector feed). No changes to existing pages.
+- Approval: Jonathan approved on 2026-08-02 — link-to-Gumroad (no DMG hosted on the
+  site) and host the selector feed.
+- Distribution: purchase happens on Gumroad (`devsoul64.gumroad.com/l/socialbar`,
+  $4.99). The site hosts **no** installer, so the paid listing stays the only source.
+- Privacy: no analytics, tracking, forms, or backend added. The page states plainly
+  that the app contacts only Gumroad (license) and this domain (selector feed).
+- Rollback point: `d24856c` on `main`.
+- Validation: local HTTP served from repo root — `/socialbar/` 200,
+  `/socialbar/selectors.json` 200 and valid JSON (v4, 6 platforms), `/styles.css`,
+  `/script.js`, brand mark and every internal link referenced by the page all 200.
+- Known gap: no screenshots yet. The page ships without a gallery rather than with
+  placeholder art; add `/socialbar/screenshots/` when captures exist.
+- Claim accuracy: badge-count coverage varies by platform today (LinkedIn verified;
+  others fall back to "unavailable" rather than showing a wrong number). Page copy
+  reflects this instead of promising universal counts.
+
 ## Pending Review: M5SteamBridge Open-Source Landing Page
 
 - Branch: `codex/m5steambridge-open-source-launch`

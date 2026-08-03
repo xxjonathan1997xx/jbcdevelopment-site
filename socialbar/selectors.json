@@ -1,0 +1,69 @@
+{
+  "version": 4,
+  "note": "v4 from a live six-platform diagnostic with all accounts logged in. LinkedIn is VERIFIED: it exposes counts in aria-label on nav items ('Notifications, 0 new notifications'). Others remain anchor-based guesses because every platform had 0 unread at capture time, so no count node existed. DO NOT use X's app-text-transition-container spans \u2014 those are post like/repost counts, not notifications.",
+  "platforms": {
+    "instagram": {
+      "verified": false,
+      "anchor": "svg[aria-label='Notifications'] \u2014 confirmed present",
+      "badge": [
+        "a[href='/notifications/'] span:not(:empty)",
+        "a:has(svg[aria-label='Notifications']) span:not(:empty)",
+        "div:has(> svg[aria-label='Notifications']) span:not(:empty)",
+        "[aria-label*='unread']"
+      ],
+      "dot": []
+    },
+    "tiktok": {
+      "verified": false,
+      "anchor": "none found \u2014 mobile web home exposed no inbox or notification element at all",
+      "badge": [
+        "[data-e2e='inbox-notification-count']",
+        "a[href*='/inbox'] span:not(:empty)",
+        "[aria-label*='unread']"
+      ],
+      "dot": []
+    },
+    "x": {
+      "verified": false,
+      "anchor": "a[data-testid='AppTabBar_Notifications_Link'] confirmed. NEVER use span[data-testid='app-text-transition-container'] \u2014 post metrics, not notifications.",
+      "badge": [
+        "a[data-testid='AppTabBar_Notifications_Link'] [aria-label*='unread']",
+        "a[data-testid='AppTabBar_Notifications_Link'][aria-label*='unread']",
+        "a[data-testid='AppTabBar_Notifications_Link'] span:not(:empty)",
+        "a[href='/notifications'] span:not(:empty)"
+      ],
+      "dot": []
+    },
+    "youtube_studio": {
+      "verified": false,
+      "anchor": "ytcp-inbox-trigger \u2014 confirmed present",
+      "badge": [
+        "ytcp-inbox-trigger [class*='badge']:not(:empty)",
+        "ytcp-inbox-trigger [aria-label*='unread']",
+        "ytcp-inbox-trigger [aria-label*='new']",
+        "tp-yt-paper-badge[label]"
+      ],
+      "dot": []
+    },
+    "threads": {
+      "verified": false,
+      "anchor": "svg[aria-label='Notifications'] inside a nav anchor \u2014 confirmed present",
+      "badge": [
+        "a:has(svg[aria-label='Notifications']) span:not(:empty)",
+        "a[href='/activity'] span:not(:empty)",
+        "[aria-label^='Notifications,']",
+        "[aria-label*='unread']"
+      ],
+      "dot": []
+    },
+    "linkedin": {
+      "verified": true,
+      "anchor": "nav item with aria-label prefixed 'Notifications,' \u2014 confirmed present",
+      "badge": [
+        "[aria-label^='Notifications,']",
+        "a[href*='/notifications'][aria-label]"
+      ],
+      "dot": []
+    }
+  }
+}
