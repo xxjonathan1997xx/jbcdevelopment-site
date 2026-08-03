@@ -68,6 +68,28 @@
         padding: 0;
         list-style: none;
       }
+      .socialbar-inline-shot {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 1.25rem;
+        padding: 1rem 1.15rem;
+        border: 1px solid var(--border-color, #dbe3ef);
+        border-radius: 14px;
+        background: #f4f6fa;
+      }
+      .socialbar-inline-shot img {
+        width: 60px;   /* native size: 120px capture at 2x */
+        height: auto;
+        border-radius: 6px;
+        flex: none;
+      }
+      .socialbar-inline-shot p {
+        margin: 0;
+        font-size: 0.92rem;
+        color: var(--muted-color, #5c6370);
+      }
       .socialbar-shot {
         margin: 2rem 0 0;
         border: 1px solid var(--border-color, #dbe3ef);
@@ -178,6 +200,16 @@
               Unread counts per platform, totalled on the menu bar icon. When a count
               can't be read, SocialBar says so — it never shows a fake zero.
             </p>
+            <div class="socialbar-inline-shot">
+              <img
+                src="/socialbar/screenshots/menubar-badge.png"
+                alt="SocialBar's menu bar icon showing an aggregate unread count of 2."
+                width="120"
+                height="64"
+                loading="lazy"
+              />
+              <p>That is the whole interface until you need it.</p>
+            </div>
           </article>
           <article class="socialbar-feature">
             <h3>Compose staging</h3>

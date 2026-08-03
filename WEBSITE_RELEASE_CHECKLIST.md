@@ -96,6 +96,18 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
   `build-dmg.sh` from the artefact itself.
 - Rollback point: `14952da` on `main`.
 
+### Follow-up — SocialBar menu bar detail, August 2, 2026
+
+- Scope: added `/socialbar/screenshots/menubar-badge.png` (12 KB) inline inside the
+  badge-counts feature card on `/socialbar/`.
+- Approval: Jonathan approved on 2026-08-02.
+- Shown at native size (120x64 capture rendered at 60 CSS px). Deliberately not
+  enlarged — magnifying a menu bar icon only exposes pixels.
+- Privacy: region capture of the menu bar's right end only; cropped to SocialBar's
+  own icon, so no other apps, windows or desktop content appear.
+- Rollback point: `70000a4` on `main`.
+- Validation: page and both screenshots 200 locally; explicit width/height set.
+
 ## Pending Review: M5SteamBridge Open-Source Landing Page
 
 - Branch: `codex/m5steambridge-open-source-launch`
