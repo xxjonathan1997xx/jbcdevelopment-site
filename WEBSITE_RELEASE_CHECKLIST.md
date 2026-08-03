@@ -51,6 +51,19 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
   M5SteamBridge, NextRole and ClearWaive are reachable via Projects/Store only.
   Placed as requested; easy to drop back to Projects-only if the nav feels crowded.
 
+### Follow-up — SocialBar screenshot, August 2, 2026
+
+- Scope: added `/socialbar/screenshots/badge-proof.png` (36 KB) and a figure under the
+  hero on `/socialbar/`, plus the `og:image` tag that page was missing.
+- Approval: Jonathan approved on 2026-08-02.
+- Privacy: the capture is cropped so no profile block, name, employer, location, or
+  analytics are visible. No third-party accounts or content appear. A small avatar
+  remains in LinkedIn's own nav bar — Jonathan's own, reviewed and accepted.
+- Rollback point: `01888e5` on `main`.
+- Validation: `/socialbar/` and the image both 200 locally; image referenced twice
+  (og:image + figure); explicit width/height set to avoid layout shift; alt text
+  describes the claim being made.
+
 ## Pending Review: M5SteamBridge Open-Source Landing Page
 
 - Branch: `codex/m5steambridge-open-source-launch`

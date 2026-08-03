@@ -18,6 +18,7 @@
       property="og:description"
       content="Stop app-hopping. Badge counts, quick access, and compose staging for six platforms — using the accounts you're already logged into."
     />
+    <meta property="og:image" content="https://jbcdevelopment.dev/socialbar/screenshots/badge-proof.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#0b5fff" />
 
@@ -66,6 +67,24 @@
         margin-top: 1rem;
         padding: 0;
         list-style: none;
+      }
+      .socialbar-shot {
+        margin: 2rem 0 0;
+        border: 1px solid var(--border-color, #dbe3ef);
+        border-radius: 14px;
+        overflow: hidden;
+        background: #f4f6fa;
+      }
+      .socialbar-shot img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .socialbar-shot figcaption {
+        padding: 0.75rem 1rem;
+        font-size: 0.88rem;
+        color: var(--muted-color, #5c6370);
+        border-top: 1px solid var(--border-color, #dbe3ef);
       }
       .socialbar-platforms li {
         border: 1px solid var(--border-color, #dbe3ef);
@@ -131,6 +150,21 @@
           <span>No tracking</span>
         </div>
       </header>
+
+      <figure class="socialbar-shot">
+        <img
+          src="/socialbar/screenshots/badge-proof.png"
+          alt="SocialBar's menu bar popover showing a platform switcher with LinkedIn's unread count of 2, above LinkedIn's own notification bell also showing 2."
+          width="972"
+          height="300"
+          loading="lazy"
+        />
+        <figcaption>
+          The switcher reads LinkedIn's unread count straight from the page — matching
+          LinkedIn's own bell. Platforms whose count can't be read show a dot instead of
+          a number, never a fake zero.
+        </figcaption>
+      </figure>
 
       <section class="content-panel" aria-labelledby="how">
         <div class="m5-section-heading">
