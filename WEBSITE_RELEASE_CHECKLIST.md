@@ -39,6 +39,18 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
   others fall back to "unavailable" rather than showing a wrong number). Page copy
   reflects this instead of promising universal counts.
 
+### Follow-up — SocialBar navigation, August 2, 2026
+
+- Scope: added `SocialBar` to the primary nav on all 12 pages carrying it, and a
+  SocialBar card to `projects.html`.
+- Approval: Jonathan approved on 2026-08-02.
+- Rollback point: `b9bb4ab` on `main`.
+- Validation: all 12 pages return 200 locally; exactly one SocialBar nav link per
+  page; card renders on `projects.html`.
+- Note: SocialBar is the only product with a top-level nav entry — ThreadVigil,
+  M5SteamBridge, NextRole and ClearWaive are reachable via Projects/Store only.
+  Placed as requested; easy to drop back to Projects-only if the nav feels crowded.
+
 ## Pending Review: M5SteamBridge Open-Source Landing Page
 
 - Branch: `codex/m5steambridge-open-source-launch`
