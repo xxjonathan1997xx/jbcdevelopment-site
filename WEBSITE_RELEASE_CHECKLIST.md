@@ -122,6 +122,19 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
   compose demo is still outstanding and needs a clean/test account, since the real
   compose view shows third-party feeds.
 
+### Follow-up — SocialBar settings screenshot, August 2, 2026
+
+- Scope: added `/socialbar/screenshots/settings.png` (137 KB, 920x1304) above the
+  Pricing section on `/socialbar/`, illustrating platform toggles, account naming,
+  polling interval and licence state.
+- Approval: Jonathan approved on 2026-08-02.
+- Portrait shot constrained to 460px max-width so it does not dominate the page.
+- Privacy: window-only capture of SocialBar's own settings UI. No third-party content;
+  account labels are all "Default".
+- Rollback point: `96bc0c5` on `main`.
+- Validation: page plus all four screenshots return 200 locally; five image references
+  on the page; explicit width/height on every img.
+
 ## Pending Review: M5SteamBridge Open-Source Landing Page
 
 - Branch: `codex/m5steambridge-open-source-launch`
