@@ -2,6 +2,22 @@
 
 Use this checklist before deploying updates to `jbcdevelopment.dev`.
 
+## Northstar ERP Engineering Case Study — August 3, 2026
+
+- Scope: publish `/northstar-erp-case-study.html`, add it to a separate
+  Engineering case studies section on `/projects.html`, and add it to the
+  sitemap.
+- Approval: Jonathan explicitly approved publication on August 3, 2026.
+- Positioning: synthetic ERPNext/Frappe engineering pilot; never a customer
+  deployment, production ERP product, manufacturing module, or IFS integration.
+- Data boundary: fabricated data only; no employer or customer data.
+- Product inventory: the seven released/public product cards remain unchanged and
+  separate from the case study.
+- Rollback point: `d24856c` on `main`.
+- Validation: JavaScript syntax, XML, whitespace, local HTTP, internal links,
+  EN/ES content, mobile navigation, console errors, and horizontal overflow
+  passed before publication.
+
 ## PainTrail First 100 Feedback Campaign — July 31, 2026
 
 - Scope: replace the referral offer with an honest product-feedback offer on

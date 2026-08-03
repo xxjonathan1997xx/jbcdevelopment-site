@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Northstar ERPNext Pilot — Engineering Case Study | JBC Development</title>
+    <meta
+      name="description"
+      content="A validated synthetic ERPNext and Frappe engineering case study covering permission-aware workflows, approvals, duplicate-safe automation, retries, audit history, and honest production boundaries."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jbcdevelopment.dev/northstar-erp-case-study.html" />
+    <link rel="alternate" hreflang="en" href="https://jbcdevelopment.dev/northstar-erp-case-study.html" />
+    <link rel="alternate" hreflang="es" href="https://jbcdevelopment.dev/northstar-erp-case-study.html" />
+    <link rel="alternate" hreflang="x-default" href="https://jbcdevelopment.dev/northstar-erp-case-study.html" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://jbcdevelopment.dev/northstar-erp-case-study.html" />
+    <meta property="og:title" content="Northstar ERPNext Pilot — Engineering Case Study" />
+    <meta
+      property="og:description"
+      content="How JBC translated a synthetic service-business workflow into a tested, permission-aware ERPNext control layer—without claiming production deployment or an IFS integration."
+    />
+    <meta property="og:image" content="https://jbcdevelopment.dev/assets/og-share.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://jbcdevelopment.dev/assets/og-share.jpg" />
+    <meta name="theme-color" content="#0b5fff" />
+
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body class="northstar-case-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-site-header>
+      <nav class="nav shell" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="JBC Software Development LLC home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="/assets/jbc-brand-mark.svg" alt="" width="44" height="44" />
+          </span>
+          <span class="brand-name">
+            <strong>JBC Development</strong>
+            <small>Software Development LLC</small>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="/projects.html">Projects</a>
+          <a href="/custom-work.html">Custom work</a>
+          <a href="/store.html">Store</a>
+          <a href="/support.html">Support</a>
+          <a href="/#contact">Contact</a>
+          <div class="language-switcher" aria-label="Language selector">
+            <button type="button" class="language-option" data-language-option="en" aria-pressed="true">EN</button>
+            <button type="button" class="language-option" data-language-option="es" aria-pressed="false">ES</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="northstar-hero shell" aria-labelledby="northstar-title">
+        <div class="northstar-hero-copy">
+          <p class="hero-eyebrow">ERP workflow engineering case study</p>
+          <h1 id="northstar-title">Northstar ERPNext Pilot</h1>
+          <p class="northstar-lede">
+            Turning inquiry, quotation, accepted work, and invoice-review records into a safe,
+            permission-aware operational command center.
+          </p>
+          <div class="northstar-meta" aria-label="Case study summary">
+            <div><strong>Platform</strong><span>ERPNext 16, Frappe 16, Python, MariaDB, Docker</span></div>
+            <div><strong>Scope</strong><span>Synthetic 1–25-person professional-services business</span></div>
+            <div><strong>Role</strong><span>Discovery, workflow design, Frappe engineering, validation</span></div>
+            <div><strong>Disposition</strong><span>Validated locally; not deployed to production</span></div>
+          </div>
+        </div>
+        <aside class="northstar-boundary" aria-labelledby="boundary-title">
+          <span class="project-status status-pilot">Synthetic pilot</span>
+          <h2 id="boundary-title">What this is—and is not.</h2>
+          <p>
+            Northstar used fabricated data in an isolated ERPNext environment. It was never a
+            customer deployment, production ERP product, manufacturing module, or IFS integration.
+          </p>
+        </aside>
+      </section>
+
+      <section class="northstar-story shell" aria-labelledby="challenge-title">
+        <div>
+          <p class="section-label">The challenge</p>
+          <h2 id="challenge-title">The records existed. The daily operating picture did not.</h2>
+        </div>
+        <p>
+          Small service teams often track inquiries, quotes, accepted work, tasks, and invoice
+          follow-up across disconnected screens and spreadsheets. The pilot explored whether those
+          records could explain what needs attention, why it matters, and who owns the next action—
+          without granting automation unsafe authority.
+        </p>
+      </section>
+
+      <section class="northstar-flow-section" aria-labelledby="flow-title">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-label">Workflow architecture</p>
+            <h2 id="flow-title">From inquiry to draft-invoice attention.</h2>
+            <p>Five bounded stages, with human approval where pricing or accepted work changes state.</p>
+          </div>
+          <ol class="northstar-flow">
+            <li><span>01</span><strong>Inquiry and duplicate review</strong></li>
+            <li><span>02</span><strong>Owned opportunity and quotation</strong></li>
+            <li><span>03</span><strong>Approval and accepted work</strong></li>
+            <li><span>04</span><strong>Project and three starter tasks</strong></li>
+            <li><span>05</span><strong>Blocked-work and draft-invoice attention</strong></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="northstar-controls shell" aria-labelledby="controls-title">
+        <div class="section-heading">
+          <p class="section-label">Engineering decisions</p>
+          <h2 id="controls-title">Automation designed to fail safely.</h2>
+        </div>
+        <div class="northstar-control-grid">
+          <article>
+            <span>Approval</span>
+            <h3>Risky actions stayed explicit.</h3>
+            <p>Exceptional discounts and project kickoff required human approval. External delivery, accounting, payments, and destructive actions were prohibited.</p>
+          </article>
+          <article>
+            <span>Correctness</span>
+            <h3>Duplicate prevention was structural.</h3>
+            <p>Deterministic keys, per-run locks, quotation row locking, a unique source constraint, and duplicate-race recovery protected repeated execution.</p>
+          </article>
+          <article>
+            <span>Operations</span>
+            <h3>Failure became an owned state.</h3>
+            <p>Runs recorded attempts, bounded retries, one manual retry, failure ownership, pause controls, acknowledgement, resolution, and manual fallback.</p>
+          </article>
+          <article>
+            <span>Deployment</span>
+            <h3>New controls installed safely.</h3>
+            <p>Workflows installed inactive and automation rules installed paused, with no customers, invoices, credentials, endpoints, or external delivery configuration seeded.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="northstar-evidence-section" aria-labelledby="evidence-title">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="section-label">Validation evidence</p>
+            <h2 id="evidence-title">Tested beyond the happy path.</h2>
+            <p>Results below apply only to the documented synthetic, offline, or disposable-site boundaries.</p>
+          </div>
+          <div class="northstar-evidence-table-wrap">
+            <table class="northstar-evidence-table">
+              <caption class="sr-only">Northstar validation evidence and recorded results</caption>
+              <thead><tr><th scope="col">Evidence area</th><th scope="col">Recorded result</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Pilot scope</th><td>T01, T02, T04–T10, and T13–T17 passed inside recorded synthetic or offline boundaries.</td></tr>
+                <tr><th scope="row">Source contracts</th><td>42 discovered: 33 passed and nine installed-site-only skips by design.</td></tr>
+                <tr><th scope="row">Installed validation</th><td>Four clean-install contracts and five lifecycle and permission tests passed on disposable ERPNext 16.27.0 and Frappe 16.26.3 sites.</td></tr>
+                <tr><th scope="row">Concurrency</th><td>Two simultaneous kickoff processes returned one deterministic Project with exactly three Tasks.</td></tr>
+                <tr><th scope="row">Lifecycle</th><td>Repeated migration, upgrade preservation, rollback, backup integrity, and uninstall readiness passed.</td></tr>
+                <tr><th scope="row">Prohibited effects</th><td>Communication, email, accounting, payment, banking, dunning, and Sales Invoice records remained zero.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="northstar-limits shell" aria-labelledby="limits-title">
+        <div>
+          <p class="section-label">Honest boundaries</p>
+          <h2 id="limits-title">The decision to stop is part of the work.</h2>
+        </div>
+        <ul>
+          <li>Synthetic data only; no employer or customer data.</li>
+          <li>Production CSV import remained prohibited because preview validation was inadequate.</li>
+          <li>The generated briefing and general assistant were deferred, not represented as completed.</li>
+          <li>Inventory and manufacturing modules were outside the Northstar pilot.</li>
+          <li>Professional IFS Cloud experience is separate from this ERPNext/Frappe project.</li>
+        </ul>
+      </section>
+
+      <section class="contact-section shell" aria-labelledby="northstar-contact-title">
+        <div class="contact-panel">
+          <div>
+            <h2 id="northstar-contact-title">Need an operational workflow translated into software?</h2>
+            <p>JBC scopes practical ERP, automation, and internal-tool work around the decision, permissions, exceptions, and support path.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="contact-link" href="mailto:jbcsdevs@gmail.com?subject=ERP%20workflow%20project&amp;body=Business%20workflow%3A%0ACurrent%20system%3A%0AMain%20exception%20or%20decision%3A%0ATimeline%3A">Discuss a workflow</a>
+            <a class="contact-link secondary-contact" href="/custom-work.html">View custom work</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>&copy; 2026 JBC Software Development LLC. <span>All rights reserved.</span></p>
+        <div class="footer-links">
+          <a href="/projects.html">Projects</a>
+          <a href="/custom-work.html">Custom work</a>
+          <a href="/store.html">Store</a>
+          <a href="/downloads.html">Downloads</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/support.html">Support</a>
+          <a href="/#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
