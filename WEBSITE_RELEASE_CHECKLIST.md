@@ -108,6 +108,20 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
 - Rollback point: `70000a4` on `main`.
 - Validation: page and both screenshots 200 locally; explicit width/height set.
 
+### Follow-up — SocialBar switcher demo GIF, August 2, 2026
+
+- Scope: added `/socialbar/screenshots/demo-switcher.gif` (43 KB, 972x165, 6 frames)
+  above the "What it doesn't do" section on `/socialbar/`.
+- Approval: Jonathan approved on 2026-08-02.
+- Content: cropped to SocialBar's own chrome only — the platform switcher and account
+  row. No platform page content, no third-party posts, no personal data.
+- Rollback point: `98fe54f` on `main`.
+- Validation: page and GIF 200 locally; explicit width/height set; 6 distinct frames
+  verified by hash (a first attempt produced 24 frames of which only 6 differed).
+- Known limitation: this demonstrates platform switching, not compose staging. The
+  compose demo is still outstanding and needs a clean/test account, since the real
+  compose view shows third-party feeds.
+
 ## Pending Review: M5SteamBridge Open-Source Landing Page
 
 - Branch: `codex/m5steambridge-open-source-launch`
