@@ -5,18 +5,18 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
         <title>ThreadVigil</title>
         <item>
             <title>0.1.0</title>
-            <pubDate>Thu, 30 Jul 2026 18:03:14 -0400</pubDate>
-            <sparkle:version>6</sparkle:version>
+            <pubDate>Tue, 04 Aug 2026 18:46:11 -0400</pubDate>
+            <sparkle:version>7</sparkle:version>
             <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <description sparkle:format="markdown"><![CDATA[# ThreadVigil 0.1.0
 
 Initial free public release. ThreadVigil monitors supported local coding-agent sessions, keeps normalized local history, provides local cost estimates and handoff tools, and lets users silence notification sounds while keeping alerts visible.
 ]]></description>
-            <enclosure url="https://jbcdevelopment.dev/threadvigil/ThreadVigil.zip" length="1984816" type="application/octet-stream" sparkle:edSignature="1/oHt39FqhQ1qe+M6dMTO5Hzttbm7yluQ84QLr2Cq5OqK6gj8aQJZItC9y7r2c6WX/PTkm8hNkxeJl0UVC9ZBg=="></enclosure>
+            <enclosure url="https://jbcdevelopment.dev/threadvigil/ThreadVigil.zip" length="1986366" type="application/octet-stream" sparkle:edSignature="oFuF66EMAutuUSmLPqoCvqqrbwCPiINRfQ/0n0rD0/PgJq2hGnVMC2R3CO0xgWBT1sQ9J8cXWrlqqD61aJNhCg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 9sa/OgrM9l1JjBRhajBrE+O+7Na6O1l/blXNEqM/YfSFsm2C2nFCHgZFUC7PACjEPfEH1QP6uZCGcTI+JdE2Cg==
+edSignature: l4y18r6kkgcVyDXVsHj5XiXJi/7rBZb7zGAvfHjbRVJ3db0/td80OcUmBgUP6pOlyrKTIG1Q37nicasoZm+ICg==
 length: 1360
 -->
