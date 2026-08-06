@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "note": "v4 from a live six-platform diagnostic with all accounts logged in. LinkedIn is VERIFIED: it exposes counts in aria-label on nav items ('Notifications, 0 new notifications'). Others remain anchor-based guesses because every platform had 0 unread at capture time, so no count node existed. DO NOT use X's app-text-transition-container spans \u2014 those are post like/repost counts, not notifications.",
+  "version": 6,
+  "note": "v4 from a live six-platform diagnostic with all accounts logged in. LinkedIn is VERIFIED: it exposes counts in aria-label on nav items ('Notifications, 0 new notifications'). Others remain anchor-based guesses because every platform had 0 unread at capture time, so no count node existed. DO NOT use X's app-text-transition-container spans \u2014 those are post like/repost counts, not notifications. v5 added Bluesky, unverified. v6: Bluesky is now VERIFIED against a real account with 1 unread \u2014 its notifications link has aria-label='Notifications' (no count in the aria itself) but the digit is prefixed directly in the link's own text content ('1Notifications'); the app's extraction already scans aria+text combined so this parses correctly.",
   "platforms": {
     "instagram": {
       "verified": false,
@@ -62,6 +62,15 @@
       "badge": [
         "[aria-label^='Notifications,']",
         "a[href*='/notifications'][aria-label]"
+      ],
+      "dot": []
+    },
+    "bluesky": {
+      "verified": true,
+      "anchor": "a[aria-label='Notifications'] \u2014 confirmed present and unique (1 match), reads count '1' from its own text content when unread=1",
+      "badge": [
+        "a[aria-label='Notifications']",
+        "a[href='/notifications']"
       ],
       "dot": []
     }

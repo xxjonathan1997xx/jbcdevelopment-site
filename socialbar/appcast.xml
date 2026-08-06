@@ -7,15 +7,15 @@
     <language>en</language>
     <item>
       <title>Version 0.1.0</title>
-      <pubDate>Mon, 03 Aug 2026 12:25:24 +0000</pubDate>
+      <pubDate>Thu, 06 Aug 2026 15:53:50 +0000</pubDate>
       <sparkle:version>1</sparkle:version>
       <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <sparkle:releaseNotesLink>https://jbcdevelopment.dev/socialbar/</sparkle:releaseNotesLink>
       <enclosure
         url="https://jbcdevelopment.dev/socialbar/SocialBar-0.1.0.dmg"
-        sparkle:edSignature="15ozaGap0eNn21HHp3BYkttPOeatAItdHHzuMZKMALtgi1BKuzVlb+P1rgNpfngLzTXuiKLx1fL2PqAJBvNqCw=="
-        length="1554721"
+        sparkle:edSignature="ck/thQLYQwv3AzwElBGEy/HT5DhlYUOXrTb0xNWb24OGxNeHPlz7iglxNQ6uz7k/6bq5ZD67JTpSIUmrKw5tDg=="
+        length="2111297"
         type="application/octet-stream" />
     </item>
   </channel>
