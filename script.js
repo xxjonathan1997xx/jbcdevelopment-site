@@ -828,5 +828,142 @@ function normalizeText(value) {
 }
 
 function shouldSkipTranslation(element) {
-  return Boolean(element.closest("script, style, noscript, .brand-name, .language-switcher"));
+  return Boolean(element.closest("script, style, noscript, .brand-name, .language-switcher, .theme-switcher"));
 }
+
+/* ==========================================================================
+   Theme & Appearance Manager (macOS System Matching & Manual Override)
+   ========================================================================== */
+
+const THEME_STORAGE_KEY = "jbcdevelopment-theme";
+const themeButtons = document.querySelectorAll("[data-theme-option]");
+const systemDarkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+function initializeTheme() {
+  const initialTheme = getInitialTheme();
+  applyTheme(initialTheme, { remember: false });
+
+  themeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedTheme = button.dataset.themeOption;
+      applyTheme(selectedTheme, { remember: true });
+    });
+  });
+
+  try {
+    systemDarkModeQuery.addEventListener("change", () => {
+      const currentStored = localStorage.getItem(THEME_STORAGE_KEY);
+      if (!currentStored || currentStored === "auto") {
+        updateThemeUI("auto");
+      }
+    });
+  } catch {
+    // Legacy browser fallback
+  }
+}
+
+function getInitialTheme() {
+  try {
+    const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    if (savedTheme === "dark" || savedTheme === "light" || savedTheme === "auto") {
+      return savedTheme;
+    }
+  } catch {
+    // Fall back to auto
+  }
+  return "auto";
+}
+
+function applyTheme(theme, options = {}) {
+  const targetTheme = theme === "dark" || theme === "light" ? theme : "auto";
+
+  if (targetTheme === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else if (targetTheme === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+
+  updateThemeUI(targetTheme);
+
+  if (options.remember) {
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, targetTheme);
+    } catch {
+      // Storage blocked
+    }
+  }
+}
+
+function updateThemeUI(activeTheme) {
+  themeButtons.forEach((button) => {
+    const isActive = button.dataset.themeOption === activeTheme;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+}
+
+/* ==========================================================================
+   Interactive Demo Switcher & CTA Handler (ThreadVigil & Monitoring Software)
+   ========================================================================== */
+
+function initializeDemoSwitcher() {
+  const demoTabs = document.querySelectorAll("[data-demo-target]");
+  const demoPanels = document.querySelectorAll("[data-demo-panel]");
+  const demoCtaLinks = document.querySelectorAll('[data-action="see-demo"], a[href="#demo-interactive"], a[href="#screenshots"]');
+
+  if (!demoTabs.length && !demoPanels.length) {
+    // Still bind CTA link smooth scroll if demo section exists
+    demoCtaLinks.forEach((cta) => {
+      cta.addEventListener("click", (event) => {
+        const demoContainer = document.getElementById("demo-interactive") || document.getElementById("screenshots");
+        if (!demoContainer) return;
+        event.preventDefault();
+        demoContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+    return;
+  }
+
+  demoTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const target = tab.dataset.demoTarget;
+
+      demoTabs.forEach((t) => {
+        const isActive = t === tab;
+        t.classList.toggle("is-active", isActive);
+        t.setAttribute("aria-selected", String(isActive));
+      });
+
+      demoPanels.forEach((panel) => {
+        const isTarget = panel.dataset.demoPanel === target;
+        panel.classList.toggle("is-active", isTarget);
+        if (isTarget) {
+          panel.removeAttribute("hidden");
+        } else {
+          panel.setAttribute("hidden", "hidden");
+        }
+      });
+    });
+  });
+
+  demoCtaLinks.forEach((cta) => {
+    cta.addEventListener("click", (event) => {
+      const demoContainer = document.getElementById("demo-interactive") || document.getElementById("screenshots");
+      if (!demoContainer) return;
+
+      event.preventDefault();
+      demoContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      const activeTab = demoContainer.querySelector(".demo-tab.is-active") || demoContainer.querySelector(".demo-tab");
+      if (activeTab) {
+        activeTab.focus({ preventScroll: true });
+      }
+    });
+  });
+}
+
+initializeTheme();
+initializeDemoSwitcher();
+

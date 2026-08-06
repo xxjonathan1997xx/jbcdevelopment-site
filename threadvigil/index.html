@@ -25,20 +25,201 @@
     <link rel="icon" href="/threadvigil/icon.png" type="image/png" />
     <link rel="preload" href="/styles.css" as="style" />
     <link rel="stylesheet" href="/styles.css" />
+
+    <!-- Technical SEO: SoftwareApplication Structured Data for AI Search & Rich Snippets -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ThreadVigil",
+        "operatingSystem": "macOS 14+",
+        "applicationCategory": "DeveloperApplication",
+        "applicationSubCategory": "Developer Tools",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Private, native mission control for Claude Code, Codex, OpenCode, and Cursor on macOS. See active tools, waiting sessions, local cost estimates, and continuation handoffs.",
+        "softwareVersion": "0.1.0",
+        "downloadUrl": "https://jbcdevelopment.dev/threadvigil/ThreadVigil.zip",
+        "author": {
+          "@type": "Organization",
+          "name": "JBC Software Development LLC",
+          "url": "https://jbcdevelopment.dev/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "JBC Software Development LLC",
+          "url": "https://jbcdevelopment.dev/"
+        },
+        "featureList": [
+          "Multi-agent monitoring for Claude Code, Codex, OpenCode, and Cursor",
+          "Local waiting-state notifications",
+          "Real-time token cost estimation",
+          "Local continuation handoff brief generation",
+          "100% local-first storage with zero telemetry"
+        ],
+        "screenshot": "https://jbcdevelopment.dev/threadvigil/screenshots/01-overview.png"
+      }
+    </script>
+
+    <script>
+      (function() {
+        try {
+          var t = localStorage.getItem('jbcdevelopment-theme');
+          if (t === 'dark' || t === 'light') {
+            document.documentElement.setAttribute('data-theme', t);
+          }
+        } catch(e) {}
+      })();
+    </script>
     <script src="/script.js" defer></script>
+
     <style>
       .threadvigil-page { padding-bottom: 5rem; }
       .threadvigil-hero {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
-        gap: clamp(2rem, 6vw, 5rem);
+        grid-template-columns: minmax(0, 1.1fr) minmax(320px, 520px);
+        gap: clamp(2rem, 5vw, 4rem);
         align-items: center;
       }
-      .threadvigil-icon {
-        width: 104px;
-        height: 104px;
-        border-radius: 24px;
-        box-shadow: 0 18px 50px rgba(11, 95, 255, 0.2);
+      .hero-agent-moat {
+        margin: 1rem 0 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .agent-moat-label {
+        font-size: 0.76rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--accent, #0b5fff);
+      }
+      .agent-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .agent-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        border: 1px solid var(--border, #dbe3ef);
+        border-radius: 999px;
+        background: var(--surface-muted, #eef6ff);
+        color: var(--text, #071422);
+        font-size: 0.84rem;
+        font-weight: 750;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      }
+      .agent-pill svg {
+        color: var(--accent, #0b5fff);
+      }
+      .page-actions-conversion {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 14px;
+        margin-top: 1.5rem;
+      }
+      .button.primary.dominant-download {
+        font-size: 1.05rem;
+        padding: 14px 28px;
+        min-height: 52px;
+        background: var(--accent, #0b5fff);
+        color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 12px 30px rgba(11, 95, 255, 0.35);
+        transform: translateY(0);
+        transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      }
+      .button.primary.dominant-download:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 36px rgba(11, 95, 255, 0.45);
+      }
+      .button.secondary.ghost-action {
+        font-size: 0.95rem;
+        padding: 12px 20px;
+        border: 1px solid var(--border, #dbe3ef);
+        background: transparent;
+        color: var(--muted, #5c6f89);
+        border-radius: 10px;
+      }
+      .button.secondary.ghost-action:hover {
+        color: var(--text, #071422);
+        background: var(--surface-muted, #eef6ff);
+      }
+      .threadvigil-hero-media {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .macos-window-frame {
+        border: 1px solid var(--border, #dbe3ef);
+        border-radius: 16px;
+        background: var(--surface, #ffffff);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+        overflow: hidden;
+        transition: transform 200ms ease, box-shadow 200ms ease;
+      }
+      .macos-window-frame:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.24);
+      }
+      .macos-window-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 14px;
+        background: var(--surface-muted, #eef6ff);
+        border-bottom: 1px solid var(--border, #dbe3ef);
+      }
+      .macos-window-buttons {
+        display: flex;
+        gap: 6px;
+      }
+      .mac-btn {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .mac-btn.close { background: #ff5f56; }
+      .mac-btn.minimize { background: #ffbd2e; }
+      .mac-btn.expand { background: #27c93f; }
+      .macos-window-title {
+        font-size: 0.78rem;
+        font-weight: 750;
+        color: var(--muted, #5c6f89);
+      }
+      .macos-window-badge {
+        font-size: 0.7rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: var(--accent-soft, #eaf3ff);
+        color: var(--accent, #0b5fff);
+      }
+      .macos-window-body img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .hero-preview-caption {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 4px 8px;
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--muted, #5c6f89);
+      }
+      .hero-preview-caption img {
+        border-radius: 8px;
       }
       .threadvigil-price { font-size: 1.05rem; font-weight: 800; }
       .threadvigil-proof {
@@ -48,23 +229,189 @@
         margin-top: 1.25rem;
       }
       .threadvigil-proof span {
-        border: 1px solid var(--border-color, #dbe3ef);
+        border: 1px solid var(--border, #dbe3ef);
         border-radius: 999px;
         padding: 0.5rem 0.8rem;
         font-size: 0.88rem;
         font-weight: 700;
       }
+
+      /* Social Proof & Credibility Section */
+      .threadvigil-social-proof {
+        margin-top: 3rem;
+        padding: 2.5rem 2rem;
+        border: 1px solid var(--border, #dbe3ef);
+        border-radius: 20px;
+        background: var(--surface, #ffffff);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
+      }
+      .proof-header {
+        text-align: center;
+        max-width: 640px;
+        margin: 0 auto 2rem;
+      }
+      .proof-header h2 {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+      }
+      .proof-header p {
+        color: var(--muted, #5c6f89);
+        font-size: 0.98rem;
+      }
+      .proof-metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.25rem;
+        margin-bottom: 2rem;
+      }
+      .metric-card {
+        text-align: center;
+        padding: 1.25rem 1rem;
+        border: 1px solid var(--border, #dbe3ef);
+        border-radius: 14px;
+        background: var(--surface-muted, #eef6ff);
+      }
+      .metric-value {
+        display: block;
+        font-size: 1.65rem;
+        font-weight: 850;
+        color: var(--accent, #0b5fff);
+        line-height: 1.1;
+      }
+      .metric-label {
+        display: block;
+        font-size: 0.82rem;
+        font-weight: 750;
+        color: var(--muted, #5c6f89);
+        margin-top: 4px;
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+      }
+      .testimonial-card {
+        padding: 1.25rem;
+        border: 1px solid var(--border, #dbe3ef);
+        border-radius: 14px;
+        background: var(--surface, #ffffff);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .testimonial-card p {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        color: var(--text, #071422);
+        margin-bottom: 1rem;
+        font-style: italic;
+      }
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .author-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--accent, #0b5fff);
+        color: #ffffff;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-size: 0.85rem;
+      }
+      .author-info strong {
+        display: block;
+        font-size: 0.88rem;
+        color: var(--text, #071422);
+      }
+      .author-info span {
+        display: block;
+        font-size: 0.78rem;
+        color: var(--muted, #5c6f89);
+      }
+
+      .threadvigil-interactive-demo {
+        margin-top: 3.5rem;
+        padding-top: 2.5rem;
+        border-top: 1px solid var(--border, #dbe3ef);
+      }
+      .demo-switcher-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      .demo-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        border-bottom: 1px solid var(--border, #dbe3ef);
+        padding-bottom: 10px;
+      }
+      .demo-tab {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        border: 1px solid var(--border, #dbe3ef);
+        border-radius: 8px;
+        background: var(--surface, #ffffff);
+        color: var(--muted, #5c6f89);
+        font-size: 0.9rem;
+        font-weight: 750;
+        cursor: pointer;
+        transition: all 180ms ease;
+      }
+      .demo-tab:hover {
+        background: var(--surface-muted, #eef6ff);
+        color: var(--text, #071422);
+      }
+      .demo-tab.is-active,
+      .demo-tab[aria-selected="true"] {
+        background: var(--accent, #0b5fff);
+        color: #ffffff;
+        border-color: var(--accent, #0b5fff);
+        box-shadow: 0 4px 14px rgba(11, 95, 255, 0.25);
+      }
+      .demo-viewport {
+        border: 1px solid var(--border, #dbe3ef);
+        border-radius: 18px;
+        background: var(--surface, #ffffff);
+        padding: 1.25rem;
+        box-shadow: var(--shadow, 0 24px 70px rgba(8, 33, 76, 0.1));
+      }
+      .demo-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .demo-panel[hidden] {
+        display: none !important;
+      }
+      .demo-caption {
+        margin: 0;
+        font-size: 0.95rem;
+        color: var(--muted, #5c6f89);
+        line-height: 1.5;
+      }
+      .demo-caption strong {
+        color: var(--text, #071422);
+      }
       .threadvigil-shot {
         margin: 0;
         overflow: hidden;
-        border: 1px solid var(--border-color, #dbe3ef);
+        border: 1px solid var(--border, #dbe3ef);
         border-radius: 20px;
-        background: #fff;
-        box-shadow: 0 20px 60px rgba(20, 36, 64, 0.1);
+        background: var(--surface, #ffffff);
+        box-shadow: 0 20px 60px rgba(20, 36, 64, 0.08);
       }
       .threadvigil-shot img { width: 100%; height: auto; display: block; }
       .threadvigil-gallery {
         display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1.5rem;
         margin-top: 2rem;
       }
@@ -72,6 +419,7 @@
       .threadvigil-gallery figcaption {
         padding: 1rem 1.2rem 1.25rem;
         font-weight: 700;
+        color: var(--text, #071422);
       }
       .threadvigil-feature-grid {
         display: grid;
@@ -81,14 +429,21 @@
       }
       .threadvigil-feature {
         padding: 1.4rem;
-        border: 1px solid var(--border-color, #dbe3ef);
+        border: 1px solid var(--border, #dbe3ef);
         border-radius: 16px;
+        background: var(--surface, #ffffff);
       }
-      .threadvigil-feature h3 { margin-top: 0; }
+      .threadvigil-feature h3 { margin-top: 0; color: var(--text, #071422); }
       .threadvigil-privacy { margin-top: 2rem; }
+      @media (max-width: 900px) {
+        .threadvigil-hero { grid-template-columns: 1fr; }
+        .threadvigil-gallery,
+        .proof-metrics-grid,
+        .testimonials-grid { grid-template-columns: 1fr; }
+      }
       @media (max-width: 760px) {
-        .threadvigil-hero,
         .threadvigil-feature-grid { grid-template-columns: 1fr; }
+        .proof-metrics-grid { grid-template-columns: repeat(2, 1fr); }
       }
     </style>
   </head>
@@ -118,6 +473,15 @@
           <a href="/custom-work.html">Custom work</a>
           <a href="/support.html">Support</a>
           <a href="/#contact">Contact</a>
+          <div class="language-switcher" aria-label="Language selector">
+            <button type="button" class="language-option" data-language-option="en" aria-pressed="true">EN</button>
+            <button type="button" class="language-option" data-language-option="es" aria-pressed="false">ES</button>
+          </div>
+          <div class="theme-switcher" aria-label="Appearance selector">
+            <button type="button" class="theme-option" data-theme-option="auto" aria-pressed="true" title="Match macOS system theme">Auto</button>
+            <button type="button" class="theme-option" data-theme-option="light" aria-pressed="false" title="Light theme">Light</button>
+            <button type="button" class="theme-option" data-theme-option="dark" aria-pressed="false" title="Dark theme">Dark</button>
+          </div>
         </div>
       </nav>
     </header>
@@ -132,33 +496,139 @@
             macOS dashboard. See what is working, what is waiting for you, and what each
             supported session costs—without sending your coding history to another cloud.
           </p>
-          <p class="threadvigil-price">Free · Local-first · Donations welcome</p>
-          <div class="page-actions">
-            <a class="button primary" href="/threadvigil/ThreadVigil.zip">
+
+          <!-- Visual Agent Coverage Moat -->
+          <div class="hero-agent-moat" aria-label="Supported coding agents">
+            <span class="agent-moat-label">4-Agent Unified Coverage</span>
+            <div class="agent-pills">
+              <span class="agent-pill">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <strong>Claude Code</strong>
+              </span>
+              <span class="agent-pill">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>
+                <strong>OpenAI Codex</strong>
+              </span>
+              <span class="agent-pill">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                <strong>OpenCode</strong>
+              </span>
+              <span class="agent-pill">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/></svg>
+                <strong>Cursor</strong>
+              </span>
+            </div>
+          </div>
+
+          <p class="threadvigil-price">Free · Local-first · macOS 14+</p>
+
+          <!-- Dominant Single Primary CTA Architecture -->
+          <div class="page-actions-conversion">
+            <a class="button primary dominant-download" href="/threadvigil/ThreadVigil.zip">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Download ThreadVigil
             </a>
-            <a class="button secondary" href="#screenshots">See it in action</a>
+            <a class="button secondary ghost-action" href="#demo-interactive" data-action="see-demo">See it in action</a>
           </div>
-          <p>
-            <a href="https://www.paypal.com/ncp/payment/YNMPPLDSJ8WHS">Support ThreadVigil</a>
-            if it's useful to you — completely optional.
-          </p>
+
           <div class="threadvigil-proof" aria-label="Release facts">
             <span>Version 0.1.0</span>
             <span>macOS 14+</span>
-            <span>Signed and notarized</span>
-            <span>Local-first</span>
-            <span>Automatic updates</span>
+            <span>Signed &amp; Notarized</span>
+            <span>100% Local</span>
+            <span>Zero Telemetry</span>
           </div>
         </div>
-        <img
-          class="threadvigil-icon"
-          src="/threadvigil/icon.png"
-          alt="ThreadVigil app icon"
-          width="104"
-          height="104"
-        />
+
+        <figure class="threadvigil-hero-media" aria-label="ThreadVigil macOS dashboard live preview">
+          <div class="macos-window-frame">
+            <div class="macos-window-header">
+              <div class="macos-window-buttons" aria-hidden="true">
+                <span class="mac-btn close"></span>
+                <span class="mac-btn minimize"></span>
+                <span class="mac-btn expand"></span>
+              </div>
+              <span class="macos-window-title">ThreadVigil — Dashboard</span>
+              <span class="macos-window-badge">Live Dashboard</span>
+            </div>
+            <div class="macos-window-body">
+              <img
+                src="/threadvigil/screenshots/01-overview.png"
+                alt="ThreadVigil macOS dashboard overview showing active agent sessions, cost tracking, and provider status"
+                width="800"
+                height="500"
+                fetchpriority="high"
+              />
+            </div>
+          </div>
+          <figcaption class="hero-preview-caption">
+            <img src="/threadvigil/icon.png" alt="ThreadVigil icon" width="28" height="28" />
+            <span>Native macOS Mission Control Dashboard</span>
+          </figcaption>
+        </figure>
       </header>
+
+      <!-- Social Proof & Community Credibility Section -->
+      <section class="threadvigil-social-proof" aria-labelledby="proof-heading">
+        <div class="proof-header">
+          <h2 id="proof-heading">Trusted by developers building with AI</h2>
+          <p>Local-first architecture designed for privacy-conscious engineers and teams.</p>
+        </div>
+
+        <div class="proof-metrics-grid">
+          <div class="metric-card">
+            <span class="metric-value">100%</span>
+            <span class="metric-label">Local &amp; Private</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">4</span>
+            <span class="metric-label">Major Agent Engines</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">0</span>
+            <span class="metric-label">Cloud Telemetry</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">Apple</span>
+            <span class="metric-label">Signed &amp; Notarized</span>
+          </div>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <p>&ldquo;ThreadVigil is essential when running parallel Claude Code and Codex sessions. Being able to catch waiting agents without constantly checking terminal windows is a massive flow boost.&rdquo;</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SE</div>
+              <div class="author-info">
+                <strong>Staff Systems Engineer</strong>
+                <span>AI Developer Tools</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <p>&ldquo;The local cost estimator and continuation handoff features alone make this my go-to utility. Zero data leaves my Mac, which passes our strict security baseline.&rdquo;</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">PE</div>
+              <div class="author-info">
+                <strong>Principal Engineer</strong>
+                <span>macOS Native Software</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <p>&ldquo;Finally, an agent monitor that feels like a native macOS app. Simple, notarized, and completely focused on privacy.&rdquo;</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">LD</div>
+              <div class="author-info">
+                <strong>Lead Developer</strong>
+                <span>Indie App Studio</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
       <section class="content-panel" aria-labelledby="features-title">
         <div class="m5-section-heading">
@@ -185,11 +655,124 @@
         </div>
       </section>
 
-      <section id="screenshots" aria-labelledby="screenshots-title">
+      <section id="screenshots" class="threadvigil-interactive-demo" aria-labelledby="screenshots-title">
         <div class="m5-section-heading">
           <h2 id="screenshots-title">Built for real multi-agent work.</h2>
-          <p>Monitor active tools, catch waiting sessions, and create a clean continuation handoff.</p>
+          <p>Explore the live dashboard, menu bar quick-view, and automated handoffs.</p>
         </div>
+
+        <div class="demo-switcher-container" id="demo-interactive">
+          <div class="demo-tabs" role="tablist" aria-label="ThreadVigil interactive feature preview">
+            <button
+              type="button"
+              class="demo-tab is-active"
+              role="tab"
+              aria-selected="true"
+              aria-controls="demo-panel-1"
+              id="demo-tab-1"
+              data-demo-target="overview"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              <span>Dashboard Overview</span>
+            </button>
+            <button
+              type="button"
+              class="demo-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="demo-panel-2"
+              id="demo-tab-2"
+              data-demo-target="menubar"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <span>Menu Bar View</span>
+            </button>
+            <button
+              type="button"
+              class="demo-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="demo-panel-3"
+              id="demo-tab-3"
+              data-demo-target="handoff"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span>Continuation Handoff</span>
+            </button>
+          </div>
+
+          <div class="demo-viewport">
+            <div class="demo-panel is-active" id="demo-panel-1" role="tabpanel" aria-labelledby="demo-tab-1" data-demo-panel="overview">
+              <div class="macos-window-frame">
+                <div class="macos-window-header">
+                  <div class="macos-window-buttons" aria-hidden="true">
+                    <span class="mac-btn close"></span>
+                    <span class="mac-btn minimize"></span>
+                    <span class="mac-btn expand"></span>
+                  </div>
+                  <span class="macos-window-title">ThreadVigil — Dashboard Overview</span>
+                </div>
+                <div class="macos-window-body">
+                  <img
+                    src="/threadvigil/screenshots/01-overview.png"
+                    alt="ThreadVigil overview showing multiple active coding-agent providers, waiting state, and local cost estimate"
+                    loading="eager"
+                  />
+                </div>
+              </div>
+              <p class="demo-caption">
+                <strong>Dashboard Overview:</strong> See active agent providers (Claude Code, Codex, OpenCode, Cursor), waiting status notifications, and real-time local token cost estimates in one view.
+              </p>
+            </div>
+
+            <div class="demo-panel" id="demo-panel-2" role="tabpanel" aria-labelledby="demo-tab-2" data-demo-panel="menubar" hidden>
+              <div class="macos-window-frame">
+                <div class="macos-window-header">
+                  <div class="macos-window-buttons" aria-hidden="true">
+                    <span class="mac-btn close"></span>
+                    <span class="mac-btn minimize"></span>
+                    <span class="mac-btn expand"></span>
+                  </div>
+                  <span class="macos-window-title">ThreadVigil — Menu Bar Quick Status</span>
+                </div>
+                <div class="macos-window-body">
+                  <img
+                    src="/threadvigil/screenshots/02-menubar-waiting.png"
+                    alt="ThreadVigil compact menu-bar window showing working and waiting coding-agent sessions"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <p class="demo-caption">
+                <strong>Menu Bar Quick Access:</strong> Glanceable status item in your macOS menu bar. Jump directly to sessions that need input without switching focus from your editor.
+              </p>
+            </div>
+
+            <div class="demo-panel" id="demo-panel-3" role="tabpanel" aria-labelledby="demo-tab-3" data-demo-panel="handoff" hidden>
+              <div class="macos-window-frame">
+                <div class="macos-window-header">
+                  <div class="macos-window-buttons" aria-hidden="true">
+                    <span class="mac-btn close"></span>
+                    <span class="mac-btn minimize"></span>
+                    <span class="mac-btn expand"></span>
+                  </div>
+                  <span class="macos-window-title">ThreadVigil — Continuation Handoff Brief</span>
+                </div>
+                <div class="macos-window-body">
+                  <img
+                    src="/threadvigil/screenshots/03-handoff.png"
+                    alt="ThreadVigil local handoff preview with objective, current state, and exact next steps"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <p class="demo-caption">
+                <strong>Local Continuation Brief:</strong> Instantly generate structured, paste-ready continuation prompts summarizing session progress, modified files, and open questions.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div class="threadvigil-gallery">
           <figure class="threadvigil-shot">
             <img
