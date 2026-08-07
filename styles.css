@@ -4303,17 +4303,177 @@ body.home-page .bento-app-row:hover {
   border-color: rgba(56, 189, 248, 0.45);
 }
 
-@media (max-width: 992px) {
-  .bento-card-hero,
-  .bento-card-apps,
-  .bento-card-mac,
-  .bento-card-clearwaive,
-  .bento-card-custom,
-  .bento-card-full {
-    grid-column: span 12;
-    flex-direction: column;
+/* ==========================================================================
+   Bespoke Studio Workbench & Interactive Estimator System
+   ========================================================================== */
+
+h1, h2, h3, .brand-name strong, .hero-eyebrow {
+  font-family: 'Plus Jakarta Sans', 'DM Sans', system-ui, -apple-system, sans-serif;
+}
+
+.studio-workbench-section {
+  margin: 40px 0 60px;
+}
+
+.workbench-container {
+  background: var(--surface, #ffffff);
+  border: 1px solid var(--border, #cbd5e1);
+  border-radius: 24px;
+  padding: 40px clamp(20px, 4vw, 48px);
+  box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.08);
+}
+
+:root[data-theme="dark"] .workbench-container,
+body.home-page .workbench-container {
+  background: #0d1624;
+  border-color: rgba(56, 189, 248, 0.2);
+  box-shadow: 0 24px 64px -16px rgba(0, 0, 0, 0.6);
+}
+
+.workbench-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+}
+
+.workbench-tab {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.workbench-tab:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.workbench-tab.is-active {
+  background: #38bdf8;
+  color: #07111e;
+  border-color: #38bdf8;
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.35);
+}
+
+.workbench-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.workbench-panel[hidden] {
+  display: none !important;
+}
+
+.workbench-icon-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.workbench-icon-badge img {
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.workbench-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.workbench-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.workbench-feature-list li::before {
+  content: "✓";
+  color: #38bdf8;
+  font-weight: 800;
+}
+
+/* Estimator Widget */
+.estimator-panel {
+  background: linear-gradient(135deg, rgba(13, 27, 46, 0.95) 0%, rgba(8, 18, 33, 0.98) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 24px;
+  padding: 40px clamp(20px, 4vw, 48px);
+  margin: 40px 0 60px;
+}
+
+.estimator-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 24px 0 32px;
+}
+
+.estimator-group-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.estimator-pills {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.estimator-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.estimator-pill:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.estimator-pill.is-selected {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: #38bdf8;
+  color: #38bdf8;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.2);
+}
+
+@media (max-width: 860px) {
+  .workbench-panel {
+    grid-template-columns: 1fr;
   }
 }
+
 
 
 

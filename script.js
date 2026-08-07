@@ -967,3 +967,80 @@ function initializeDemoSwitcher() {
 initializeTheme();
 initializeDemoSwitcher();
 
+/* ==========================================================================
+   Studio Workbench & Scoped Estimator Widget
+   ========================================================================== */
+
+function initializeStudioWorkbench() {
+  const workbenchTabs = document.querySelectorAll("[data-workbench-tab]");
+  const workbenchPanels = document.querySelectorAll("[data-workbench-panel]");
+
+  if (!workbenchTabs.length) return;
+
+  workbenchTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const target = tab.dataset.workbenchTab;
+
+      workbenchTabs.forEach((t) => {
+        const isActive = t === tab;
+        t.classList.toggle("is-active", isActive);
+        t.setAttribute("aria-selected", String(isActive));
+      });
+
+      workbenchPanels.forEach((panel) => {
+        const isTarget = panel.dataset.workbenchPanel === target;
+        panel.classList.toggle("is-active", isTarget);
+        if (isTarget) {
+          panel.removeAttribute("hidden");
+        } else {
+          panel.setAttribute("hidden", "hidden");
+        }
+      });
+    });
+  });
+}
+
+function initializeProjectEstimator() {
+  const platformButtons = document.querySelectorAll("[data-estimate-platform]");
+  const timelineButtons = document.querySelectorAll("[data-estimate-timeline]");
+  const estimateLink = document.getElementById("estimate-mailto-link");
+
+  if (!estimateLink) return;
+
+  let selectedPlatform = "iOS App";
+  let selectedTimeline = "3-4 Weeks";
+
+  function updateMailto() {
+    const subject = encodeURIComponent(`Custom Project Inquiry: ${selectedPlatform}`);
+    const body = encodeURIComponent(
+      `Hi JBCSDevs,\n\nI am interested in a custom software project.\n\nPlatform: ${selectedPlatform}\nTimeline: ${selectedTimeline}\n\nProject Brief:\n[Describe your project goal here]`
+    );
+    estimateLink.href = `mailto:support@jbcdevelopment.dev?subject=${subject}&body=${body}`;
+  }
+
+  platformButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      platformButtons.forEach((b) => b.classList.remove("is-selected"));
+      btn.classList.add("is-selected");
+      selectedPlatform = btn.dataset.estimatePlatform;
+      updateMailto();
+    });
+  });
+
+  timelineButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      timelineButtons.forEach((b) => b.classList.remove("is-selected"));
+      btn.classList.add("is-selected");
+      selectedTimeline = btn.dataset.estimateTimeline;
+      updateMailto();
+    });
+  });
+
+  updateMailto();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initializeStudioWorkbench();
+  initializeProjectEstimator();
+});
+

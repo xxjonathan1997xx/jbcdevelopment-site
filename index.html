@@ -81,13 +81,38 @@
       })();
     </script>
     <script src="/script.js?v=20260731-home-motion" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="/styles.css?v=20260807-studio-workbench" as="style" />
+    <link rel="stylesheet" href="/styles.css?v=20260807-studio-workbench" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "JBCSDevs Products",
+        "operatingSystem": "iOS, macOS",
+        "applicationCategory": "DeveloperApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "JBCSDevs",
+          "url": "https://jbcdevelopment.dev"
+        }
+      }
+    </script>
   </head>
   <body class="home-page">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header" data-site-header>
-      <nav class="nav shell" aria-label="Primary navigation">
-        <a class="brand" href="/" aria-label="JBC Software Development LLC home">
+      <div class="header-inner shell">
+        <a class="brand" href="/" aria-label="JBCSDevs home">
           <span class="brand-mark" aria-hidden="true">
             <img src="/assets/jbc-brand-mark.svg" alt="" width="44" height="44" />
           </span>
@@ -96,144 +121,255 @@
             <small>Software Development LLC</small>
           </span>
         </a>
-
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
           <span class="nav-toggle-line"></span>
           <span class="nav-toggle-line"></span>
           <span class="nav-toggle-line"></span>
-          <span class="sr-only">Toggle navigation</span>
+          <span class="sr-only">Toggle menu</span>
         </button>
 
-        <div class="nav-links" id="nav-links">
+        <nav class="nav" id="nav-links" aria-label="Main Navigation">
           <a href="/projects.html">Projects</a>
           <a href="/socialbar/">SocialBar</a>
-          <a href="#custom-work">Custom work</a>
+          <a href="/clearwaive.html">ClearWaive</a>
+          <a href="/custom-work.html">Custom work</a>
+          <a href="/downloads.html">Downloads</a>
           <a href="/support.html">Support</a>
-          <a href="#contact">Contact</a>
-          <div class="language-switcher" aria-label="Language selector">
-            <button type="button" class="language-option" data-language-option="en" aria-pressed="true">EN</button>
-            <button type="button" class="language-option" data-language-option="es" aria-pressed="false">ES</button>
+          <a class="nav-cta" href="mailto:support@jbcdevelopment.dev">Contact</a>
+        </nav>
+        <div class="header-controls">
+          <div class="lang-switch" aria-label="Language selector">
+            <a class="lang-link is-active" href="/" lang="en">EN</a>
+            <a class="lang-link" href="/es/" lang="es">ES</a>
           </div>
-          <div class="theme-switcher" aria-label="Appearance selector">
-            <button type="button" class="theme-option" data-theme-option="auto" aria-pressed="true" title="Match macOS system theme">Auto</button>
-            <button type="button" class="theme-option" data-theme-option="light" aria-pressed="false" title="Light theme">Light</button>
-            <button type="button" class="theme-option" data-theme-option="dark" aria-pressed="false" title="Dark theme">Dark</button>
+          <div class="theme-switch" role="group" aria-label="Theme switcher">
+            <button
+              class="theme-btn"
+              type="button"
+              data-theme-option="system"
+              aria-label="Use system theme"
+              title="System theme"
+            >
+              ⚙
+            </button>
+            <button
+              class="theme-btn"
+              type="button"
+              data-theme-option="light"
+              aria-label="Use light theme"
+              title="Light theme"
+            >
+              ☀
+            </button>
+            <button
+              class="theme-btn"
+              type="button"
+              data-theme-option="dark"
+              aria-label="Use dark theme"
+              title="Dark theme"
+            >
+              🌙
+            </button>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
 
     <main id="main">
-      <section class="bento-section shell">
-        <div class="bento-grid">
-          <!-- Hero Bento Tile -->
-          <article class="bento-card bento-card-hero">
-            <div>
-              <span class="bento-tag primary">Florida indie app studio</span>
-              <h1>iOS apps, <span>private and supported.</span></h1>
-              <p>
-                JBCSDevs ships focused App Store products with visible privacy details,
-                direct support, and scoped custom work when the fit is right.
-              </p>
-            </div>
-            <div class="hero-actions" style="margin-top: 24px;">
-              <a
-                class="button primary"
-                href="https://apps.apple.com/us/app/paw-care-academy/id6768147697"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get Paw Care Academy
-              </a>
-              <a
-                class="button secondary"
-                href="https://apps.apple.com/us/app/paintrail/id6785262063"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get PainTrail
-              </a>
-            </div>
-            <p class="hero-trust" style="margin-top: 16px;">
-              No accounts, ads, or analytics in Paw Care Academy or PainTrail.
-              <a href="/privacy.html">Read the privacy details</a>
-            </p>
-          </article>
+      <!-- Bespoke Studio Hero -->
+      <section class="hero shell" style="padding-top: 48px; padding-bottom: 32px;">
+        <div class="hero-copy">
+          <p class="hero-eyebrow">Florida Independent Studio</p>
+          <h1 style="font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.15; font-weight: 800;">
+            Handcrafted Apple apps &amp; <span>signed Mac software.</span>
+          </h1>
+          <p style="font-size: 1.15rem; max-width: 640px; margin-top: 16px;">
+            JBCSDevs builds privacy-first iOS applications, notarized macOS tools, and scoped custom engineering with direct developer support.
+          </p>
+          
+          <div class="hero-actions" style="margin-top: 28px;">
+            <a class="button primary" href="#workbench">
+              Explore Studio Workbench ↓
+            </a>
+            <a class="button secondary" href="#estimator">
+              Request Custom Build →
+            </a>
+          </div>
 
-          <!-- Featured Products Bento Tile -->
-          <article class="bento-card bento-card-apps">
-            <div>
-              <span class="bento-tag green"><span class="pulse-dot"></span> Live App Store Products</span>
-              <h2>Featured iOS Apps</h2>
-              <p>Handcrafted, private iOS applications with direct support.</p>
-              
-              <a class="bento-app-row" href="https://apps.apple.com/us/app/paw-care-academy/id6768147697" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/app-icons/paw-care-academy.jpg" alt="Paw Care Academy icon" width="48" height="48" style="border-radius: 12px;" />
-                <div>
-                  <strong>Paw Care Academy</strong>
-                  <div style="font-size: 0.85rem; color: #94a3b8;">Kid-friendly pet-care learning</div>
+          <div class="hero-proof-bar" style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px; font-size: 0.9rem; color: #94a3b8;">
+            <span><span class="pulse-dot"></span> 2 Apps Live on App Store</span>
+            <span>• 0 Ads or Telemetry</span>
+            <span>• Direct Email Support</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Studio Workbench -->
+      <section class="studio-workbench-section shell" id="workbench" aria-labelledby="workbench-title">
+        <div class="workbench-container">
+          <div style="margin-bottom: 24px;">
+            <h2 id="workbench-title" style="font-size: 1.8rem; font-weight: 800;">Studio Workbench</h2>
+            <p style="color: #94a3b8; margin-top: 4px;">Click any product tab to inspect live builds, privacy details, and download paths.</p>
+          </div>
+
+          <div class="workbench-tabs" role="tablist">
+            <button class="workbench-tab is-active" type="button" role="tab" data-workbench-tab="paw">
+              <span class="pulse-dot"></span> Paw Care Academy (iOS)
+            </button>
+            <button class="workbench-tab" type="button" role="tab" data-workbench-tab="paintrail">
+              <span class="pulse-dot"></span> PainTrail (iOS)
+            </button>
+            <button class="workbench-tab" type="button" role="tab" data-workbench-tab="clearwaive">
+              ClearWaive (Pilot)
+            </button>
+            <button class="workbench-tab" type="button" role="tab" data-workbench-tab="m5">
+              M5SteamBridge (Mac)
+            </button>
+          </div>
+
+          <div class="workbench-panels">
+            <!-- Panel 1: Paw Care Academy -->
+            <div class="workbench-panel is-active" data-workbench-panel="paw">
+              <div>
+                <div class="workbench-icon-badge">
+                  <img src="/assets/app-icons/paw-care-academy.jpg" alt="Paw Care Academy icon" width="64" height="64" />
+                  <div>
+                    <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">Paw Care Academy</h3>
+                    <span style="color: #38bdf8; font-weight: 700; font-size: 0.88rem;">App Store • Education &amp; Games</span>
+                  </div>
                 </div>
-              </a>
+                <p>Kid-friendly pet-care learning on iOS. Teaches essential pet hygiene, feeding routines, and safety habits through interactive daily scenarios.</p>
+                <ul class="workbench-feature-list">
+                  <li>100% Offline Capable &amp; Zero Ads</li>
+                  <li>No Account Required or Data Collection</li>
+                  <li>Designed specifically for iPhone &amp; iPad</li>
+                </ul>
+                <a class="button primary" href="https://apps.apple.com/us/app/paw-care-academy/id6768147697" target="_blank" rel="noopener noreferrer">
+                  Open on App Store ↗
+                </a>
+              </div>
+              <div style="background: rgba(13, 27, 46, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 16px; padding: 24px;">
+                <h4 style="margin-top: 0; color: #ffffff;">Privacy Manifest Summary</h4>
+                <p style="font-size: 0.9rem; color: #94a3b8;">Paw Care Academy collects zero personal data, location data, or device identifiers. All progress is saved locally on device.</p>
+                <a href="/privacy.html" style="color: #38bdf8; font-weight: 700; font-size: 0.88rem;">Read Full App Privacy Policy →</a>
+              </div>
+            </div>
 
-              <a class="bento-app-row" href="https://apps.apple.com/us/app/paintrail/id6785262063" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/app-icons/paintrail-256.png" alt="PainTrail icon" width="48" height="48" style="border-radius: 12px;" />
-                <div>
-                  <strong>PainTrail</strong>
-                  <div style="font-size: 0.85rem; color: #94a3b8;">Private pain &amp; symptom tracking</div>
+            <!-- Panel 2: PainTrail -->
+            <div class="workbench-panel" data-workbench-panel="paintrail" hidden="hidden">
+              <div>
+                <div class="workbench-icon-badge">
+                  <img src="/assets/app-icons/paintrail-256.png" alt="PainTrail icon" width="64" height="64" />
+                  <div>
+                    <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">PainTrail</h3>
+                    <span style="color: #38bdf8; font-weight: 700; font-size: 0.88rem;">App Store • Health &amp; Fitness</span>
+                  </div>
                 </div>
-              </a>
+                <p>Private symptom and pain journaling for iOS. Helps users log daily intensity, triggers, and export structured summaries before doctor visits.</p>
+                <ul class="workbench-feature-list">
+                  <li>Private local data storage on device</li>
+                  <li>One-tap PDF export for medical visits</li>
+                  <li>Zero analytics, zero tracking, zero sign-up</li>
+                </ul>
+                <a class="button primary" href="https://apps.apple.com/us/app/paintrail/id6785262063" target="_blank" rel="noopener noreferrer">
+                  Open on App Store ↗
+                </a>
+              </div>
+              <div style="background: rgba(13, 27, 46, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 16px; padding: 24px;">
+                <h4 style="margin-top: 0; color: #ffffff;">Doctor Visit Exporting</h4>
+                <p style="font-size: 0.9rem; color: #94a3b8;">Prepares clear, concise medical summaries so your doctor visits are focused and effective.</p>
+                <a href="/paintrail-referral.html" style="color: #38bdf8; font-weight: 700; font-size: 0.88rem;">View PainTrail Overview →</a>
+              </div>
             </div>
-            <a href="/projects.html" style="font-size: 0.9rem; font-weight: 700; color: #38bdf8; text-decoration: none; margin-top: 16px; display: inline-block;">See all products →</a>
-          </article>
 
-          <!-- Mac Tools Bento Tile -->
-          <article class="bento-card bento-card-mac">
-            <div>
-              <span class="bento-tag primary">Signed macOS Tools</span>
-              <h3>M5SteamBridge &amp; Utilities</h3>
-              <p>Signed and notarized Mac DMGs with published SHA-256 checksums.</p>
+            <!-- Panel 3: ClearWaive -->
+            <div class="workbench-panel" data-workbench-panel="clearwaive" hidden="hidden">
+              <div>
+                <div class="workbench-icon-badge">
+                  <img src="/assets/app-icons/clearwaive.svg" alt="ClearWaive icon" width="64" height="64" />
+                  <div>
+                    <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">ClearWaive</h3>
+                    <span style="color: #f59e0b; font-weight: 700; font-size: 0.88rem;">Public Pilot • General Contractors</span>
+                  </div>
+                </div>
+                <p>COI, lien waiver, and payment-hold tracking web tool built for small general contractors to prevent payment risks before checks go out.</p>
+                <ul class="workbench-feature-list">
+                  <li>Automatic payment holds on unverified COIs</li>
+                  <li>Conditional &amp; unconditional lien waiver tracking</li>
+                  <li>Designed for fast jobsite compliance audits</li>
+                </ul>
+                <a class="button primary" href="/clearwaive.html">
+                  See ClearWaive Public Pilot →
+                </a>
+              </div>
+              <div style="background: rgba(13, 27, 46, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 16px; padding: 24px;">
+                <h4 style="margin-top: 0; color: #ffffff;">General Contractor Tooling</h4>
+                <p style="font-size: 0.9rem; color: #94a3b8;">Streamlines compliance documentation for sub-contractors and trade partners.</p>
+              </div>
             </div>
-            <div style="margin-top: 20px;">
-              <a class="button secondary" href="/downloads.html#m5steambridge" style="width: 100%; text-align: center;">Signed Mac Downloads</a>
-            </div>
-          </article>
 
-          <!-- ClearWaive Bento Tile -->
-          <article class="bento-card bento-card-clearwaive">
-            <div>
-              <span class="bento-tag amber">Public Pilot</span>
-              <h3>ClearWaive</h3>
-              <p>COI, lien waiver, and payment-hold tracking for small general contractors.</p>
+            <!-- Panel 4: M5SteamBridge -->
+            <div class="workbench-panel" data-workbench-panel="m5" hidden="hidden">
+              <div>
+                <div class="workbench-icon-badge">
+                  <div style="width: 64px; height: 64px; background: rgba(56, 189, 248, 0.15); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">💻</div>
+                  <div>
+                    <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">M5SteamBridge</h3>
+                    <span style="color: #10b981; font-weight: 700; font-size: 0.88rem;">Signed macOS Utility • Developer Tool</span>
+                  </div>
+                </div>
+                <p>Desktop helper for connecting M5Stack hardware with steam telemetry streams. Distributed as a signed and notarized Mac DMG.</p>
+                <ul class="workbench-feature-list">
+                  <li>Apple Developer ID Signed &amp; Notarized</li>
+                  <li>Published SHA-256 Checksums</li>
+                  <li>Direct local Mac installation DMG</li>
+                </ul>
+                <a class="button primary" href="/downloads.html#m5steambridge">
+                  Go to Signed Mac Downloads →
+                </a>
+              </div>
+              <div style="background: rgba(13, 27, 46, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 16px; padding: 24px;">
+                <h4 style="margin-top: 0; color: #ffffff;">Security Verification</h4>
+                <p style="font-size: 0.9rem; color: #94a3b8;">Verify download integrity using our published SHA-256 hash ledger prior to installation.</p>
+                <a href="https://github.com/xxjonathan1997xx/jbcdevelopment-site/releases/download/jbc-mac-gold-2026-06-14/CHECKSUMS.sha256" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; font-weight: 700; font-size: 0.88rem;">View SHA-256 Checksums ↗</a>
+              </div>
             </div>
-            <div style="margin-top: 20px;">
-              <a class="button secondary" href="/clearwaive.html" style="width: 100%; text-align: center;">View ClearWaive Pilot</a>
-            </div>
-          </article>
+          </div>
+        </div>
+      </section>
 
-          <!-- Custom Work Bento Tile -->
-          <article class="bento-card bento-card-custom">
-            <div>
-              <span class="bento-tag primary">Custom Scoped Work</span>
-              <h3>Scoped Development</h3>
-              <p>iOS apps, Mac utilities, automation, and AI workflows built by one person.</p>
-            </div>
-            <div style="margin-top: 20px;">
-              <a class="button primary" href="/custom-work.html" style="width: 100%; text-align: center;">Request a Custom Quote</a>
-            </div>
-          </article>
+      <!-- Scoped Project Estimator Widget -->
+      <section class="estimator-panel shell" id="estimator">
+        <div>
+          <h2 style="font-size: 1.8rem; font-weight: 800; margin: 0;">Interactive Project Estimator</h2>
+          <p style="color: #94a3b8; margin-top: 4px;">Need custom engineering? Select your target specs below to generate a pre-formatted inquiry for direct developer scoping.</p>
+        </div>
 
-          <!-- Full Width Support & Privacy Tile -->
-          <article class="bento-card bento-card-full">
-            <div style="flex: 1;">
-              <span class="bento-tag green">Direct Support</span>
-              <h2 style="margin-bottom: 8px;">Privacy &amp; Support Guarantee</h2>
-              <p style="margin: 0;">Support and privacy resources stay available for every release. Email us directly at <a href="mailto:support@jbcdevelopment.dev" style="color: #38bdf8;">support@jbcdevelopment.dev</a>.</p>
+        <div class="estimator-options">
+          <div>
+            <div class="estimator-group-title">1. Target Platform</div>
+            <div class="estimator-pills">
+              <button class="estimator-pill is-selected" type="button" data-estimate-platform="iOS App">iOS App</button>
+              <button class="estimator-pill" type="button" data-estimate-platform="macOS Utility">macOS Utility</button>
+              <button class="estimator-pill" type="button" data-estimate-platform="Automation / AI Workflow">Automation / AI Workflow</button>
             </div>
-            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-              <a class="button primary" href="mailto:support@jbcdevelopment.dev">Email Support</a>
-              <a class="button secondary" href="/support.html">Support Page</a>
+          </div>
+
+          <div>
+            <div class="estimator-group-title">2. Desired Scoped Timeline</div>
+            <div class="estimator-pills">
+              <button class="estimator-pill" type="button" data-estimate-timeline="1-2 Weeks">1-2 Weeks (Rapid Prototype)</button>
+              <button class="estimator-pill is-selected" type="button" data-estimate-timeline="3-4 Weeks">3-4 Weeks (Full MVP Release)</button>
+              <button class="estimator-pill" type="button" data-estimate-timeline="Monthly Retainer">Monthly Retainer / Ongoing</button>
             </div>
-          </article>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+          <a class="button primary" id="estimate-mailto-link" href="mailto:support@jbcdevelopment.dev">
+            Draft Custom Quote Request →
+          </a>
+          <span style="font-size: 0.88rem; color: #94a3b8;">Direct email to support@jbcdevelopment.dev</span>
         </div>
       </section>
 
@@ -241,30 +377,30 @@
       <section class="ship-section" id="ship" aria-labelledby="ship-title">
         <div class="shell">
           <div class="section-heading">
-            <h2 id="ship-title">Release discipline you can verify.</h2>
-            <p>Map the job, ship the smallest useful build, document the limits, and keep support visible.</p>
+            <h2 id="ship-title">Studio discipline &amp; verification.</h2>
+            <p>We scope the job, ship signed builds, document limits, and maintain transparent support.</p>
           </div>
 
           <div class="ship-grid">
             <article class="ship-step">
               <span>01</span>
-              <h3>Scope the product</h3>
-              <p>Clarify the user, constraints, and support path before code ships.</p>
+              <h3>Clear Boundary Scoping</h3>
+              <p>Clarify goals, constraints, and support responsibilities before a line of code is written.</p>
             </article>
             <article class="ship-step">
               <span>02</span>
-              <h3>Sign the Mac build</h3>
-              <p>Local Mac tools ship as signed, notarized DMGs with published checksums.</p>
+              <h3>Notarized Mac Software</h3>
+              <p>Desktop utilities ship with Apple Developer ID signing and published SHA-256 hashes.</p>
             </article>
             <article class="ship-step">
               <span>03</span>
-              <h3>Document limits</h3>
-              <p>Setup notes, privacy details, and known limits stay on this site.</p>
+              <h3>Zero Telemetry Guarantee</h3>
+              <p>No ad trackers, data brokers, or unnecessary background data harvesting.</p>
             </article>
             <article class="ship-step">
               <span>04</span>
-              <h3>Support the release</h3>
-              <p>Per-app support pages and direct email for troubleshooting.</p>
+              <h3>Human Developer Support</h3>
+              <p>Direct support via support@jbcdevelopment.dev for every app and utility.</p>
             </article>
           </div>
         </div>
