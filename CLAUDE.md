@@ -38,6 +38,14 @@ Review `WEBSITE_RELEASE_CHECKLIST.md` before any live deployment.
 
 Deployment, DNS changes, hosting changes, and public announcements require approval first.
 
+## Action Buckets
+
+**Always do:** local edits to HTML/CSS/JS, local preview server, running the release checklist.
+
+**Ask first:** deployment, DNS changes, hosting changes, public announcements.
+
+**Never do:** none defined yet — add hook-enforced paths here if a folder needs it.
+
 ## Agent hub
 
 For routing across local agents, skills, and workflows, read:
