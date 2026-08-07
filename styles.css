@@ -4145,4 +4145,175 @@ body.home-page .footer-links a:hover {
   color: #38bdf8;
 }
 
+/* ==========================================================================
+   Option 3: Bento Grid Layout System
+   ========================================================================== */
+
+.bento-section {
+  padding: 30px 0 60px;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.bento-card {
+  position: relative;
+  border-radius: 20px;
+  background: var(--surface, #ffffff);
+  border: 1px solid var(--border, #d6e5f7);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
+  overflow: hidden;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px -10px rgba(11, 95, 255, 0.18);
+  border-color: rgba(11, 95, 255, 0.4);
+}
+
+.bento-card-hero {
+  grid-column: span 7;
+  background: linear-gradient(135deg, rgba(234, 243, 255, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%);
+  min-height: 380px;
+}
+
+.bento-card-apps {
+  grid-column: span 5;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(234, 243, 255, 0.85) 100%);
+  min-height: 380px;
+}
+
+.bento-card-mac {
+  grid-column: span 4;
+}
+
+.bento-card-clearwaive {
+  grid-column: span 4;
+}
+
+.bento-card-custom {
+  grid-column: span 4;
+}
+
+.bento-card-full {
+  grid-column: span 12;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+.bento-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  width: fit-content;
+  margin-bottom: 14px;
+}
+
+.bento-tag.primary {
+  background: rgba(11, 95, 255, 0.12);
+  color: var(--accent);
+}
+
+.bento-tag.green {
+  background: rgba(16, 185, 129, 0.14);
+  color: #10b981;
+}
+
+.bento-tag.amber {
+  background: rgba(245, 158, 11, 0.14);
+  color: #f59e0b;
+}
+
+.bento-app-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(11, 95, 255, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+
+.bento-app-row:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateX(4px);
+  border-color: rgba(11, 95, 255, 0.3);
+}
+
+/* Dark Theme Bento Overrides */
+:root[data-theme="dark"] .bento-card,
+body.home-page .bento-card {
+  background: #0d192a;
+  border-color: #1e3248;
+  color: #f0f6fc;
+}
+
+:root[data-theme="dark"] .bento-card-hero,
+body.home-page .bento-card-hero {
+  background: linear-gradient(135deg, #0d1b2b 0%, #162942 100%);
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+:root[data-theme="dark"] .bento-card-apps,
+body.home-page .bento-card-apps {
+  background: linear-gradient(135deg, #0d1b2b 0%, #102136 100%);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+:root[data-theme="dark"] .bento-card-full,
+body.home-page .bento-card-full {
+  background: linear-gradient(135deg, #0a1523 0%, #102136 100%);
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+:root[data-theme="dark"] .bento-card:hover,
+body.home-page .bento-card:hover {
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 20px 48px -10px rgba(56, 189, 248, 0.25);
+}
+
+:root[data-theme="dark"] .bento-app-row,
+body.home-page .bento-app-row {
+  background: rgba(13, 27, 46, 0.8);
+  border-color: rgba(56, 189, 248, 0.18);
+}
+
+:root[data-theme="dark"] .bento-app-row:hover,
+body.home-page .bento-app-row:hover {
+  background: rgba(18, 36, 61, 0.95);
+  border-color: rgba(56, 189, 248, 0.45);
+}
+
+@media (max-width: 992px) {
+  .bento-card-hero,
+  .bento-card-apps,
+  .bento-card-mac,
+  .bento-card-clearwaive,
+  .bento-card-custom,
+  .bento-card-full {
+    grid-column: span 12;
+    flex-direction: column;
+  }
+}
+
+
 

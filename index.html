@@ -43,8 +43,8 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" href="/styles.css?v=20260807-dark-studio" as="style" />
-    <link rel="stylesheet" href="/styles.css?v=20260807-dark-studio" />
+    <link rel="preload" href="/styles.css?v=20260807-bento-grid" as="style" />
+    <link rel="stylesheet" href="/styles.css?v=20260807-bento-grid" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -124,94 +124,120 @@
     </header>
 
     <main id="main">
-      <section class="hero shell">
-        <div class="hero-copy">
-          <p class="hero-eyebrow">Florida indie app studio</p>
-          <h1>iOS apps, <span>private and supported.</span></h1>
-          <p>
-            JBCSDevs ships focused App Store products with visible privacy details,
-            direct support, and scoped custom work when the fit is right.
-          </p>
-          <div class="hero-actions">
-            <a
-              class="button primary"
-              href="https://apps.apple.com/us/app/paw-care-academy/id6768147697"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get Paw Care Academy
-            </a>
-            <a
-              class="button secondary"
-              href="https://apps.apple.com/us/app/paintrail/id6785262063"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get PainTrail
-            </a>
-          </div>
-          <p class="hero-trust">
-            No accounts, ads, or analytics in Paw Care Academy or PainTrail.
-            <a href="/privacy.html">Read the privacy details</a>
-          </p>
-          <div class="product-rotator" aria-label="Current JBC products">
-            <span>Now shipping</span>
-            <code data-lab-console>Paw Care Academy</code>
-          </div>
-        </div>
+      <section class="bento-section shell">
+        <div class="bento-grid">
+          <!-- Hero Bento Tile -->
+          <article class="bento-card bento-card-hero">
+            <div>
+              <span class="bento-tag primary">Florida indie app studio</span>
+              <h1>iOS apps, <span>private and supported.</span></h1>
+              <p>
+                JBCSDevs ships focused App Store products with visible privacy details,
+                direct support, and scoped custom work when the fit is right.
+              </p>
+            </div>
+            <div class="hero-actions" style="margin-top: 24px;">
+              <a
+                class="button primary"
+                href="https://apps.apple.com/us/app/paw-care-academy/id6768147697"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Paw Care Academy
+              </a>
+              <a
+                class="button secondary"
+                href="https://apps.apple.com/us/app/paintrail/id6785262063"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get PainTrail
+              </a>
+            </div>
+            <p class="hero-trust" style="margin-top: 16px;">
+              No accounts, ads, or analytics in Paw Care Academy or PainTrail.
+              <a href="/privacy.html">Read the privacy details</a>
+            </p>
+          </article>
 
-        <figure class="hero-media hero-media-products" aria-label="JBCSDevs apps and tools">
-          <div class="hero-product-stack">
-            <a
-              class="hero-product hero-product-featured"
-              href="https://apps.apple.com/us/app/paw-care-academy/id6768147697"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/assets/app-icons/paw-care-academy.jpg"
-                alt="Paw Care Academy app icon"
-                width="96"
-                height="96"
-                fetchpriority="high"
-                decoding="async"
-              />
-              <span>Paw Care Academy</span>
-              <em><span class="pulse-dot"></span> App Store</em>
-            </a>
-            <a
-              class="hero-product hero-product-secondary"
-              href="https://apps.apple.com/us/app/paintrail/id6785262063"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/assets/app-icons/paintrail-256.png"
-                alt="PainTrail app icon"
-                width="96"
-                height="96"
-                loading="lazy"
-              />
-              <span>PainTrail</span>
-              <em><span class="pulse-dot"></span> App Store</em>
-            </a>
-          </div>
-          <figcaption class="hero-proof">
-            <strong>Real products</strong>
-            <span>App Store apps with clear privacy and support paths.</span>
-          </figcaption>
-        </figure>
+          <!-- Featured Products Bento Tile -->
+          <article class="bento-card bento-card-apps">
+            <div>
+              <span class="bento-tag green"><span class="pulse-dot"></span> Live App Store Products</span>
+              <h2>Featured iOS Apps</h2>
+              <p>Handcrafted, private iOS applications with direct support.</p>
+              
+              <a class="bento-app-row" href="https://apps.apple.com/us/app/paw-care-academy/id6768147697" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/app-icons/paw-care-academy.jpg" alt="Paw Care Academy icon" width="48" height="48" style="border-radius: 12px;" />
+                <div>
+                  <strong>Paw Care Academy</strong>
+                  <div style="font-size: 0.85rem; color: #94a3b8;">Kid-friendly pet-care learning</div>
+                </div>
+              </a>
+
+              <a class="bento-app-row" href="https://apps.apple.com/us/app/paintrail/id6785262063" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/app-icons/paintrail-256.png" alt="PainTrail icon" width="48" height="48" style="border-radius: 12px;" />
+                <div>
+                  <strong>PainTrail</strong>
+                  <div style="font-size: 0.85rem; color: #94a3b8;">Private pain &amp; symptom tracking</div>
+                </div>
+              </a>
+            </div>
+            <a href="/projects.html" style="font-size: 0.9rem; font-weight: 700; color: #38bdf8; text-decoration: none; margin-top: 16px; display: inline-block;">See all products →</a>
+          </article>
+
+          <!-- Mac Tools Bento Tile -->
+          <article class="bento-card bento-card-mac">
+            <div>
+              <span class="bento-tag primary">Signed macOS Tools</span>
+              <h3>M5SteamBridge &amp; Utilities</h3>
+              <p>Signed and notarized Mac DMGs with published SHA-256 checksums.</p>
+            </div>
+            <div style="margin-top: 20px;">
+              <a class="button secondary" href="/downloads.html#m5steambridge" style="width: 100%; text-align: center;">Signed Mac Downloads</a>
+            </div>
+          </article>
+
+          <!-- ClearWaive Bento Tile -->
+          <article class="bento-card bento-card-clearwaive">
+            <div>
+              <span class="bento-tag amber">Public Pilot</span>
+              <h3>ClearWaive</h3>
+              <p>COI, lien waiver, and payment-hold tracking for small general contractors.</p>
+            </div>
+            <div style="margin-top: 20px;">
+              <a class="button secondary" href="/clearwaive.html" style="width: 100%; text-align: center;">View ClearWaive Pilot</a>
+            </div>
+          </article>
+
+          <!-- Custom Work Bento Tile -->
+          <article class="bento-card bento-card-custom">
+            <div>
+              <span class="bento-tag primary">Custom Scoped Work</span>
+              <h3>Scoped Development</h3>
+              <p>iOS apps, Mac utilities, automation, and AI workflows built by one person.</p>
+            </div>
+            <div style="margin-top: 20px;">
+              <a class="button primary" href="/custom-work.html" style="width: 100%; text-align: center;">Request a Custom Quote</a>
+            </div>
+          </article>
+
+          <!-- Full Width Support & Privacy Tile -->
+          <article class="bento-card bento-card-full">
+            <div style="flex: 1;">
+              <span class="bento-tag green">Direct Support</span>
+              <h2 style="margin-bottom: 8px;">Privacy &amp; Support Guarantee</h2>
+              <p style="margin: 0;">Support and privacy resources stay available for every release. Email us directly at <a href="mailto:support@jbcdevelopment.dev" style="color: #38bdf8;">support@jbcdevelopment.dev</a>.</p>
+            </div>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a class="button primary" href="mailto:support@jbcdevelopment.dev">Email Support</a>
+              <a class="button secondary" href="/support.html">Support Page</a>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section class="proof-strip shell" aria-label="Release proof">
-        <div class="proof-track proof-track-links">
-          <a class="proof-badge" href="https://apps.apple.com/us/app/paw-care-academy/id6768147697" target="_blank" rel="noopener noreferrer">App Store app</a>
-          <a class="proof-badge" href="/downloads.html#m5steambridge">Signed macOS download</a>
-          <a class="proof-badge" href="https://github.com/xxjonathan1997xx/jbcdevelopment-site/releases/download/jbc-mac-gold-2026-06-14/CHECKSUMS.sha256" target="_blank" rel="noopener noreferrer">SHA-256 checksums</a>
-          <span class="proof-badge proof-badge-static">Built in Florida</span>
-        </div>
-      </section>
-
+      <!-- Release Discipline Section -->
       <section class="ship-section" id="ship" aria-labelledby="ship-title">
         <div class="shell">
           <div class="section-heading">
@@ -241,163 +267,6 @@
               <p>Per-app support pages and direct email for troubleshooting.</p>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section class="featured-product-section shell" aria-labelledby="featured-title">
-        <article class="featured-product-card">
-          <img
-            class="featured-product-icon"
-            src="/assets/app-icons/paw-care-academy.jpg"
-            alt="Paw Care Academy app icon"
-            width="112"
-            height="112"
-            loading="lazy"
-          />
-          <div class="featured-product-copy">
-            <h2 id="featured-title">Paw Care Academy</h2>
-            <p>Kid-friendly pet-care learning on iOS — the clearest place to start with JBCSDevs.</p>
-            <a
-              class="button primary"
-              href="https://apps.apple.com/us/app/paw-care-academy/id6768147697"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open in App Store
-            </a>
-          </div>
-        </article>
-      </section>
-
-      <section class="app-showcase-section" id="apps" aria-labelledby="apps-title">
-        <div class="shell app-showcase-panel">
-          <div class="app-showcase-heading">
-            <h2 id="apps-title">All JBCSDevs apps and tools.</h2>
-            <p>Public App Store apps and software with direct support links.</p>
-          </div>
-
-          <div class="app-showcase-grid" aria-label="JBCSDevs apps and software downloads">
-            <a
-              class="app-showcase-card"
-              href="https://apps.apple.com/us/app/paw-care-academy/id6768147697"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="app-card-visual app-card-visual-paw">
-                <img
-                  class="app-icon"
-                  src="/assets/app-icons/paw-care-academy.jpg"
-                  alt="Paw Care Academy app icon"
-                  width="80"
-                  height="80"
-                />
-                <span class="app-visual-status"><span class="pulse-dot"></span> App Store</span>
-              </span>
-              <span class="app-card-copy">
-                <span class="app-link-kicker">Education / Games</span>
-                <strong>Paw Care Academy</strong>
-                <span>Kid-friendly pet-care learning.</span>
-                <em>Open in App Store</em>
-              </span>
-            </a>
-
-            <a
-              class="app-showcase-card"
-              href="https://apps.apple.com/us/app/paintrail/id6785262063"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="app-card-visual app-card-visual-paintrail">
-                <img
-                  class="app-icon"
-                  src="/assets/app-icons/paintrail-256.png"
-                  alt="PainTrail app icon"
-                  width="80"
-                  height="80"
-                />
-                <span class="app-visual-status"><span class="pulse-dot"></span> App Store</span>
-              </span>
-              <span class="app-card-copy">
-                <span class="app-link-kicker">Health &amp; Fitness / Journal</span>
-                <strong>PainTrail</strong>
-                <span>Private pain tracking and clearer visit preparation.</span>
-                <em>Open in App Store</em>
-              </span>
-            </a>
-
-            <a class="app-showcase-card" href="/clearwaive.html">
-              <span class="app-card-visual app-card-visual-clearwaive">
-                <img
-                  class="app-icon"
-                  src="/assets/app-icons/clearwaive.svg"
-                  alt="ClearWaive logo"
-                  width="80"
-                  height="80"
-                />
-                <span class="app-visual-status">Public pilot</span>
-              </span>
-              <span class="app-card-copy">
-                <span class="app-link-kicker">Web app / Construction</span>
-                <strong>ClearWaive</strong>
-                <span>COI, lien waiver, and payment-hold tracking for small general contractors.</span>
-                <em>See ClearWaive</em>
-              </span>
-            </a>
-          </div>
-
-          <p class="app-showcase-note">
-            <a href="/projects.html">See all publicly available JBCSDevs products</a>.
-          </p>
-        </div>
-      </section>
-
-      <section class="custom-work-section shell" id="custom-work" aria-labelledby="custom-work-title">
-        <div class="custom-work-panel">
-          <div class="custom-work-copy">
-            <h2 id="custom-work-title">Need a scoped app, Mac tool, or workflow?</h2>
-            <p>
-              JBCSDevs takes on small custom jobs when the scope is clear: iOS apps, signed Mac
-              utilities, automation, and AI-assisted internal tools.
-            </p>
-          </div>
-          <div class="custom-work-actions">
-            <a class="button primary" href="/custom-work.html">
-              See how custom work gets scoped and shipped
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact-section shell" id="contact" aria-labelledby="contact-title">
-        <div class="contact-panel">
-          <div>
-            <h2 id="contact-title">Support for apps and software.</h2>
-            <p>
-              For app questions, Mac setup, download checks, privacy, or software support.
-            </p>
-          </div>
-          <div class="contact-actions">
-            <a class="contact-link" href="mailto:support@jbcdevelopment.dev">
-              support@jbcdevelopment.dev
-            </a>
-            <a class="contact-link secondary-contact" href="/support.html">
-              Support page
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="policy-section shell" id="privacy" aria-labelledby="policy-title">
-        <div class="policy-grid">
-          <div id="support">
-            <h2 id="policy-title">Privacy and support</h2>
-            <p>
-              Support and privacy resources stay available for every app and software release.
-            </p>
-          </div>
-          <a class="button secondary" href="mailto:support@jbcdevelopment.dev">
-            Contact support
-          </a>
         </div>
       </section>
     </main>
