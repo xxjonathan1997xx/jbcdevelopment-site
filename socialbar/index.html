@@ -130,6 +130,29 @@
         font-weight: 700;
         font-size: 0.9rem;
       }
+      .socialbar-update-banner {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.5rem 1rem;
+        background: rgba(11, 95, 255, 0.08);
+        border: 1px solid rgba(11, 95, 255, 0.25);
+        border-radius: 999px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        margin-bottom: 1.25rem;
+        flex-wrap: wrap;
+      }
+      .update-pill {
+        background: #0b5fff;
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        text-transform: uppercase;
+      }
     </style>
   </head>
   <body>
@@ -169,6 +192,10 @@
 
     <main id="main" class="content-page shell socialbar-page">
       <header class="content-header">
+        <div class="socialbar-update-banner" aria-label="Version 0.2.0 Announcement">
+          <span class="update-pill">v0.2.0 Released</span>
+          <span>5 New Platforms (Facebook, YouTube, Bluesky, Pinterest, Reddit) + Local Reminders & Caption Overrides!</span>
+        </div>
         <p class="section-label">macOS menu bar social command center</p>
         <h1>All your socials. One menu bar.</h1>
         <p>
@@ -181,7 +208,7 @@
           <a class="button primary" href="https://devsoul64.gumroad.com/l/socialbar">
             Get SocialBar on Gumroad
           </a>
-          <a class="button secondary" href="#how">How it works</a>
+          <a class="button secondary" href="#whats-new">What's New in v0.2.0</a>
         </div>
         <div class="socialbar-proof" aria-label="Release facts">
           <span>Version 0.2.0</span>
@@ -222,6 +249,52 @@
           a number, never a fake zero.
         </figcaption>
       </figure>
+
+      <section class="content-panel" aria-labelledby="whats-new">
+        <div class="m5-section-heading">
+          <p class="section-label">v0.2.0 Major Update</p>
+          <h2 id="whats-new">What's New in Version 0.2.0</h2>
+          <p>Everything added in our latest update for macOS creators and managers.</p>
+        </div>
+        <div class="socialbar-feature-grid">
+          <article class="socialbar-feature">
+            <h3>🌐 5 New Platforms (11 Total)</h3>
+            <p>
+              Added <strong>Facebook</strong>, <strong>YouTube</strong> (main feed), <strong>Bluesky</strong>, <strong>Pinterest</strong>, and <strong>Reddit</strong> alongside Instagram, Threads, TikTok, X, LinkedIn, and YouTube Studio.
+            </p>
+          </article>
+          <article class="socialbar-feature">
+            <h3>✍️ Per-Platform Caption Overrides</h3>
+            <p>
+              Customize captions per platform inside Compose. Use hashtags for Instagram vs longform text for LinkedIn and Reddit without losing your shared default.
+            </p>
+          </article>
+          <article class="socialbar-feature">
+            <h3>📜 Local Post History</h3>
+            <p>
+              Keep a private, on-device log of staged and copied captions (up to 500 entries) in your local Application Support directory — clearable anytime.
+            </p>
+          </article>
+          <article class="socialbar-feature">
+            <h3>🔔 macOS Local Reminders</h3>
+            <p>
+              Schedule native macOS notifications to remind you when it's time to post — rearmed across app restarts.
+            </p>
+          </article>
+          <article class="socialbar-feature">
+            <h3>🔍 Responsive Desktop Scaling</h3>
+            <p>
+              Desktop views (LinkedIn Messaging, YouTube Studio, Facebook) now automatically scale to fit narrow windows and popover switchers cleanly.
+            </p>
+          </article>
+          <article class="socialbar-feature">
+            <h3>📋 Native Copy & Paste Fixes</h3>
+            <p>
+              Full support for standard macOS editing shortcuts (⌘C, ⌘V, ⌘X, ⌘A, ⌘Z) across all input fields and web views.
+            </p>
+          </article>
+        </div>
+      </section>
 
       <section class="content-panel" aria-labelledby="how">
         <div class="m5-section-heading">
