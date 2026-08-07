@@ -29,7 +29,7 @@ Open `http://127.0.0.1:8788`
 
 ## Contact behavior
 
-- Direct email links to `jbcsdevs@gmail.com` (no server-side form storage)
+- Direct email links to `support@jbcdevelopment.dev` (no server-side form storage)
 - EN/ES toggle stored in local browser storage only
 
 ## Before deploy

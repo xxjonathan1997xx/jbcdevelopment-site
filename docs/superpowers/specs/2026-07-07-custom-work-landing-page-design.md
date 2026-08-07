@@ -41,7 +41,7 @@ New page gets `body.custom-work-page` class (parallel to existing `body.home-pag
 - Headline leads with capability, not apps: positions iOS + Mac + AI + automation range
 - One sentence sub-copy reinforcing the range positioning
 - Dual CTA inline:
-  - Primary: mailto intake, reusing the exact existing pattern/subject/body fields from the homepage's `custom-work-section` (`mailto:jbcsdevs@gmail.com?subject=Custom%20project%20inquiry&body=...`)
+  - Primary: mailto intake, reusing the exact existing pattern/subject/body fields from the homepage's `custom-work-section` (`mailto:support@jbcdevelopment.dev?subject=Custom%20project%20inquiry&body=...`)
   - Secondary: "Book a call" — `href="#"` stub, marked `data-cta="book-call"` for easy find-and-wire-up once a booking link (Calendly/Cal.com) exists
 
 ### 2. Capability strip (light, badge row)

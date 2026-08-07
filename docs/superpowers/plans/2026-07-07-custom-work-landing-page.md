@@ -17,8 +17,8 @@
 - One eyebrow label maximum on the new page (per eyebrow-sprawl fix already applied site-wide)
 - `text-wrap: balance` (headings) / `text-wrap: pretty` (paragraphs) already global in `styles.css` — inherited automatically, no action needed
 - Book-a-call CTA ships as a stub: `href="#"` with `data-cta="book-call"` attribute — no real booking link yet
-- Mailto CTA reuses the exact existing pattern: `mailto:jbcsdevs@gmail.com?subject=Custom%20project%20inquiry&body=Project%20summary%3A%0APlatform%3A%0ATimeline%3A%0ABudget%20range%3A`
-- Contact email is always `jbcsdevs@gmail.com`
+- Mailto CTA reuses the exact existing pattern: `mailto:support@jbcdevelopment.dev?subject=Custom%20project%20inquiry&body=Project%20summary%3A%0APlatform%3A%0ATimeline%3A%0ABudget%20range%3A`
+- Contact email is always `support@jbcdevelopment.dev`
 
 ---
 
@@ -230,7 +230,7 @@ git commit -m "feat: add background rule for custom-work page"
           <div class="hero-actions">
             <a
               class="button primary"
-              href="mailto:jbcsdevs@gmail.com?subject=Custom%20project%20inquiry&body=Project%20summary%3A%0APlatform%3A%0ATimeline%3A%0ABudget%20range%3A"
+              href="mailto:support@jbcdevelopment.dev?subject=Custom%20project%20inquiry&body=Project%20summary%3A%0APlatform%3A%0ATimeline%3A%0ABudget%20range%3A"
             >
               Request a custom quote
             </a>
@@ -447,7 +447,7 @@ Note: `app-showcase-note` class is reused here purely for its existing muted-tex
           <div class="custom-work-actions">
             <a
               class="button primary"
-              href="mailto:jbcsdevs@gmail.com?subject=Custom%20project%20inquiry&body=Project%20summary%3A%0APlatform%3A%0ATimeline%3A%0ABudget%20range%3A"
+              href="mailto:support@jbcdevelopment.dev?subject=Custom%20project%20inquiry&body=Project%20summary%3A%0APlatform%3A%0ATimeline%3A%0ABudget%20range%3A"
             >
               Request a custom quote
             </a>
@@ -496,7 +496,7 @@ git commit -m "feat: add shipping-rigor and engagement-shape sections"
           <div class="contact-actions">
             <a
               class="contact-link"
-              href="mailto:jbcsdevs@gmail.com?subject=Custom%20project%20inquiry&body=Project%20summary%3A%0APlatform%3A%0ATimeline%3A%0ABudget%20range%3A"
+              href="mailto:support@jbcdevelopment.dev?subject=Custom%20project%20inquiry&body=Project%20summary%3A%0APlatform%3A%0ATimeline%3A%0ABudget%20range%3A"
             >
               Request a custom quote
             </a>
@@ -560,14 +560,14 @@ Find this block in `index.html`:
           <div class="custom-work-actions">
             <a
               class="button primary"
-              href="mailto:jbcsdevs@gmail.com?subject=Custom%20project%20inquiry&amp;body=Project%20summary%3A%0APlatform%3A%0ATimeline%3A%0ABudget%20range%3A"
+              href="mailto:support@jbcdevelopment.dev?subject=Custom%20project%20inquiry&amp;body=Project%20summary%3A%0APlatform%3A%0ATimeline%3A%0ABudget%20range%3A"
             >
               Request a custom quote
             </a>
             <p class="custom-work-note">
               Include your goal, platform, timeline, and budget range for the fastest reply.
             </p>
-            <a class="button secondary" href="mailto:jbcsdevs@gmail.com">Email JBC Development</a>
+            <a class="button secondary" href="mailto:support@jbcdevelopment.dev">Email JBC Development</a>
           </div>
         </div>
       </section>

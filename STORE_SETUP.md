@@ -15,7 +15,7 @@ Payhip hosts the files, runs secure checkout, delivers downloads/license keys
 instantly, and handles EU/UK VAT. Free plan: **5% per sale**, $0 upfront.
 
 ### Create products
-1. Sign up at https://payhip.com (use `jbcsdevs@gmail.com`).
+1. Sign up at https://payhip.com (use `support@jbcdevelopment.dev`).
 2. Add a payout method (Stripe and/or PayPal) in **Account > Payments**.
 3. For each product: **Add new product > Digital product**.
    - Upload the file(s) (PDF, ZIP, etc.).

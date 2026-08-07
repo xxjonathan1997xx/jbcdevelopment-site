@@ -19,14 +19,11 @@ setup, and software questions.
 
 Current behavior:
 
-- Opens a user-reviewed email draft to `jbcsdevs@gmail.com`
+- Opens a user-reviewed email draft to `support@jbcdevelopment.dev`
 - Does not store submissions, send automatic emails, create proposals, or make commitments
 - Keeps support and privacy pages available as static pages
 
-The public contact email is `jbcsdevs@gmail.com`. It is a direct Gmail contact
-address, so the current website contact links do not require domain email DNS.
-Review MX, SPF, DKIM, and DMARC requirements only before reintroducing
-`jbcdevelopment.dev` domain email or changing providers.
+The public contact email is `support@jbcdevelopment.dev`.
 
 Because this is a static site, there is no server-side submission storage. To
 activate direct form capture later, add an approved backend/form handler such as

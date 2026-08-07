@@ -3945,4 +3945,73 @@ body.home-page .custom-work-panel .section-label {
   border-color: #1e3248;
 }
 
+/* ==========================================================================
+   Modern Studio & Glassmorphism Enhancements (Option 1)
+   ========================================================================== */
+
+.app-showcase-card,
+.featured-product-card,
+.ship-step,
+.custom-work-panel,
+.contact-panel {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
+}
+
+.app-showcase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -8px rgba(11, 95, 255, 0.18);
+  border-color: rgba(11, 95, 255, 0.4);
+}
+
+:root[data-theme="dark"] .app-showcase-card:hover,
+body.home-page .app-showcase-card:hover {
+  box-shadow: 0 20px 48px -10px rgba(56, 189, 248, 0.22);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.featured-product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px -10px rgba(11, 95, 255, 0.2);
+}
+
+.button.primary {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(11, 95, 255, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(11, 95, 255, 0.45);
+}
+
+.button.primary:active {
+  transform: translateY(0);
+}
+
+.pulse-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse-ring 1.8s infinite cubic-bezier(0.66, 0, 0, 1);
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
 

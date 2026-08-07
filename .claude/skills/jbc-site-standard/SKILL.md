@@ -56,7 +56,7 @@ Tokens: `styles.css` — `--accent: #0b5fff`, DM Sans, existing spacing/radius s
 
 **Exceptions are allowed, but the bar is high.** A framework, backend, or real form-handler is justified only when a specific page genuinely can't work without it (e.g., a real contact form replacing mailto, a CMS for high-volume content). This must be a deliberate, stated decision — not a default reach because it's more familiar.
 
-**Contact pattern:** reuse the existing mailto intake pattern (`mailto:jbcsdevs@gmail.com?subject=...&body=...` with structured fields: goal, platform, timeline, budget) unless a page has an explicit, justified reason for something else.
+**Contact pattern:** reuse the existing mailto intake pattern (`mailto:support@jbcdevelopment.dev?subject=...&body=...` with structured fields: goal, platform, timeline, budget) unless a page has an explicit, justified reason for something else.
 
 ## Ship-Readiness Bar
 
