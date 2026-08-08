@@ -176,185 +176,124 @@
     </header>
 
     <main id="main">
-      <!-- Option C: Warm Editorial Studio Hero -->
-      <section class="hero shell" style="padding-top: 64px; padding-bottom: 48px;">
+      <!-- Option 1: Minimalist Swiss & Apple Studio Hero -->
+      <section class="hero shell" style="padding-top: 60px; padding-bottom: 40px;">
         <div class="hero-copy">
-          <div class="editorial-badge" style="margin-bottom: 18px;">
-            <span class="dot"></span> Built by Jonathan in Florida • 100% Independent
+          <div class="swiss-tag">
+            <span class="pulse-dot"></span> Florida Indie Studio
           </div>
-          <h1>
-            Crafting focused Apple apps &amp; <span class="serif-italic">signed Mac tools.</span>
+          <h1 style="font-size: clamp(2.8rem, 5.8vw, 4.4rem); line-height: 1.06; font-weight: 800;">
+            iOS apps &amp; <span>signed Mac software.</span>
           </h1>
-          <p style="font-size: 1.22rem; max-width: 640px; margin-top: 20px; line-height: 1.6;">
-            Hi, I'm Jonathan. JBCSDevs is my independent studio. I design and code single-purpose Apple applications, notarized desktop utilities, and custom software for clients who value privacy.
+          <p style="font-size: 1.2rem; max-width: 640px; margin-top: 20px; line-height: 1.6;">
+            JBCSDevs is an independent software studio based in Florida. We ship focused Apple applications, notarized desktop utilities, and custom engineering with direct developer support.
           </p>
           
           <div class="hero-actions" style="margin-top: 32px;">
-            <a class="button primary" href="#workbench">
-              Explore Studio Workbench ↓
+            <a class="button primary" href="https://apps.apple.com/us/app/paw-care-academy/id6768147697" target="_blank" rel="noopener noreferrer">
+              Get Paw Care Academy
             </a>
-            <a class="button secondary" href="#estimator">
-              Scope a Custom Build →
+            <a class="button secondary" href="#projects">
+              Explore Products ↓
             </a>
           </div>
 
-          <div class="hero-proof-bar" style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 36px; font-size: 0.92rem; opacity: 0.85; font-weight: 600;">
-            <span><strong>2 Apps</strong> Live on App Store</span>
-            <span>• <strong>Zero</strong> Ads or Tracking</span>
-            <span>• Direct Email Scoping</span>
+          <div class="hero-proof-bar" style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 32px; font-size: 0.9rem; opacity: 0.85; font-weight: 600;">
+            <span>● 2 Live App Store Apps</span>
+            <span>• Zero Analytics or Tracking</span>
+            <span>• Direct Developer Support</span>
           </div>
         </div>
       </section>
 
-      <!-- Human Developer Bio & Studio Guarantee -->
-      <section class="shell" style="margin-bottom: 48px;">
-        <div style="background: var(--warm-surface, #ffffff); border: 1px solid var(--warm-border, #e2dacd); border-radius: 20px; padding: 32px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
-          <div style="width: 64px; height: 64px; border-radius: 50%; background: #c96a28; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; flex-shrink: 0;">
+      <!-- Swiss Horizontal Showcase Rows -->
+      <section class="shell" id="projects" style="margin-bottom: 60px;">
+        <div style="margin-bottom: 28px;">
+          <h2 style="font-size: 2rem; font-weight: 800; margin: 0;">Featured Products &amp; Software</h2>
+          <p style="color: var(--swiss-muted); margin-top: 6px;">Handcrafted software applications built with privacy and long-term support.</p>
+        </div>
+
+        <!-- Product 1: Paw Care Academy -->
+        <article class="swiss-product-card">
+          <img class="swiss-product-icon" src="/assets/app-icons/paw-care-academy.jpg" alt="Paw Care Academy icon" />
+          <div class="swiss-product-info">
+            <span class="swiss-tag">Education &amp; Games • iOS</span>
+            <h3>Paw Care Academy</h3>
+            <p>Kid-friendly pet-care learning on iOS. Teaches pet hygiene, feeding routines, and safety habits through interactive daily scenarios. 100% offline capable with zero ads.</p>
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <a class="button primary" href="https://apps.apple.com/us/app/paw-care-academy/id6768147697" target="_blank" rel="noopener noreferrer">
+                Get on App Store ↗
+              </a>
+              <a href="/privacy.html" style="font-size: 0.9rem; font-weight: 700; color: var(--swiss-blue); text-decoration: none;">Privacy Details →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2: PainTrail -->
+        <article class="swiss-product-card">
+          <img class="swiss-product-icon" src="/assets/app-icons/paintrail-256.png" alt="PainTrail icon" />
+          <div class="swiss-product-info">
+            <span class="swiss-tag">Health &amp; Journal • iOS</span>
+            <h3>PainTrail</h3>
+            <p>Private symptom and pain journaling for iOS. Log daily intensity, triggers, and export structured summaries for medical visits. All data stays local on your device.</p>
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <a class="button primary" href="https://apps.apple.com/us/app/paintrail/id6785262063" target="_blank" rel="noopener noreferrer">
+                Get on App Store ↗
+              </a>
+              <a href="/paintrail-referral.html" style="font-size: 0.9rem; font-weight: 700; color: var(--swiss-blue); text-decoration: none;">Doctor Visit Exporter →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3: ClearWaive -->
+        <article class="swiss-product-card">
+          <img class="swiss-product-icon" src="/assets/app-icons/clearwaive.svg" alt="ClearWaive icon" />
+          <div class="swiss-product-info">
+            <span class="swiss-tag" style="background: rgba(245, 158, 11, 0.12); color: #d97706;">Web Pilot • Construction</span>
+            <h3>ClearWaive</h3>
+            <p>COI, lien waiver, and payment-hold tracking web application built for small general contractors to streamline compliance and prevent payment risks before checks go out.</p>
+            <div>
+              <a class="button secondary" href="/clearwaive.html">
+                View ClearWaive Pilot →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4: M5SteamBridge -->
+        <article class="swiss-product-card">
+          <div class="swiss-product-icon" style="background: rgba(37, 99, 235, 0.08); border: 1px solid var(--swiss-border); display: flex; align-items: center; justify-content: center; font-size: 2.2rem;">💻</div>
+          <div class="swiss-product-info">
+            <span class="swiss-tag" style="background: rgba(16, 185, 129, 0.12); color: #059669;">Signed macOS DMG • Developer Tool</span>
+            <h3>M5SteamBridge</h3>
+            <p>Desktop helper for connecting M5Stack hardware with steam telemetry streams. Distributed as a signed and notarized Mac DMG with published SHA-256 hashes.</p>
+            <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+              <a class="button secondary" href="/downloads.html#m5steambridge">
+                Signed Mac Downloads →
+              </a>
+              <a href="https://github.com/xxjonathan1997xx/jbcdevelopment-site/releases/download/jbc-mac-gold-2026-06-14/CHECKSUMS.sha256" target="_blank" rel="noopener noreferrer" style="font-size: 0.9rem; font-weight: 700; color: var(--swiss-blue); text-decoration: none;">
+                SHA-256 Hashes ↗
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Founder Bio & Custom Scoping Section -->
+      <section class="shell" style="margin-bottom: 60px;">
+        <div style="background: var(--swiss-surface); border: 1px solid var(--swiss-border); border-radius: 20px; padding: 40px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);">
+          <div style="width: 72px; height: 72px; border-radius: 50%; background: var(--swiss-blue); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; font-weight: 800; flex-shrink: 0;">
             JB
           </div>
           <div style="flex: 1; min-width: 280px;">
-            <h3 style="margin: 0; font-size: 1.2rem; font-weight: 800;">Built by Jonathan Brito</h3>
-            <p style="margin: 4px 0 0; font-size: 0.95rem; color: var(--warm-muted, #64748b);">
-              Independent software developer based in Orlando, Florida. JBCSDevs is my personal studio where I build single-purpose Apple applications, notarized Mac tools, and custom software. No venture capital, no ad trackers, no data selling.
+            <h3 style="margin: 0 0 6px; font-size: 1.3rem; font-weight: 800;">Built by Jonathan Brito</h3>
+            <p style="margin: 0; font-size: 0.98rem; color: var(--swiss-muted); line-height: 1.5;">
+              Independent software developer based in Orlando, Florida. JBCSDevs is my software studio where I build focused Apple applications, signed Mac tools, and custom engineering. Need custom work? Let's scope it out.
             </p>
           </div>
-          <a class="button secondary" href="mailto:support@jbcdevelopment.dev" style="flex-shrink: 0;">
-            Email Me Directly →
+          <a class="button primary" href="mailto:support@jbcdevelopment.dev" style="flex-shrink: 0;">
+            Request Custom Scope →
           </a>
-        </div>
-      </section>
-
-      <!-- Interactive Studio Workbench -->
-      <section class="studio-workbench-section shell" id="workbench" aria-labelledby="workbench-title">
-        <div class="workbench-container">
-          <div style="margin-bottom: 24px;">
-            <h2 id="workbench-title" style="font-size: 1.8rem; font-weight: 800;">Studio Workbench</h2>
-            <p style="color: #94a3b8; margin-top: 4px;">Click any product tab to inspect live builds, privacy details, and download paths.</p>
-          </div>
-
-          <div class="workbench-tabs" role="tablist">
-            <button class="workbench-tab is-active" type="button" role="tab" data-workbench-tab="paw">
-              <span class="pulse-dot"></span> Paw Care Academy (iOS)
-            </button>
-            <button class="workbench-tab" type="button" role="tab" data-workbench-tab="paintrail">
-              <span class="pulse-dot"></span> PainTrail (iOS)
-            </button>
-            <button class="workbench-tab" type="button" role="tab" data-workbench-tab="clearwaive">
-              ClearWaive (Pilot)
-            </button>
-            <button class="workbench-tab" type="button" role="tab" data-workbench-tab="m5">
-              M5SteamBridge (Mac)
-            </button>
-          </div>
-
-          <div class="workbench-panels">
-            <!-- Panel 1: Paw Care Academy -->
-            <div class="workbench-panel is-active" data-workbench-panel="paw">
-              <div>
-                <div class="workbench-icon-badge">
-                  <img src="/assets/app-icons/paw-care-academy.jpg" alt="Paw Care Academy icon" width="64" height="64" />
-                  <div>
-                    <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">Paw Care Academy</h3>
-                    <span style="color: #38bdf8; font-weight: 700; font-size: 0.88rem;">App Store • Education &amp; Games</span>
-                  </div>
-                </div>
-                <p>Kid-friendly pet-care learning on iOS. Teaches essential pet hygiene, feeding routines, and safety habits through interactive daily scenarios.</p>
-                <ul class="workbench-feature-list">
-                  <li>100% Offline Capable &amp; Zero Ads</li>
-                  <li>No Account Required or Data Collection</li>
-                  <li>Designed specifically for iPhone &amp; iPad</li>
-                </ul>
-                <a class="button primary" href="https://apps.apple.com/us/app/paw-care-academy/id6768147697" target="_blank" rel="noopener noreferrer">
-                  Open on App Store ↗
-                </a>
-              </div>
-              <div style="background: rgba(13, 27, 46, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 16px; padding: 24px;">
-                <h4 style="margin-top: 0; color: #ffffff;">Privacy Manifest Summary</h4>
-                <p style="font-size: 0.9rem; color: #94a3b8;">Paw Care Academy collects zero personal data, location data, or device identifiers. All progress is saved locally on device.</p>
-                <a href="/privacy.html" style="color: #38bdf8; font-weight: 700; font-size: 0.88rem;">Read Full App Privacy Policy →</a>
-              </div>
-            </div>
-
-            <!-- Panel 2: PainTrail -->
-            <div class="workbench-panel" data-workbench-panel="paintrail" hidden="hidden">
-              <div>
-                <div class="workbench-icon-badge">
-                  <img src="/assets/app-icons/paintrail-256.png" alt="PainTrail icon" width="64" height="64" />
-                  <div>
-                    <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">PainTrail</h3>
-                    <span style="color: #38bdf8; font-weight: 700; font-size: 0.88rem;">App Store • Health &amp; Fitness</span>
-                  </div>
-                </div>
-                <p>Private symptom and pain journaling for iOS. Helps users log daily intensity, triggers, and export structured summaries before doctor visits.</p>
-                <ul class="workbench-feature-list">
-                  <li>Private local data storage on device</li>
-                  <li>One-tap PDF export for medical visits</li>
-                  <li>Zero analytics, zero tracking, zero sign-up</li>
-                </ul>
-                <a class="button primary" href="https://apps.apple.com/us/app/paintrail/id6785262063" target="_blank" rel="noopener noreferrer">
-                  Open on App Store ↗
-                </a>
-              </div>
-              <div style="background: rgba(13, 27, 46, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 16px; padding: 24px;">
-                <h4 style="margin-top: 0; color: #ffffff;">Doctor Visit Exporting</h4>
-                <p style="font-size: 0.9rem; color: #94a3b8;">Prepares clear, concise medical summaries so your doctor visits are focused and effective.</p>
-                <a href="/paintrail-referral.html" style="color: #38bdf8; font-weight: 700; font-size: 0.88rem;">View PainTrail Overview →</a>
-              </div>
-            </div>
-
-            <!-- Panel 3: ClearWaive -->
-            <div class="workbench-panel" data-workbench-panel="clearwaive" hidden="hidden">
-              <div>
-                <div class="workbench-icon-badge">
-                  <img src="/assets/app-icons/clearwaive.svg" alt="ClearWaive icon" width="64" height="64" />
-                  <div>
-                    <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">ClearWaive</h3>
-                    <span style="color: #f59e0b; font-weight: 700; font-size: 0.88rem;">Public Pilot • General Contractors</span>
-                  </div>
-                </div>
-                <p>COI, lien waiver, and payment-hold tracking web tool built for small general contractors to prevent payment risks before checks go out.</p>
-                <ul class="workbench-feature-list">
-                  <li>Automatic payment holds on unverified COIs</li>
-                  <li>Conditional &amp; unconditional lien waiver tracking</li>
-                  <li>Designed for fast jobsite compliance audits</li>
-                </ul>
-                <a class="button primary" href="/clearwaive.html">
-                  See ClearWaive Public Pilot →
-                </a>
-              </div>
-              <div style="background: rgba(13, 27, 46, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 16px; padding: 24px;">
-                <h4 style="margin-top: 0; color: #ffffff;">General Contractor Tooling</h4>
-                <p style="font-size: 0.9rem; color: #94a3b8;">Streamlines compliance documentation for sub-contractors and trade partners.</p>
-              </div>
-            </div>
-
-            <!-- Panel 4: M5SteamBridge -->
-            <div class="workbench-panel" data-workbench-panel="m5" hidden="hidden">
-              <div>
-                <div class="workbench-icon-badge">
-                  <div style="width: 64px; height: 64px; background: rgba(56, 189, 248, 0.15); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">💻</div>
-                  <div>
-                    <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">M5SteamBridge</h3>
-                    <span style="color: #10b981; font-weight: 700; font-size: 0.88rem;">Signed macOS Utility • Developer Tool</span>
-                  </div>
-                </div>
-                <p>Desktop helper for connecting M5Stack hardware with steam telemetry streams. Distributed as a signed and notarized Mac DMG.</p>
-                <ul class="workbench-feature-list">
-                  <li>Apple Developer ID Signed &amp; Notarized</li>
-                  <li>Published SHA-256 Checksums</li>
-                  <li>Direct local Mac installation DMG</li>
-                </ul>
-                <a class="button primary" href="/downloads.html#m5steambridge">
-                  Go to Signed Mac Downloads →
-                </a>
-              </div>
-              <div style="background: rgba(13, 27, 46, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 16px; padding: 24px;">
-                <h4 style="margin-top: 0; color: #ffffff;">Security Verification</h4>
-                <p style="font-size: 0.9rem; color: #94a3b8;">Verify download integrity using our published SHA-256 hash ledger prior to installation.</p>
-                <a href="https://github.com/xxjonathan1997xx/jbcdevelopment-site/releases/download/jbc-mac-gold-2026-06-14/CHECKSUMS.sha256" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; font-weight: 700; font-size: 0.88rem;">View SHA-256 Checksums ↗</a>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
