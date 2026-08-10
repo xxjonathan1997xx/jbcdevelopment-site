@@ -35,6 +35,22 @@ Use this checklist before deploying updates to `jbcdevelopment.dev`.
 
 This file is for readiness review only. It does not deploy, publish, change DNS, send email, or contact anyone.
 
+## TallyBar Feedback Landing Page — August 10, 2026
+
+- Scope: publish `/tallybar/` from the signed-off TallyBar landing page, add the
+  feedback section, link it from the app's Support pane, add a Projects card,
+  and include the page in the sitemap.
+- Approval: Jonathan explicitly requested publication on 2026-08-10.
+- Intake: two user-reviewed `mailto:` actions — private feedback and an
+  explicitly consented review note. No backend, storage, analytics, or automatic
+  replies were added.
+- Product claims: TallyBar is free, has no license gate, and offers optional
+  Gumroad support with a suggested $5 donation.
+- Rollback point: `e62d633` on `main`.
+- Validation: local HTTP checks for `/tallybar/`, all four page images,
+  `/projects.html`, and `/sitemap.xml`; feedback anchor and mailto links checked
+  before push.
+
 ## SocialBar Landing Page — August 2, 2026
 
 - Scope: new `/socialbar/` landing page plus `/socialbar/selectors.json` (the app's
