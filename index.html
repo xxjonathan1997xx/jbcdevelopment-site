@@ -41,8 +41,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" href="/styles.css?v=20260810-estimator-white-v101" as="style" />
-    <link rel="stylesheet" href="/styles.css?v=20260810-estimator-white-v101" />
+    <link rel="preload" href="/styles.css?v=20260810-lang-fix-v102" as="style" />
+    <link rel="stylesheet" href="/styles.css?v=20260810-lang-fix-v102" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -127,10 +127,9 @@
           <a href="/support.html">Support</a>
           <a class="nav-cta" href="mailto:support@jbcdevelopment.dev">Contact</a>
         </nav>
-        <div class="header-controls">
-          <div class="lang-switch" aria-label="Language selector">
-            <a class="lang-link is-active" href="/" lang="en">EN</a>
-            <a class="lang-link" href="/es/" lang="es">ES</a>
+          <div class="language-switcher" role="group" aria-label="Language selector">
+            <button class="language-option is-active" type="button" data-language-option="en" aria-label="Switch to English">EN</button>
+            <button class="language-option" type="button" data-language-option="es" aria-label="Cambiar a Español">ES</button>
           </div>
           <div class="theme-switch" role="group" aria-label="Theme switcher">
             <button
