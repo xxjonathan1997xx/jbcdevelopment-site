@@ -4529,6 +4529,24 @@ body.home-page .hero h1 span {
   color: var(--swiss-blue);
 }
 
+/* Swiss 3-Card Concept Grid */
+.concept-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.concept-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px -10px rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
 /* Swiss Horizontal Product Rows */
 .swiss-product-card {
   background: var(--swiss-surface);
