@@ -44,8 +44,10 @@ body {
 }
 
 body.home-page {
-  background: #ffffff;
-  color: #0f172a;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  background: #ffffff !important;
+  color: #0f172a !important;
 }
 
 body.custom-work-page {

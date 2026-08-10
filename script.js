@@ -869,9 +869,9 @@ function getInitialTheme() {
       return savedTheme;
     }
   } catch {
-    // Fall back to auto
+    // Fall back to light
   }
-  return "auto";
+  return "light";
 }
 
 function applyTheme(theme, options = {}) {
