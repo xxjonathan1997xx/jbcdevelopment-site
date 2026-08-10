@@ -131,35 +131,36 @@ a {
 }
 
 body.home-page .site-header {
-  border-bottom-color: rgba(147, 197, 253, 0.18);
-  background: rgba(5, 16, 29, 0.78);
+  border-bottom: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
 }
 
 body.home-page .site-header.is-scrolled {
-  background: rgba(5, 16, 29, 0.92);
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
 }
 
 body.home-page .brand-name {
-  color: #ffffff;
+  color: #0f172a;
 }
 
 body.home-page .brand-name small,
 body.home-page .nav-links a {
-  color: #b8cbe4;
+  color: #475569;
 }
 
 body.home-page .nav-links a:hover,
 body.home-page .nav-links a:focus-visible {
-  background: rgba(59, 130, 246, 0.18);
-  color: #ffffff;
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
 }
 
 body.home-page .language-switcher,
 body.home-page .nav-toggle {
-  border-color: rgba(147, 197, 253, 0.26);
-  background: rgba(255, 255, 255, 0.08);
-  color: #eaf6ff;
+  border-color: #e2e8f0;
+  background: #ffffff;
+  color: #0f172a;
 }
 
 .nav {
@@ -299,8 +300,28 @@ body.home-page .nav-toggle {
 
 body.home-page .hero {
   isolation: isolate;
-  min-height: min(720px, calc(100svh - 76px));
-  color: #eef7ff;
+  min-height: auto;
+  color: #0f172a;
+}
+
+body.home-page .hero p {
+  color: #475569 !important;
+}
+
+body.home-page .hero-proof-bar {
+  color: #475569 !important;
+}
+
+body.home-page .button.secondary {
+  border-color: #cbd5e1 !important;
+  background: #ffffff !important;
+  color: #0f172a !important;
+}
+
+body.home-page .button.secondary:hover {
+  border-color: #94a3b8 !important;
+  background: #f8fafc !important;
+  color: #0f172a !important;
 }
 
 body.home-page .hero::before {
