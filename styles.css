@@ -163,12 +163,39 @@ body.home-page .nav-toggle {
   color: #0f172a;
 }
 
-.nav {
-  min-height: 76px;
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  min-height: 76px;
+  gap: 16px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav a {
+  color: #475569;
+  font-weight: 650;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.nav a:hover {
+  color: #0f172a;
+  background: #f1f5f9;
 }
 
 .brand {
@@ -324,36 +351,11 @@ body.home-page .button.secondary:hover {
   color: #0f172a !important;
 }
 
-body.home-page .hero::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 3% 0 8%;
-  border-radius: 18px;
-  background:
-    linear-gradient(rgba(125, 211, 252, 0.075) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(125, 211, 252, 0.06) 1px, transparent 1px);
-  background-size: 42px 42px;
-  -webkit-mask-image: radial-gradient(circle at 64% 44%, black 0, transparent 72%);
-  mask-image: radial-gradient(circle at 64% 44%, black 0, transparent 72%);
-  opacity: 0.9;
-}
-
+body.home-page .hero::before,
 body.home-page .hero::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: min(52vw, 620px);
-  aspect-ratio: 1;
-  right: -8%;
-  top: 4%;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 36% 34%, rgba(125, 211, 252, 0.22), transparent 34%),
-    radial-gradient(circle at 66% 64%, rgba(11, 95, 255, 0.2), transparent 44%);
-  filter: blur(18px);
-  opacity: 0.72;
-  pointer-events: none;
+  display: none !important;
+  content: none !important;
+  opacity: 0 !important;
 }
 
 .hero-copy {
