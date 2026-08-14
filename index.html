@@ -23,8 +23,6 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#06b6d4" />
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
@@ -36,8 +34,8 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" data-site-header>
-      <nav class="nav shell" aria-label="Primary navigation">
-        <a class="brand" href="/" aria-label="JBC Software Development LLC home">
+      <div class="header-inner shell">
+        <a class="brand" href="/" aria-label="JBCSDevs home">
           <span class="brand-mark" aria-hidden="true">
             <img src="/assets/jbc-brand-mark.svg" alt="" width="38" height="38" />
           </span>
@@ -46,12 +44,11 @@
             <small>Miami, FL &bull; Software Development LLC</small>
           </span>
         </a>
-
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
           <span class="nav-toggle-line"></span>
           <span class="nav-toggle-line"></span>
           <span class="nav-toggle-line"></span>
-          <span class="sr-only">Toggle navigation</span>
+          <span class="sr-only">Toggle menu</span>
         </button>
 
         <div class="nav-links" id="nav-links">
@@ -122,7 +119,7 @@
             <button type="button" class="language-option" data-language-option="es" aria-pressed="false">ES</button>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
 
     <main id="main">

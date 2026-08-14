@@ -29,7 +29,7 @@ Open `http://127.0.0.1:8788`
 
 ## Contact behavior
 
-- Direct email links to `jbcsdevs@gmail.com` (no server-side form storage)
+- Direct email links to `support@jbcdevelopment.dev` (no server-side form storage)
 - EN/ES toggle stored in local browser storage only
 
 ## Before deploy
@@ -37,6 +37,14 @@ Open `http://127.0.0.1:8788`
 Review `WEBSITE_RELEASE_CHECKLIST.md` before any live deployment.
 
 Deployment, DNS changes, hosting changes, and public announcements require approval first.
+
+## Action Buckets
+
+**Always do:** local edits to HTML/CSS/JS, local preview server, running the release checklist.
+
+**Ask first:** deployment, DNS changes, hosting changes, public announcements.
+
+**Never do:** none defined yet — add hook-enforced paths here if a folder needs it.
 
 ## Agent hub
 

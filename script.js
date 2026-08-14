@@ -1078,7 +1078,7 @@ function normalizeText(value) {
 }
 
 function shouldSkipTranslation(element) {
-  return Boolean(element.closest("script, style, noscript, .brand-name, .language-switcher"));
+  return Boolean(element.closest("script, style, noscript, .brand-name, .language-switcher, .theme-switcher"));
 }
 
 /* ── Scroll Reveal Observer for Smooth Page Entrance ── */

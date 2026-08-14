@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "note": "v4 from a live six-platform diagnostic with all accounts logged in. LinkedIn is VERIFIED: it exposes counts in aria-label on nav items ('Notifications, 0 new notifications'). Others remain anchor-based guesses because every platform had 0 unread at capture time, so no count node existed. DO NOT use X's app-text-transition-container spans \u2014 those are post like/repost counts, not notifications.",
+  "version": 7,
+  "note": "v7: Added Facebook, YouTube, Pinterest, and Reddit entries.",
   "platforms": {
     "instagram": {
       "verified": false,
@@ -23,6 +23,15 @@
       ],
       "dot": []
     },
+    "facebook": {
+      "verified": false,
+      "anchor": "a[aria-label='Notifications']",
+      "badge": [
+        "a[aria-label='Notifications'] span:not(:empty)",
+        "[aria-label*='Notifications'][aria-label*='unread']"
+      ],
+      "dot": []
+    },
     "x": {
       "verified": false,
       "anchor": "a[data-testid='AppTabBar_Notifications_Link'] confirmed. NEVER use span[data-testid='app-text-transition-container'] \u2014 post metrics, not notifications.",
@@ -31,6 +40,24 @@
         "a[data-testid='AppTabBar_Notifications_Link'][aria-label*='unread']",
         "a[data-testid='AppTabBar_Notifications_Link'] span:not(:empty)",
         "a[href='/notifications'] span:not(:empty)"
+      ],
+      "dot": []
+    },
+    "linkedin": {
+      "verified": true,
+      "anchor": "nav item with aria-label prefixed 'Notifications,' \u2014 confirmed present",
+      "badge": [
+        "[aria-label^='Notifications,']",
+        "a[href*='/notifications'][aria-label]"
+      ],
+      "dot": []
+    },
+    "youtube": {
+      "verified": false,
+      "anchor": "ytd-notification-topbar-button-renderer",
+      "badge": [
+        "ytd-notification-topbar-button-renderer [aria-label*='notification']",
+        "a[aria-label*='Notification'] span:not(:empty)"
       ],
       "dot": []
     },
@@ -56,12 +83,30 @@
       ],
       "dot": []
     },
-    "linkedin": {
+    "bluesky": {
       "verified": true,
-      "anchor": "nav item with aria-label prefixed 'Notifications,' \u2014 confirmed present",
+      "anchor": "a[aria-label='Notifications'] \u2014 confirmed present and unique (1 match), reads count '1' from its own text content when unread=1",
       "badge": [
-        "[aria-label^='Notifications,']",
-        "a[href*='/notifications'][aria-label]"
+        "a[aria-label='Notifications']",
+        "a[href='/notifications']"
+      ],
+      "dot": []
+    },
+    "pinterest": {
+      "verified": false,
+      "anchor": "a[aria-label='Notifications']",
+      "badge": [
+        "a[aria-label='Notifications'] span:not(:empty)",
+        "[data-test-id='notifications-bell'] span:not(:empty)"
+      ],
+      "dot": []
+    },
+    "reddit": {
+      "verified": false,
+      "anchor": "a[href*='/notifications']",
+      "badge": [
+        "a[href*='/notifications'] span:not(:empty)",
+        "#notifications-tab-icon span:not(:empty)"
       ],
       "dot": []
     }

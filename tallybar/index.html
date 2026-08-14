@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TallyBar | Your whole business. One glance.</title>
+<meta name="description" content="TallyBar unifies App Store Connect, Gumroad, and Product Hunt into one macOS menu bar dropdown — The One Number, review replies, and Launch Mode for launch day." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7fbff;
+    --ink: #071422;
+    --ink-secondary: #4a5b6c;
+    --ink-tertiary: #7c8b99;
+    --blue: #0b5fff;
+    --border: rgba(7, 20, 34, 0.10);
+    --card-bg: #ffffff;
+    --pill-bg: rgba(7, 20, 34, 0.05);
+    --green: #1f8a49;
+    --orange: #e07c1f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "DM Sans", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .header-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 0;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+  .brand img { width: 32px; height: 32px; border-radius: 7px; }
+  nav a { margin-left: 28px; font-weight: 600; font-size: 14.5px; text-decoration: none; color: var(--ink-secondary); }
+
+  .eyebrow {
+    font-size: 12.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--ink-tertiary); margin: 0 0 14px;
+  }
+  h1 {
+    font-size: 60px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em;
+    margin: 0 0 20px;
+  }
+  .hero {
+    display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: start;
+    padding: 64px 0 40px;
+  }
+  .hero-sub { font-size: 18px; color: var(--ink-secondary); max-width: 520px; margin: 0 0 18px; }
+  .hero-meta { font-weight: 700; color: var(--ink-secondary); margin-bottom: 26px; }
+  .cta-row { display: flex; gap: 12px; margin-bottom: 22px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 14px 22px; border-radius: 8px; font-weight: 740; font-size: 15.5px;
+    text-decoration: none; border: 1px solid transparent;
+  }
+  .btn-primary { background: var(--blue); color: #fff; }
+  .btn-secondary { background: #fff; color: var(--ink); border-color: var(--border); }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill {
+    font-size: 13px; font-weight: 600; padding: 7px 13px; border-radius: 999px;
+    background: var(--pill-bg); border: 1px solid var(--border); color: var(--ink-secondary);
+  }
+  .hero-shot {
+    background: linear-gradient(180deg, #eef5ff, #f7fbff);
+    border: 1px solid var(--border); border-radius: 16px; padding: 28px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-shot img { max-width: 100%; height: auto; filter: drop-shadow(0 20px 40px rgba(7,20,34,0.14)); }
+
+  .honesty-note {
+    max-width: 720px; margin: 8px 0 56px; padding: 14px 18px;
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+    font-size: 14.5px; color: var(--ink-secondary);
+  }
+
+  .statement {
+    font-size: 34px; font-weight: 800; letter-spacing: -0.01em; text-align: center;
+    padding: 10px 0 56px; max-width: 760px; margin: 0 auto;
+  }
+
+  section { padding: 20px 0; }
+  .section-title { font-size: 13px; }
+
+  .feature-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;
+    padding-bottom: 64px;
+  }
+  .feature h3 { font-size: 19px; margin: 0 0 8px; font-weight: 700; }
+  .feature p { color: var(--ink-secondary); margin: 0; font-size: 15px; }
+
+  .launch-section {
+    display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 48px; align-items: center;
+    background: linear-gradient(135deg, #fff4ec, #fff9f4);
+    border: 1px solid rgba(224, 124, 31, 0.18); border-radius: 20px;
+    padding: 48px; margin-bottom: 64px;
+  }
+  .launch-section .eyebrow { color: var(--orange); }
+  .launch-section h2 { font-size: 32px; font-weight: 800; margin: 0 0 14px; letter-spacing: -0.01em; }
+  .launch-section p { color: var(--ink-secondary); font-size: 15.5px; margin: 0 0 12px; }
+  .launch-shot img { max-width: 100%; height: auto; border-radius: 12px; filter: drop-shadow(0 16px 32px rgba(224,124,31,0.16)); }
+
+  .sources-row {
+    display: flex; flex-wrap: wrap; gap: 12px; padding: 8px 0 56px;
+  }
+  .source-chip {
+    display: flex; align-items: center; gap: 8px; padding: 10px 16px;
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+    font-weight: 600; font-size: 14.5px;
+  }
+  .source-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .sources-note { color: var(--ink-tertiary); font-size: 14px; max-width: 640px; }
+
+  .not-box {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px;
+    padding: 32px; margin-bottom: 64px;
+  }
+  .not-box h3 { margin: 0 0 10px; font-size: 20px; }
+  .not-box p { color: var(--ink-secondary); font-size: 15px; margin: 0 0 10px; }
+
+  .pricing {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px;
+    padding: 36px; margin-bottom: 64px; text-align: center;
+  }
+  .pricing .amount { font-size: 44px; font-weight: 800; margin: 6px 0; }
+  .pricing p { color: var(--ink-secondary); }
+
+  .feedback {
+    background: linear-gradient(135deg, #edf5ff, #f7fbff);
+    border: 1px solid rgba(11, 95, 255, 0.14); border-radius: 20px;
+    padding: 48px; margin-bottom: 64px;
+  }
+  .feedback h2 { font-size: 30px; font-weight: 800; margin: 0 0 12px; }
+  .feedback > p { color: var(--ink-secondary); font-size: 15.5px; max-width: 700px; }
+  .feedback-prompts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+  .feedback-prompt {
+    background: rgba(255, 255, 255, 0.82); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px; color: var(--ink-secondary); font-size: 14px;
+  }
+  .feedback-prompt strong { display: block; color: var(--ink); margin-bottom: 5px; }
+  .feedback-note { color: var(--ink-tertiary) !important; font-size: 13px !important; margin-bottom: 0; }
+
+  .privacy {
+    background: linear-gradient(135deg, #0b1c2c, #071422);
+    color: #eaf2fb; border-radius: 20px; padding: 48px; margin-bottom: 64px;
+  }
+  .privacy h2 { font-size: 26px; margin: 0 0 14px; }
+  .privacy p { color: #b9c9d6; font-size: 15.5px; max-width: 680px; }
+  .privacy a { color: #9dc4ff; }
+
+  footer {
+    border-top: 1px solid var(--border); padding: 28px 0; color: var(--ink-tertiary); font-size: 13.5px;
+  }
+
+  @media (max-width: 760px) {
+    .hero, .launch-section { grid-template-columns: 1fr; }
+    h1 { font-size: 42px; }
+    .feature-grid { grid-template-columns: 1fr; }
+    .feedback-prompts { grid-template-columns: 1fr; }
+    nav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <div class="brand">
+      <img src="assets/app-icon.png" alt="TallyBar icon" />
+      TallyBar
+    </div>
+    <nav>
+      <a href="https://jbcdevelopment.dev">JBC Development</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#privacy">Privacy</a>
+      <a href="mailto:support@jbcdevelopment.dev">Support</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <p class="eyebrow">macOS menu bar business dashboard</p>
+      <h1>Your whole business.<br>One glance.</h1>
+      <p class="hero-sub">TallyBar checks App Store Connect, Gumroad, and Product Hunt for you — sales, reviews, and launch-day votes in one dropdown, no tab-hopping between three dashboards.</p>
+      <p class="hero-meta">Free download · Optional $5 support · macOS 14+</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://devsoul64.gumroad.com/l/tallybar">Get TallyBar free</a>
+        <a class="btn btn-secondary" href="#how-it-works">How it works</a>
+      </div>
+      <div class="pills">
+        <span class="pill">Version 0.1.1</span>
+        <span class="pill">macOS 14+</span>
+        <span class="pill">Signed and notarized</span>
+        <span class="pill">No dashboard account</span>
+        <span class="pill">No tracking</span>
+      </div>
+    </div>
+    <div class="hero-shot">
+      <img src="assets/hero-one-number.png" alt="TallyBar's menu bar dropdown showing The One Number, $47 today across App Store Connect and Gumroad, a new PainTrail review, and a Product Hunt launch update." />
+    </div>
+  </div>
+
+  <p class="honesty-note">TallyBar labels exactly how fresh each number is — a same-day App Store Connect figure never pretends to be as fresh as a live Gumroad sale. When a source has nothing to report, it says so instead of showing a number that implies it checked and found zero.</p>
+
+  <p class="statement">Stop tab-hopping between dashboards. Start shipping.</p>
+
+  <section id="how-it-works">
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>The One Number</h3>
+        <p>Today's total, blended from Gumroad's live sales and App Store Connect's most recent daily report — each source labeled with its own freshness, never silently merged.</p>
+      </div>
+      <div class="feature">
+        <h3>Reply without leaving your menu bar</h3>
+        <p>A new App Store review shows up with an inline reply composer. Compose, confirm, publish — no context switch to App Store Connect's own web console.</p>
+      </div>
+      <div class="feature">
+        <h3>Honest by default</h3>
+        <p>Every section shows a plain freshness tag. A degraded or expired key goes quiet, not broken — the rest of your dashboard keeps working while you reconnect it.</p>
+      </div>
+      <div class="feature">
+        <h3>Your accounts, your Mac</h3>
+        <p>No server, no relay, no account with TallyBar itself. Your API keys live in macOS Keychain and talk directly to Apple, Gumroad, and Product Hunt.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="launch-section">
+    <div>
+      <p class="eyebrow">Launch day</p>
+      <h2>Launch Mode</h2>
+      <p>The moment a Product Hunt launch goes live, TallyBar flips into Launch Mode: live vote count, comment feed newest-first, and a nudge the instant a comment has waited 20 minutes without a reply.</p>
+      <p>Auto-suggested when a connected launch is under 24 hours old — entering it is always your call, never automatic. It quietly exits itself 48 hours after you start.</p>
+    </div>
+    <div class="launch-shot">
+      <img src="assets/launch-mode.png" alt="TallyBar's Launch Mode showing a live vote count of 24 with +3 since last check, an unreplied-comment nudge, and a comment feed." />
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Connects to</p>
+    <div class="sources-row">
+      <div class="source-chip"><span class="source-dot" style="background:#2f7de1"></span>App Store Connect</div>
+      <div class="source-chip"><span class="source-dot" style="background:#ff90e8"></span>Gumroad</div>
+      <div class="source-chip"><span class="source-dot" style="background:#da552f"></span>Product Hunt</div>
+    </div>
+    <p class="sources-note">Connect any subset — TallyBar works with just one source and grows with you as you add more, right from Settings.</p>
+  </section>
+
+  <div class="not-box">
+    <h3>What it doesn't do</h3>
+    <p>TallyBar is not an analytics suite. No charts, no sparklines, no historical trends beyond a rolling week of local cache. It answers one question — did anything happen since I last looked — and stops there.</p>
+    <p>It never publishes anything without your explicit confirmation. A review reply shows a confirmation step before it goes live, because there's no undo once it's posted.</p>
+  </div>
+
+  <div class="pricing" id="pricing">
+    <p class="eyebrow" style="text-align:center;">Pricing</p>
+    <div class="amount">Free</div>
+    <p>Full access, no license gate. Optional Gumroad support; suggested donation: $5.</p>
+    <div class="cta-row" style="justify-content:center;">
+      <a class="btn btn-primary" href="https://devsoul64.gumroad.com/l/tallybar">Get TallyBar free</a>
+    </div>
+  </div>
+
+  <section class="feedback" id="feedback">
+    <p class="eyebrow">Help shape TallyBar</p>
+    <h2>What should it do next?</h2>
+    <p>Tell me what you were trying to see, where TallyBar helped or got in the way, and what would make the next release more useful. I read every note.</p>
+    <div class="feedback-prompts">
+      <div class="feedback-prompt"><strong>What were you trying to do?</strong>Check a launch, follow sales, or reply to a review?</div>
+      <div class="feedback-prompt"><strong>What happened?</strong>What felt clear, confusing, missing, or surprisingly useful?</div>
+      <div class="feedback-prompt"><strong>What should change?</strong>Describe the one improvement that would matter most.</div>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:feedback@jbcdevelopment.dev?subject=TallyBar%20feedback&amp;body=What%20were%20you%20trying%20to%20do%3F%0A%0AWhat%20happened%3F%0A%0AWhat%20should%20change%3F">Send private feedback</a>
+      <a class="btn btn-secondary" href="mailto:feedback@jbcdevelopment.dev?subject=TallyBar%20review%20note&amp;body=I%27m%20happy%20for%20this%20note%20to%20be%20shared%20as%20a%20public%20TallyBar%20review%3A%0A%0A">Share a review note</a>
+    </div>
+    <p class="feedback-note">Your note stays private unless you explicitly say it can be shared as a review or quoted publicly.</p>
+  </section>
+
+  <div class="privacy" id="privacy">
+    <h2>Privacy</h2>
+    <p>Everything stays on your Mac. No analytics, no tracking, no telemetry, and no TallyBar account required. TallyBar contacts exactly the services you connect — App Store Connect, Gumroad, and Product Hunt's own APIs, directly.</p>
+    <p>Requires macOS 14 or later. Questions: <a href="mailto:support@jbcdevelopment.dev">support@jbcdevelopment.dev</a>.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    © 2026 JBC Software Development LLC. TallyBar is not affiliated with Apple, Gumroad, or Product Hunt.
+  </div>
+</footer>
+
+</body>
+</html>

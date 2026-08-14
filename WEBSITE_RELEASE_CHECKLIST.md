@@ -35,6 +35,22 @@ Use this checklist before deploying updates to `jbcdevelopment.dev`.
 
 This file is for readiness review only. It does not deploy, publish, change DNS, send email, or contact anyone.
 
+## TallyBar Feedback Landing Page — August 10, 2026
+
+- Scope: publish `/tallybar/` from the signed-off TallyBar landing page, add the
+  feedback section, link it from the app's Support pane, add a Projects card,
+  and include the page in the sitemap.
+- Approval: Jonathan explicitly requested publication on 2026-08-10.
+- Intake: two user-reviewed `mailto:` actions — private feedback and an
+  explicitly consented review note. No backend, storage, analytics, or automatic
+  replies were added.
+- Product claims: TallyBar is free, has no license gate, and offers optional
+  Gumroad support with a suggested $5 donation.
+- Rollback point: `e62d633` on `main`.
+- Validation: local HTTP checks for `/tallybar/`, all four page images,
+  `/projects.html`, and `/sitemap.xml`; feedback anchor and mailto links checked
+  before push.
+
 ## SocialBar Landing Page — August 2, 2026
 
 - Scope: new `/socialbar/` landing page plus `/socialbar/selectors.json` (the app's
@@ -166,7 +182,7 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
 | Mobile QA | Verified | `clearwaive.html` at 375/500px: hamburger nav, full-width buttons, badges reflow, no overflow | None | — |
 | Navigation links | Verified | ClearWaive + M5SteamBridge added to header + footer on `index.html`; M5 apps card repointed to `/m5steambridge/`; all internal hrefs resolve (200) | None | — |
 | New page: ClearWaive | Verified | `clearwaive.html` live 200, h1 present; copy sourced from ClearWaive MVP (no fabricated claims); "View live demo" → `clearwaive-mvp.vercel.app` confirmed 200; reuses existing components/tokens | Demo video is a marked placeholder (no YouTube upload yet) | Swap `VIDEO_ID` when uploaded |
-| Contact link behavior | Verified | ClearWaive uses `mailto:jbcsdevs@gmail.com` intake pattern; no backend, no submission storage | None | — |
+| Contact link behavior | Verified | ClearWaive uses `mailto:support@jbcdevelopment.dev` intake pattern; no backend, no submission storage | None | — |
 | SEO title/description | Verified | `clearwaive.html` full title/description/canonical/og/hreflang matching `index.html` pattern | None | — |
 | Sitemap/robots | Verified | `sitemap.xml` adds `clearwaive.html` + `custom-work.html` (lastmod 2026-07-13); live sitemap serves both; valid XML | None | — |
 | No secrets committed | Verified | Only `clearwaive.html`, `index.html`, `sitemap.xml`, `WEBSITE_RELEASE_CHECKLIST.md` changed; no `.env`/tokens/keys; `CLAUDE.md` pre-existing local edit left untouched | None | — |
@@ -179,7 +195,7 @@ The current contact path is static. It uses direct email links that create a use
 
 Website inquiries should be manually reviewed before becoming lead tracker rows. Do not add backend capture, CRM syncing, or automatic lead creation without approval.
 
-The current public contact email is `jbcsdevs@gmail.com`. Review email DNS only before reintroducing `jbcdevelopment.dev` domain email or changing providers. Do not use this checklist to change other projects, email providers, quote intake systems, or automation settings.
+The current public contact email is `support@jbcdevelopment.dev`. Do not use this checklist to change other projects, email providers, quote intake systems, or automation settings.
 
 ## Approval Gate
 
