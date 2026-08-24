@@ -80,7 +80,7 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
 - Validation: all 12 pages return 200 locally; exactly one SocialBar nav link per
   page; card renders on `projects.html`.
 - Note: SocialBar is the only product with a top-level nav entry — ThreadVigil,
-  M5SteamBridge, NextRole and ClearWaive are reachable via Projects/Store only.
+  M5SteamBridge and ClearWaive are reachable via Projects/Store only.
   Placed as requested; easy to drop back to Projects-only if the nav feels crowded.
 
 ### Follow-up — SocialBar screenshot, August 2, 2026
@@ -187,7 +187,7 @@ This file is for readiness review only. It does not deploy, publish, change DNS,
 | Sitemap/robots | Verified | `sitemap.xml` adds `clearwaive.html` + `custom-work.html` (lastmod 2026-07-13); live sitemap serves both; valid XML | None | — |
 | No secrets committed | Verified | Only `clearwaive.html`, `index.html`, `sitemap.xml`, `WEBSITE_RELEASE_CHECKLIST.md` changed; no `.env`/tokens/keys; `CLAUDE.md` pre-existing local edit left untouched | None | — |
 | Deploy + live verify | Verified | Pushed to `main`; GitHub Pages build `built`; live URLs 200 (`/clearwaive.html`, `/m5steambridge/`, sitemap) | None | — |
-| Merge integrity | Verified | Two rounds of remote divergence (teammate M5 page, then NextRole support/privacy) merged cleanly — no conflicts, no work lost | None | — |
+| Merge integrity | Verified | Remote divergence was merged cleanly — no conflicts, no work lost | None | — |
 
 ## Contact Link Limitation
 
