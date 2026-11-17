@@ -6,7 +6,7 @@
     <title>SocialBar | All your socials. One menu bar.</title>
     <meta
       name="description"
-      content="A macOS menu bar app for people who post to several platforms a week. Badge counts, instant access, and compose staging across 11 platforms including Instagram, Threads, TikTok, Facebook, X, LinkedIn, YouTube, YouTube Studio, Bluesky, Pinterest, and Reddit."
+      content="A Mac menu bar app with unread counts and side-by-side upload flows for Instagram, Threads, TikTok, X, LinkedIn and YouTube Studio. Version 0.1.0; version 0.2.0 is in progress."
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://jbcdevelopment.dev/socialbar/" />
@@ -16,13 +16,16 @@
     <meta property="og:title" content="SocialBar | All your socials. One menu bar." />
     <meta
       property="og:description"
-      content="Stop app-hopping. Badge counts, quick access, and compose staging for 11 platforms — using the accounts you're already logged into."
+      content="Unread counts and side-by-side upload flows for your social platforms, from the Mac menu bar, using the accounts you're already logged into."
     />
     <meta property="og:image" content="https://jbcdevelopment.dev/socialbar/screenshots/socialbar-v2-showcase.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#0b5fff" />
+    <link rel="alternate" hreflang="en" href="https://jbcdevelopment.dev/socialbar/" />
+    <link rel="alternate" hreflang="es" href="https://jbcdevelopment.dev/socialbar/" />
+    <link rel="alternate" hreflang="x-default" href="https://jbcdevelopment.dev/socialbar/" />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js): disclosed on this page and in /privacy.html -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HVZ7HGVT3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -32,344 +35,112 @@
       gtag('config', 'G-4HVZ7HGVT3');
     </script>
 
-    <link rel="preload" href="/styles.css" as="style" />
-    <link rel="stylesheet" href="/styles.css" />
-    <script src="/script.js" defer></script>
-    <style>
-      .socialbar-page { padding-bottom: 5rem; }
-      .socialbar-price { font-size: 1.05rem; font-weight: 800; }
-      .socialbar-proof {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.65rem;
-        margin-top: 1.25rem;
-      }
-      .socialbar-proof span {
-        border: 1px solid var(--border-color, #dbe3ef);
-        border-radius: 999px;
-        padding: 0.5rem 0.8rem;
-        font-size: 0.88rem;
-        font-weight: 700;
-      }
-      .socialbar-feature-grid {
-        display: grid;
-        gap: 1.25rem;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        margin-top: 1.5rem;
-      }
-      .socialbar-feature {
-        border: 1px solid var(--border-color, #dbe3ef);
-        border-radius: 14px;
-        padding: 1.1rem 1.2rem;
-      }
-      .socialbar-feature h3 { margin: 0 0 0.4rem; font-size: 1.02rem; }
-      .socialbar-feature p { margin: 0; }
-      .socialbar-note {
-        border-left: 3px solid #0b5fff;
-        padding: 0.9rem 1.1rem;
-        border-radius: 0 12px 12px 0;
-        background: rgba(11, 95, 255, 0.06);
-      }
-      .socialbar-platforms {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 1rem;
-        padding: 0;
-        list-style: none;
-      }
-      .socialbar-inline-shot {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-        margin-top: 1.25rem;
-        padding: 1rem 1.15rem;
-        border: 1px solid var(--border-color, #dbe3ef);
-        border-radius: 14px;
-        background: #f4f6fa;
-      }
-      .socialbar-inline-shot img {
-        width: 60px;   /* native size: 120px capture at 2x */
-        height: auto;
-        border-radius: 6px;
-        flex: none;
-      }
-      .socialbar-inline-shot p {
-        margin: 0;
-        font-size: 0.92rem;
-        color: var(--muted-color, #5c6370);
-      }
-      .socialbar-shot {
-        margin: 2rem 0 0;
-        border: 1px solid var(--border-color, #dbe3ef);
-        border-radius: 14px;
-        overflow: hidden;
-        background: #f4f6fa;
-      }
-      .socialbar-shot img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-      .socialbar-shot.is-portrait {
-        max-width: 460px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .socialbar-shot figcaption {
-        padding: 0.75rem 1rem;
-        font-size: 0.88rem;
-        color: var(--muted-color, #5c6370);
-        border-top: 1px solid var(--border-color, #dbe3ef);
-      }
-      .socialbar-platforms li {
-        border: 1px solid var(--border-color, #dbe3ef);
-        border-radius: 10px;
-        padding: 0.45rem 0.75rem;
-        font-weight: 700;
-        font-size: 0.9rem;
-      }
-      .socialbar-update-banner {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.5rem 1rem;
-        background: rgba(11, 95, 255, 0.08);
-        border: 1px solid rgba(11, 95, 255, 0.25);
-        border-radius: 999px;
-        font-size: 0.88rem;
-        font-weight: 600;
-        margin-bottom: 1.25rem;
-        flex-wrap: wrap;
-      }
-      .update-pill {
-        background: #0b5fff;
-        color: #ffffff;
-        font-size: 0.75rem;
-        font-weight: 800;
-        letter-spacing: 0.05em;
-        padding: 0.2rem 0.6rem;
-        border-radius: 999px;
-        text-transform: uppercase;
-      }
-    </style>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/home.css?v=20261117b" />
+    <script src="/script.js?v=20261117b" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip" href="#main">Skip to content</a>
 
-    <header class="site-header" data-site-header>
-      <nav class="nav shell" aria-label="Primary navigation">
-        <a class="brand" href="/" aria-label="JBC Software Development LLC home">
-          <span class="brand-mark" aria-hidden="true">
-            <img src="/assets/jbc-brand-mark.svg" alt="" width="44" height="44" />
-          </span>
-          <span class="brand-name">
-            <strong>JBCSDevs</strong>
-            <small>Software Development LLC</small>
-          </span>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="/">
+          <img src="/assets/jbc-brand-mark.svg" alt="" width="30" height="30" />
+          <span>JBC Development<small>Software Development LLC · Miami</small></span>
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-          <span class="nav-toggle-line"></span>
-          <span class="nav-toggle-line"></span>
-          <span class="nav-toggle-line"></span>
-          <span class="sr-only">Toggle navigation</span>
-        </button>
-        <div class="nav-links" id="nav-links">
-          <a href="/">Home</a>
-          <!-- Live Apps Header Dropdown -->
-          <div class="nav-dropdown">
-            <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-              <span>Live Apps &amp; Products</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="nav-dropdown-menu">
-              <a href="/socialbar/" class="nav-dropdown-item">
-                <img src="/assets/app-icons/socialbar.png" alt="" class="nav-dropdown-item-icon" />
-                <div class="nav-dropdown-item-info">
-                  <strong>SocialBar</strong>
-                  <small>Menu Bar Socials (macOS)</small>
-                </div>
-              </a>
-              <a href="/clearwaive.html" class="nav-dropdown-item">
-                <img src="/assets/app-icons/clearwaive.svg" alt="" class="nav-dropdown-item-icon" />
-                <div class="nav-dropdown-item-info">
-                  <strong>ClearWaive</strong>
-                  <small>Contractor COI Platform (Web)</small>
-                </div>
-              </a>
-            </div>
-          </div>
-          <a href="/custom-work.html">Custom Work</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/#products">Products</a>
+          <a href="/custom-work.html">Custom work</a>
           <a href="/downloads.html">Downloads</a>
           <a href="/support.html">Support</a>
+        </nav>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-language-option="en" aria-pressed="true">EN</button>
+          <button type="button" data-language-option="es" aria-pressed="false">ES</button>
         </div>
-      </nav>
+        <a class="btn btn-solid" href="mailto:jbcsdevs@gmail.com">Email me</a>
+      </div>
     </header>
 
-    <main id="main" class="content-page shell socialbar-page">
-      <header class="content-header">
-        <div class="socialbar-update-banner" aria-label="Version 0.2.0 Announcement">
-          <span class="update-pill">v0.2.0 Released</span>
-          <span>5 New Platforms (Facebook, YouTube, Bluesky, Pinterest, Reddit) + Local Reminders & Caption Overrides!</span>
-        </div>
-        <p class="section-label">macOS menu bar social command center</p>
+    <main id="main">
+      <header class="page-head wrap">
         <h1>All your socials. One menu bar.</h1>
-        <p>
-          SocialBar keeps 11 platforms one click away — Instagram, Threads, TikTok, Facebook,
-          X, LinkedIn, YouTube, YouTube Studio, Bluesky, Pinterest, and Reddit — with unread counts,
-          per-platform caption overrides, local posting history, and macOS reminder notifications.
+        <p class="lede">
+          SocialBar keeps Instagram, Threads, TikTok, X, LinkedIn and YouTube Studio one click away in
+          your Mac's menu bar, with unread counts and one shared caption for every upload flow.
         </p>
-        <p class="socialbar-price">Free and Open · Voluntary Donation · macOS 14+</p>
-        <div class="page-actions">
-          <a class="button primary" href="/socialbar/SocialBar-0.1.0.dmg">
-            Download SocialBar (macOS)
-          </a>
-          <a class="button secondary" href="https://devsoul64.gumroad.com/l/socialbar" target="_blank" rel="noopener noreferrer">
-            Support / Donate (Voluntary)
-          </a>
+        <div class="facts mono">
+          <span>Version 0.1.0</span><span>6 platforms</span><span>macOS 14+</span><span>Signed and notarized</span><span>No account required</span><span>No tracking in the app</span>
         </div>
-        <div class="socialbar-proof" aria-label="Release facts">
-          <span>Version 0.2.0</span>
-          <span>11 Platforms</span>
-          <span>macOS 14+</span>
-          <span>Signed and notarized</span>
-          <span>No account required</span>
-          <span>No tracking</span>
+        <div class="actions">
+          <a class="btn btn-solid" href="/socialbar/SocialBar-0.1.0.dmg">Download SocialBar 0.1.0 (macOS)</a>
+          <a class="btn btn-line" href="https://devsoul64.gumroad.com/l/socialbar" target="_blank" rel="noopener noreferrer">SocialBar on Gumroad</a>
         </div>
+        <p class="note">
+          <b>Version 0.2.0 is in progress, not released.</b> It adds Facebook, YouTube, Bluesky, Pinterest
+          and Reddit, per-platform captions, post history and reminders, and makes every feature free.
+          Until it ships, the download is 0.1.0.
+        </p>
       </header>
 
-      <figure class="socialbar-shot">
-        <img
-          src="/socialbar/screenshots/socialbar-v2-showcase.jpg"
-          alt="SocialBar v0.2.0 showcase banner featuring 11 supported social platforms, unread notification badges, and side-by-side compose staging pane."
-          width="1280"
-          height="720"
-          loading="lazy"
-        />
-        <figcaption>
-          SocialBar v0.2.0 Command Center: 11 platforms, unread badges, per-platform compose overrides, and local posting history.
-        </figcaption>
-      </figure>
+      <div class="wrap">
+        <figure class="shot" style="margin: 0 0 clamp(48px, 7vw, 88px)">
+          <img
+            src="/socialbar/screenshots/socialbar-v2-showcase.jpg"
+            alt="Preview of SocialBar 0.2.0: the menu bar strip with unread badges for 11 platforms above a shared caption editor"
+            width="1376"
+            height="768"
+          />
+          <figcaption>Preview of SocialBar 0.2.0, not released yet. Version 0.1.0 shows 6 platforms.</figcaption>
+        </figure>
+      </div>
 
-      <section class="content-panel" aria-labelledby="whats-new">
-        <div class="m5-section-heading">
-          <p class="section-label">v0.2.0 Major Update</p>
-          <h2 id="whats-new">What's New in Version 0.2.0</h2>
-          <p>Everything added in our latest update for macOS creators and managers.</p>
-        </div>
-        <div class="socialbar-feature-grid">
-          <article class="socialbar-feature">
-            <h3>🌐 5 New Platforms (11 Total)</h3>
-            <p>
-              Added <strong>Facebook</strong>, <strong>YouTube</strong> (main feed), <strong>Bluesky</strong>, <strong>Pinterest</strong>, and <strong>Reddit</strong> alongside Instagram, Threads, TikTok, X, LinkedIn, and YouTube Studio.
-            </p>
-          </article>
-          <article class="socialbar-feature">
-            <h3>✍️ Per-Platform Caption Overrides</h3>
-            <p>
-              Customize captions per platform inside Compose. Use hashtags for Instagram vs longform text for LinkedIn and Reddit without losing your shared default.
-            </p>
-          </article>
-          <article class="socialbar-feature">
-            <h3>📜 Local Post History</h3>
-            <p>
-              Keep a private, on-device log of staged and copied captions (up to 500 entries) in your local Application Support directory — clearable anytime.
-            </p>
-          </article>
-          <article class="socialbar-feature">
-            <h3>🔔 macOS Local Reminders</h3>
-            <p>
-              Schedule native macOS notifications to remind you when it's time to post — rearmed across app restarts.
-            </p>
-          </article>
-          <article class="socialbar-feature">
-            <h3>🔍 Responsive Desktop Scaling</h3>
-            <p>
-              Desktop views (LinkedIn Messaging, YouTube Studio, Facebook) now automatically scale to fit narrow windows and popover switchers cleanly.
-            </p>
-          </article>
-          <article class="socialbar-feature">
-            <h3>📋 Native Copy & Paste Fixes</h3>
-            <p>
-              Full support for standard macOS editing shortcuts (⌘C, ⌘V, ⌘X, ⌘A, ⌘Z) across all input fields and web views.
-            </p>
-          </article>
+      <section class="block" aria-labelledby="now">
+        <div class="wrap">
+          <h2 id="now">What version 0.1.0 does</h2>
+          <p class="body">Built for people who post to several platforms a week.</p>
+          <dl class="feature-rows" style="margin-top: 28px">
+            <div><dt>Badge counts, aggregated</dt><dd>Unread counts per platform, totalled on the menu bar icon. When a count can't be read, SocialBar says so — it never shows a fake zero.</dd></div>
+            <div><dt>Compose staging</dt><dd>One hotkey opens every platform's upload flow side by side, with a shared caption to paste.</dd></div>
+            <div><dt>Separate accounts</dt><dd>Each account gets its own isolated session, kept separate across restarts. The free mode allows one account per platform.</dd></div>
+            <div><dt>Detached windows</dt><dd>Pop a platform out of the menu bar into its own window.</dd></div>
+          </dl>
+          <ul class="platforms" aria-label="Platforms">
+            <li>Instagram</li><li>Threads</li><li>TikTok</li><li>X</li><li>LinkedIn</li><li>YouTube Studio</li>
+            <li class="next">Facebook · 0.2.0</li><li class="next">YouTube · 0.2.0</li><li class="next">Bluesky · 0.2.0</li><li class="next">Pinterest · 0.2.0</li><li class="next">Reddit · 0.2.0</li>
+          </ul>
         </div>
       </section>
 
-      <section class="content-panel" aria-labelledby="how">
-        <div class="m5-section-heading">
-          <h2 id="how">Stop app-hopping. Start posting.</h2>
-          <p>Built for people who post to several platforms a week.</p>
+      <section class="block" aria-labelledby="next">
+        <div class="wrap">
+          <h2 id="next">Coming in version 0.2.0</h2>
+          <p class="body">Not released yet. None of this is in the 0.1.0 download.</p>
+          <dl class="feature-rows" style="margin-top: 28px">
+            <div><dt>Five more platforms</dt><dd>Facebook, YouTube (main feed), Bluesky, Pinterest and Reddit, for 11 in total.</dd></div>
+            <div><dt>Per-platform captions</dt><dd>Adjust the shared caption for each platform, with character limits, without losing your default.</dd></div>
+            <div><dt>Local post history</dt><dd>A private, on-device log of staged and copied captions (up to 500 entries), clearable anytime.</dd></div>
+            <div><dt>Reminders</dt><dd>Native macOS notifications that remind you when it's time to post.</dd></div>
+            <div><dt>Everything free</dt><dd>No free-mode limits. Gumroad becomes an optional donation.</dd></div>
+          </dl>
         </div>
-        <div class="socialbar-feature-grid">
-          <article class="socialbar-feature">
-            <h3>Badge counts, aggregated</h3>
-            <p>
-              Unread counts per platform, totalled on the menu bar icon. When a count
-              can't be read, SocialBar says so — it never shows a fake zero.
-            </p>
-            <div class="socialbar-inline-shot">
-              <img
-                src="/socialbar/screenshots/menubar-badge.png"
-                alt="SocialBar's menu bar icon showing an aggregate unread count of 2."
-                width="120"
-                height="64"
-                loading="lazy"
-              />
-              <p>That is the whole interface until you need it.</p>
-            </div>
-          </article>
-          <article class="socialbar-feature">
-            <h3>Compose staging & overrides</h3>
-            <p>
-              One hotkey opens every platform's upload flow side by side, with a
-              shared caption, per-platform custom overrides, and character limits.
-            </p>
-          </article>
-          <article class="socialbar-feature">
-            <h3>Local history & reminders</h3>
-            <p>
-              Log staged and copied captions locally (up to 500 entries) and schedule local
-              macOS User Notifications to remind you when it's time to post.
-            </p>
-          </article>
-          <article class="socialbar-feature">
-            <h3>Real multi-account</h3>
-            <p>
-              Each account gets its own isolated session. Multiple accounts per platform stay
-              genuinely separate, across restarts.
-            </p>
-          </article>
-        </div>
-
-        <ul class="socialbar-platforms" aria-label="Supported platforms">
-          <li>Instagram</li>
-          <li>Threads</li>
-          <li>TikTok</li>
-          <li>Facebook</li>
-          <li>X</li>
-          <li>LinkedIn</li>
-          <li>YouTube</li>
-          <li>YouTube Studio</li>
-          <li>Bluesky</li>
-          <li>Pinterest</li>
-          <li>Reddit</li>
-        </ul>
       </section>
 
-      <section class="content-panel" aria-labelledby="honest">
-        <div class="m5-section-heading">
+      <section class="block" aria-labelledby="honest">
+        <div class="wrap">
           <h2 id="honest">What it doesn't do</h2>
-        </div>
-        <div class="socialbar-note">
-          <p>
+          <p class="body">
             <strong>SocialBar stages posts. It does not auto-post.</strong> It opens each
             platform's own upload flow and hands you a shared caption to paste. It does
             not fill forms, schedule, or upload on your behalf.
           </p>
-          <p>
+          <p class="body">
             That is deliberate. Automated posting breaks whenever a platform changes its
             interface, and it puts your accounts at risk. Staging just removes the
             tab-shuffling.
@@ -377,50 +148,57 @@
         </div>
       </section>
 
-      <section class="content-panel" aria-labelledby="pricing">
-        <div class="m5-section-heading">
-          <h2 id="pricing">100% Free & Open</h2>
-          <p>All features are fully unlocked for everyone. Voluntary donations support ongoing maintenance and development.</p>
-        </div>
-        <div class="socialbar-feature-grid">
-          <article class="socialbar-feature">
-            <h3>Fully Unlocked</h3>
-            <p><strong>$0</strong> · Free for everyone</p>
-            <p>Access all 11 platforms, unlimited accounts, compose staging & per-platform overrides, local post history, local macOS reminders, global hotkeys, settings export/import, and detached windows.</p>
-          </article>
-          <article class="socialbar-feature">
-            <h3>Voluntary Donation</h3>
-            <p><strong>Pay what you want</strong> · Completely optional</p>
-            <p>
-              If SocialBar saves you time, please consider supporting the project. Your contributions help keep the app updated as social platforms evolve.
-            </p>
-          </article>
-        </div>
-        <div class="page-actions">
-          <a class="button primary" href="/socialbar/SocialBar-0.1.0.dmg">
-            Download SocialBar (macOS)
-          </a>
-          <a class="button secondary" href="https://devsoul64.gumroad.com/l/socialbar" target="_blank" rel="noopener noreferrer">
-            Support on Gumroad
-          </a>
+      <section class="block" aria-labelledby="pricing">
+        <div class="wrap">
+          <h2 id="pricing">Pricing</h2>
+          <div class="two">
+            <div>
+              <h3>TODAY · VERSION 0.1.0</h3>
+              <p><b>Free for 2 platforms</b> with one account each.</p>
+              <p>A license key from Gumroad unlocks all 6 platforms and multiple accounts.</p>
+            </div>
+            <div>
+              <h3>COMING · VERSION 0.2.0</h3>
+              <p><b>Every feature free</b> for everyone.</p>
+              <p>Paying on Gumroad becomes an optional donation that supports updates as platforms change.</p>
+            </div>
+          </div>
+          <div class="actions">
+            <a class="btn btn-solid" href="/socialbar/SocialBar-0.1.0.dmg">Download SocialBar 0.1.0 (macOS)</a>
+            <a class="btn btn-line" href="https://devsoul64.gumroad.com/l/socialbar" target="_blank" rel="noopener noreferrer">SocialBar on Gumroad</a>
+          </div>
         </div>
       </section>
 
-      <section class="content-panel" aria-labelledby="privacy-title">
-        <div class="m5-section-heading">
+      <section class="block" aria-labelledby="privacy-title">
+        <div class="wrap">
           <h2 id="privacy-title">Privacy</h2>
+          <p class="body">
+            Inside the app, everything stays on your Mac: no analytics, no tracking, no telemetry,
+            no account required. The app contacts this website for a small file that keeps badge
+            detection working and to check for updates, and contacts Gumroad only to verify a license
+            key if you enter one.
+          </p>
+          <p class="body">
+            This web page uses Google Analytics to count visits. Details are in the
+            <a href="/privacy.html">privacy policy</a>.
+          </p>
+          <p class="body">Requires macOS 14 or later. Questions: <a href="/support.html">support</a>.</p>
         </div>
-        <p>
-          Everything stays on your Mac. No analytics, no tracking, no telemetry, no
-          account required. SocialBar contacts exactly one thing it does not have to:
-          a small static file on this domain that keeps badge detection working when
-          platforms change their markup.
-        </p>
-        <p>
-          Requires macOS 14 or later. Questions:
-          <a href="/support.html">support</a>.
-        </p>
       </section>
     </main>
+
+    <footer>
+      <div class="wrap">
+        <span>© 2026 JBC Software Development LLC · Miami, Florida</span>
+        <nav aria-label="Footer">
+          <a href="/">Home</a>
+          <a href="/custom-work.html">Custom work</a>
+          <a href="/downloads.html">Downloads</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/support.html">Support</a>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>

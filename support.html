@@ -29,80 +29,49 @@
     <link rel="alternate" hreflang="x-default" href="https://jbcdevelopment.dev/support.html" />
 
     <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-    <link rel="preload" href="/styles.css" as="style" />
-    <link rel="stylesheet" href="/styles.css" />
-    <script src="/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/home.css?v=20261117b" />
+    <script src="/script.js?v=20261117b" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip" href="#main">Skip to content</a>
 
-    <header class="site-header" data-site-header>
-      <nav class="nav shell" aria-label="Primary navigation">
-        <a class="brand" href="/" aria-label="JBC Software Development LLC home">
-          <span class="brand-mark" aria-hidden="true">
-            <img src="/assets/jbc-brand-mark.svg" alt="" width="44" height="44" />
-          </span>
-          <span class="brand-name">
-            <strong>JBCSDevs</strong>
-            <small>Software Development LLC</small>
-          </span>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="/">
+          <img src="/assets/jbc-brand-mark.svg" alt="" width="30" height="30" />
+          <span>JBC Development<small>Software Development LLC · Miami</small></span>
         </a>
-
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-          <span class="nav-toggle-line"></span>
-          <span class="nav-toggle-line"></span>
-          <span class="nav-toggle-line"></span>
-          <span class="sr-only">Toggle navigation</span>
-        </button>
-
-        <div class="nav-links" id="nav-links">
-          <a href="/">Home</a>
-          <!-- Live Apps Header Dropdown -->
-          <div class="nav-dropdown">
-            <button class="nav-dropdown-toggle" type="button" aria-expanded="false">
-              <span>Live Apps &amp; Products</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M6 9l6 6 6-6"/></svg>
-            </button>
-            <div class="nav-dropdown-menu">
-              <a href="/socialbar/" class="nav-dropdown-item">
-                <img src="/assets/app-icons/socialbar.png" alt="" class="nav-dropdown-item-icon" />
-                <div class="nav-dropdown-item-info">
-                  <strong>SocialBar</strong>
-                  <small>Menu Bar Socials (macOS)</small>
-                </div>
-              </a>
-              <a href="/clearwaive.html" class="nav-dropdown-item">
-                <img src="/assets/app-icons/clearwaive.svg" alt="" class="nav-dropdown-item-icon" />
-                <div class="nav-dropdown-item-info">
-                  <strong>ClearWaive</strong>
-                  <small>Contractor COI Platform (Web)</small>
-                </div>
-              </a>
-            </div>
-          </div>
-          <a href="/custom-work.html">Custom Work</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/#products">Products</a>
+          <a href="/custom-work.html">Custom work</a>
           <a href="/downloads.html">Downloads</a>
           <a href="/support.html" aria-current="page">Support</a>
-          <div class="language-switcher" aria-label="Language selector">
-            <button type="button" class="language-option" data-language-option="en" aria-pressed="true">EN</button>
-            <button type="button" class="language-option" data-language-option="es" aria-pressed="false">ES</button>
-          </div>
+        </nav>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-language-option="en" aria-pressed="true">EN</button>
+          <button type="button" data-language-option="es" aria-pressed="false">ES</button>
         </div>
-      </nav>
+        <a class="btn btn-solid" href="mailto:jbcsdevs@gmail.com">Email me</a>
+      </div>
     </header>
 
-    <main id="main" class="content-page shell">
-      <header class="content-header">
-        <p class="section-label">Support</p>
+    <main id="main">
+      <header class="page-head wrap">
         <h1>Support for JBC apps and software.</h1>
-        <p>
+        <p class="lede">
           Use this page for app support, Mac setup, download questions,
           privacy questions, or general contact with JBC Software Development LLC.
         </p>
       </header>
 
-      <div class="content-grid">
-        <article class="content-panel">
+      <div class="doc wrap">
+        <article class="prose">
           <h2>Contact support</h2>
           <p>
             Email <a href="mailto:support@jbcdevelopment.dev">support@jbcdevelopment.dev</a>
@@ -126,11 +95,6 @@
             as each product is released.
           </p>
 
-
-
-
-
-
           <h2>Safety and privacy</h2>
           <p>
             Do not send passwords, payment details, private customer records, or other
@@ -144,26 +108,25 @@
           </p>
         </article>
 
-        <aside class="side-panel" aria-label="Support actions">
+        <aside class="side" aria-label="Support actions">
           <h2>Start here</h2>
           <p>Send a concise note with the app, software, or download question.</p>
-          <a class="button primary" href="mailto:jbcsdevs@gmail.com">Email support</a>
-          <a class="button secondary" href="https://wa.me/13055550199?text=Hi%20Jonathan%2C%20I%27m%20reaching%20out%20for%20app%20support" target="_blank" rel="noopener noreferrer" style="background:#25d366; color:#fff; border:none;">WhatsApp Business</a>
-          <a class="button secondary" href="/privacy.html">Privacy policy</a>
+          <a class="btn btn-solid" href="mailto:jbcsdevs@gmail.com">Email support</a>
+          <a class="btn btn-line" href="/privacy.html">Privacy policy</a>
         </aside>
       </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="shell footer-inner">
-        <p>&copy; 2026 JBC Software Development LLC. <span>All rights reserved.</span></p>
-        <div class="footer-links">
+    <footer>
+      <div class="wrap">
+        <span>© 2026 JBC Software Development LLC · Miami, Florida</span>
+        <nav aria-label="Footer">
           <a href="/">Home</a>
-          <a href="/custom-work.html">Custom Work</a>
+          <a href="/custom-work.html">Custom work</a>
           <a href="/downloads.html">Downloads</a>
-          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/privacy.html">Privacy</a>
           <a href="/support.html">Support</a>
-        </div>
+        </nav>
       </div>
     </footer>
   </body>
