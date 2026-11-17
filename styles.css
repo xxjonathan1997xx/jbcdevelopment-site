@@ -1056,38 +1056,6 @@ body.theme-editorial .theme-icon-moon { display: block; }
   outline-offset: 1px;
 }
 
-/* Dark Mode Overrides for ThreadVigil Agent Moat & Social Proof */
-:root[data-theme="dark"] .agent-pill,
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .agent-pill {
-    background: rgba(56, 189, 248, 0.12);
-    border-color: rgba(56, 189, 248, 0.28);
-    color: #f0f6fc;
-  }
-
-  :root:not([data-theme="light"]) .threadvigil-social-proof,
-  :root:not([data-theme="light"]) .testimonial-card {
-    background: #0f1d2d;
-    border-color: #1e3248;
-  }
-
-  :root:not([data-theme="light"]) .metric-card {
-    background: #16273b;
-    border-color: #1e3248;
-  }
-}
-
-:root[data-theme="dark"] .threadvigil-social-proof,
-:root[data-theme="dark"] .testimonial-card {
-  background: #0f1d2d;
-  border-color: #1e3248;
-}
-
-:root[data-theme="dark"] .metric-card {
-  background: #16273b;
-  border-color: #1e3248;
-}
-
 /* ==========================================================================
    Modern Studio & Glassmorphism Enhancements (Option 1)
    ========================================================================== */
