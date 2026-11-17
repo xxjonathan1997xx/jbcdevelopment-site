@@ -19,7 +19,7 @@ Open `http://127.0.0.1:8788`
 ## Key files
 
 - `index.html` — company site content and metadata
-- `downloads.html` — Mac app download page for M5SteamBridge
+- `downloads.html` — free downloads (Miami Marine Stadium AutoX Assetto Corsa track; zip hosted as a GitHub Release)
 - `privacy.html` — public privacy policy
 - `support.html` — public support page
 - `styles.css` — responsive styling

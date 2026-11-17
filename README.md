@@ -83,7 +83,7 @@ Deployment, DNS changes, hosting changes, and public update announcements requir
 ## Files
 
 - `index.html`: company site content and metadata
-- `downloads.html`: Mac app download page for M5SteamBridge
+- `downloads.html`: free downloads (Miami Marine Stadium AutoX Assetto Corsa track; zip hosted as a GitHub Release)
 - `privacy.html`: public privacy policy for website inquiries and app support
 - `support.html`: public support page for apps, projects, and business inquiries
 - `styles.css`: responsive styling

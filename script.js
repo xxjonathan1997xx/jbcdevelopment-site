@@ -44,8 +44,8 @@ if (document.readyState === "loading") {
 const LANGUAGE_STORAGE_KEY = "jbcdevelopment-language";
 const SUPPORTED_LANGUAGES = new Set(["en", "es"]);
 const LAB_CONSOLE_PHRASES = {
-  en: ["Paw Care Academy", "PainTrail"],
-  es: ["Paw Care Academy", "PainTrail"],
+  en: ["SocialBar", "ClearWaive"],
+  es: ["SocialBar", "ClearWaive"],
 };
 
 let currentLanguage = "en";

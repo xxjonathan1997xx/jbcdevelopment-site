@@ -22,7 +22,7 @@ Indie software engineering studio built on privacy, transparency, and signed rel
 
 - Independent studio operating out of Florida
 - Direct email contact: `jbcsdevs@gmail.com`
-- Primary products: Paw Care Academy, PainTrail, ClearWaive, M5SteamBridge, SocialBar
+- Primary products: SocialBar, ClearWaive, CounterOps
 - Static site deployment (Vercel, Netlify, Cloudflare Pages, GitHub Pages)
 - Lightweight English / Spanish (EN/ES) language switcher in browser storage
 
