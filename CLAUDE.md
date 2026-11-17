@@ -22,7 +22,8 @@ Open `http://127.0.0.1:8788`
 - `downloads.html` — free downloads (Miami Marine Stadium AutoX Assetto Corsa track; zip hosted as a GitHub Release)
 - `privacy.html` — public privacy policy
 - `support.html` — public support page
-- `styles.css` — responsive styling
+- `home.css` — homepage styles (see DESIGN.md, Homepage system)
+- `styles.css` — responsive styling for the other pages
 - `script.js` — mobile nav, EN/ES language switching, lab console rotation
 - `WEBSITE_RELEASE_CHECKLIST.md` — pre-deploy QA and rollback checklist
 - `assets/` — favicon and brand visuals
