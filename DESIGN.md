@@ -49,3 +49,5 @@ The homepage (`index.html`) uses its own stylesheet, `home.css`, instead of `sty
 - Motion: ledger rows slide in on load using transform only, never opacity, so content is visible even if animations are paused. Everything is disabled under `prefers-reduced-motion`.
 - Phones: menu links sit on their own row under the logo; the header email button is hidden (the hero CTA and `#contact` cover it).
 - EN/ES: text is translated by `script.js` from its `translations.es` dictionary; add a Spanish entry for every new homepage string.
+- Also on home.css (same header/footer): `support.html` and `privacy.html` (document layout: `.page-head`, `.doc`, `.prose`, `.side`) and `socialbar/index.html` (product layout: `.block`, `.feature-rows`, `.two`, `.note`). ClearWaive, CounterOps, Custom Work and Downloads still use `styles.css`.
+- Product facts must match the build people actually download. SocialBar's page describes 0.1.0 (the published DMG) and labels 0.2.0 features as not released.

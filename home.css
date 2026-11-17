@@ -160,6 +160,48 @@ section.product { padding: clamp(56px, 8vw, 104px) 0; border-top: 1px solid var(
 .hire dt { font-weight: 700; }
 .hire dd { margin: 0; color: var(--ink-2); }
 
+/* Captions under product screenshots */
+.shot figcaption { padding: 10px 14px; border-top: 1px solid var(--rule); color: var(--ink-2); font-size: 0.9rem; }
+
+/* Document pages (Support, Privacy) and product pages (SocialBar) */
+.page-head { padding: clamp(48px, 7vw, 88px) 0 clamp(28px, 4vw, 40px); }
+.page-head h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); line-height: 1.06; font-weight: 800; letter-spacing: -0.03em; max-width: 20em; }
+.page-head .lede { margin-top: 18px; max-width: 40em; font-size: 1.12rem; color: var(--ink-2); }
+.page-head .updated { margin-top: 14px; color: var(--ink-2); }
+.doc { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: clamp(32px, 6vw, 72px); align-items: start; padding-bottom: clamp(56px, 8vw, 104px); }
+.prose { max-width: 68ch; }
+.prose h2 { font-size: 1.45rem; font-weight: 800; margin: 40px 0 10px; }
+.prose > h2:first-child, .prose > section:first-child > h2 { margin-top: 0; }
+.prose h3 { font-size: 1.1rem; font-weight: 700; margin: 24px 0 6px; }
+.prose p, .prose li { color: var(--ink-2); }
+.prose p + p { margin-top: 12px; }
+.prose ul { list-style: disc; padding-left: 1.2rem; margin-top: 8px; }
+.prose li + li { margin-top: 6px; }
+.prose a { color: var(--accent); text-underline-offset: 3px; }
+.prose a:hover { color: var(--accent-hover); }
+.prose strong { color: var(--ink); }
+.side { position: sticky; top: 24px; border: 1px solid var(--rule); border-radius: 12px; background: var(--surface); padding: 22px; display: grid; gap: 12px; }
+.side h2 { font-size: 1.1rem; font-weight: 800; }
+.side p { color: var(--ink-2); font-size: 0.98rem; }
+.side .btn { justify-content: center; }
+.note { margin-top: 24px; padding: 16px 18px; background: var(--tint); border-radius: 10px; max-width: 52rem; }
+.note b { color: var(--ink); }
+.feature-rows { margin: 0; border-top: 1px solid var(--rule); }
+.feature-rows div { display: grid; grid-template-columns: 13rem 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.feature-rows dt { font-weight: 700; }
+.feature-rows dd { margin: 0; color: var(--ink-2); }
+.tag { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 999px; background: var(--tint); color: var(--accent); font: 500 0.75rem/1.5 var(--mono); vertical-align: middle; }
+.platforms { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.platforms li { padding: 5px 12px; border: 1px solid var(--rule-strong); border-radius: 999px; font-size: 0.92rem; }
+.platforms li.next { border-style: dashed; color: var(--ink-2); }
+section.block { padding: clamp(44px, 6vw, 72px) 0; border-top: 1px solid var(--rule); }
+section.block h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.12; font-weight: 800; }
+section.block .body { margin-top: 12px; max-width: 42em; color: var(--ink-2); font-size: 1.05rem; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 48px); margin-top: 28px; }
+.two h3 { font: 500 0.8rem/1 var(--mono); letter-spacing: 0.04em; color: var(--ink-2); padding-bottom: 12px; border-bottom: 1px solid var(--rule-strong); margin-bottom: 4px; }
+.two p { color: var(--ink-2); margin-top: 10px; }
+.two p b { color: var(--ink); }
+
 footer { border-top: 1px solid var(--rule); padding: 28px 0 40px; color: var(--ink-2); font-size: 0.92rem; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
 footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
@@ -170,6 +212,9 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   .lang { margin-left: auto; }
   .extra .wrap { grid-template-columns: 1fr; }
   .extra img { max-width: 360px; }
+  .doc { grid-template-columns: 1fr; }
+  .side { position: static; }
+  .two { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
   .brand small { display: none; }
@@ -187,6 +232,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
   .p-counterops .pair { grid-template-columns: 1fr; }
   .p-counterops .pair .phone { display: none; }
   .hire dl div { grid-template-columns: 1fr; gap: 4px; }
+  .feature-rows div { grid-template-columns: 1fr; gap: 4px; }
   .facts span + span::before { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
